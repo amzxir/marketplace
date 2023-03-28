@@ -20,10 +20,10 @@ export default function Home() {
       </Head>
       <main className="main">
         <Slider/>
-        {/* <Feature/> */}
-        {/* <BoxWrapper/> */}
-        {/* <Vendors/> */}
-        {/* <DiscountProduct/> */}
+        <Feature/>
+        <BoxWrapper/>
+        <Vendors/>
+        <DiscountProduct/>
         {/* <SingleBanner/> */}
         {/* <AllProduct/> */}
         {/* <DoubleBanner/>÷ */}

@@ -957,44 +957,44 @@ window.Wolmart = {};
      * 
      * @param {String} selector 
      */
-    Wolmart.countDown = function (selector) {
-        if ($.fn.countdown) {
-            Wolmart.$(selector).each(function () {
-                var $this = $(this),
-                    untilDate = $this.data('until'),
-                    compact = $this.data('compact'),
-                    dateFormat = (!$this.data('format')) ? 'DHMS' : $this.data('format'),
-                    newLabels = (!$this.data('labels-short')) ?
-                        ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds'] :
-                        ['Years', 'Months', 'Weeks', 'Days', 'Hrs', 'Mins', 'Secs'],
-                    newLabels1 = (!$this.data('labels-short')) ?
-                        ['Year', 'Month', 'Week', 'Day', 'Hour', 'Minute', 'Second'] :
-                        ['Year', 'Month', 'Week', 'Day', 'Hour', 'Min', 'Sec'];
+    // Wolmart.countDown = function (selector) {
+    //     if ($.fn.countdown) {
+    //         Wolmart.$(selector).each(function () {
+    //             var $this = $(this),
+    //                 untilDate = $this.data('until'),
+    //                 compact = $this.data('compact'),
+    //                 dateFormat = (!$this.data('format')) ? 'DHMS' : $this.data('format'),
+    //                 newLabels = (!$this.data('labels-short')) ?
+    //                     ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Minutes', 'Seconds'] :
+    //                     ['Years', 'Months', 'Weeks', 'Days', 'Hrs', 'Mins', 'Secs'],
+    //                 newLabels1 = (!$this.data('labels-short')) ?
+    //                     ['Year', 'Month', 'Week', 'Day', 'Hour', 'Minute', 'Second'] :
+    //                     ['Year', 'Month', 'Week', 'Day', 'Hour', 'Min', 'Sec'];
 
-                var newDate;
+    //             var newDate;
 
-                // Split and created again for ie and edge
-                if (!$this.data('relative')) {
-                    var untilDateArr = untilDate.split(", "), // data-until 2019, 10, 8 - yy,mm,dd
-                        newDate = new Date(untilDateArr[0], untilDateArr[1] - 1, untilDateArr[2]);
-                } else {
-                    newDate = untilDate;
-                }
+    //             // Split and created again for ie and edge
+    //             if (!$this.data('relative')) {
+    //                 var untilDateArr = untilDate.split(", "), // data-until 2019, 10, 8 - yy,mm,dd
+    //                     newDate = new Date(untilDateArr[0], untilDateArr[1] - 1, untilDateArr[2]);
+    //             } else {
+    //                 newDate = untilDate;
+    //             }
 
-                $this.countdown({
-                    until: newDate,
-                    format: dateFormat,
-                    padZeroes: true,
-                    compact: compact,
-                    compactLabels: [' y', ' m', ' w', ' days, '],
-                    timeSeparator: ' : ',
-                    labels: newLabels,
-                    labels1: newLabels1
-                });
-            });
-            //$('.product-countdown, .countdown').countdown('pause');
-        }
-    }
+    //             $this.countdown({
+    //                 until: newDate,
+    //                 format: dateFormat,
+    //                 padZeroes: true,
+    //                 compact: compact,
+    //                 compactLabels: [' y', ' m', ' w', ' days, '],
+    //                 timeSeparator: ' : ',
+    //                 labels: newLabels,
+    //                 labels1: newLabels1
+    //             });
+    //         });
+    //         //$('.product-countdown, .countdown').countdown('pause');
+    //     }
+    // }
 
     /**
      * priceSlider
@@ -3586,7 +3586,7 @@ window.Wolmart = {};
         Wolmart.initQtyInput('.quantity');                                  // Initialize Quantity Input
         Wolmart.initNavFilter('.nav-filters .nav-filter')                   // Initialize Isotope Navigation Filters
         Wolmart.calendar('.calendar-container');                            // Initialize Calendar
-        Wolmart.countDown('.product-countdown, .countdown');                // Initialize CountDown
+        // Wolmart.countDown('.product-countdown, .countdown');                // Initialize CountDown
         // Wolmart.initPopup();                                                // Initialize Popup
         // Wolmart.initNotificationAlert();                                    // Initialize Notification Alert
         Wolmart.countTo('.count-to');                                       // Initialize CountTo 

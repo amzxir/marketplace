@@ -50,9 +50,7 @@ export default function Product() {
                             <h4 className="font-weight-bold ls-10">Hurry up!</h4>
                             <label className="text-dark">Offer end in:</label>
                         </div>
-                        <div className="swiper-slide product-countdown countdown-compact mb-2"
-                            data-until="2021, 9, 9" data-format="DHMS" data-compact="false"
-                            data-labels-short="Days, Hours, Mins, Secs">
+                        <div className="swiper-slide product-countdown countdown-compact mb-2">
                             00:00:00:00
                         </div>
                     </div>
