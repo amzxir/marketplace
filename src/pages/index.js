@@ -1,3 +1,4 @@
+import Banner from 'components/home/banner/banner'
 import BoxWrapper from 'components/home/box-wrapper/box-wrapper'
 import Product from 'components/home/discount-product/product'
 import Feature from 'components/home/feature/feature'
@@ -20,6 +21,7 @@ export default function Home() {
         <BoxWrapper/>
         <Vendors/>
         <Product/>
+        <Banner/>
       </main>
     </>
   )
