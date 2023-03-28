@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import DoubleBanner from 'components/home/banner/double-banner'
 import SingleBanner from 'components/home/banner/single-banner'
 import BoxWrapper from 'components/home/box-wrapper/box-wrapper'
@@ -7,7 +8,6 @@ import AllProduct from 'components/home/product/product'
 import Slider from 'components/home/slider/slider'
 import TopProduct from 'components/home/top-product/product'
 import Vendors from 'components/home/vendors/vendors'
-import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -20,15 +20,15 @@ export default function Home() {
       </Head>
       <main className="main">
         <Slider/>
-        <Feature/>
-        <BoxWrapper/>
-        <Vendors/>
-        <DiscountProduct/>
-        <SingleBanner/>
-        <AllProduct/>
-        <DoubleBanner/>
-        <AllProduct/>
-        <TopProduct/>
+        {/* <Feature/> */}
+        {/* <BoxWrapper/> */}
+        {/* <Vendors/> */}
+        {/* <DiscountProduct/> */}
+        {/* <SingleBanner/> */}
+        {/* <AllProduct/> */}
+        {/* <DoubleBanner/>÷ */}
+        {/* <AllProduct/> */}
+        {/* <TopProduct/> */}
       </main>
     </>
   )

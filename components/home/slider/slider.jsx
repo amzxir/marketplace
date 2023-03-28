@@ -10,9 +10,7 @@ export default function Slider() {
                         style={{ backgroundImage:'url(/assets/images/demos/demo9/slides/slide-4.jpg)' , backgroundColor:'#EEF4F4' }}>
                         <div className="container">
                             <div className="banner-content d-inline-block y-50">
-                                <div className="slide-animate" data-animation-options="{
-                                    'name': 'zoomIn', 'duration': '1s'
-                                }">
+                                <div className="slide-animate">
                                     <h5 className="banner-subtitle text-uppercase font-weight-bold">Deals and Promotions
                                     </h5>
                                     <h3 className="banner-title text-capitalize ls-25">
