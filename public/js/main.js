@@ -3574,7 +3574,7 @@ window.Wolmart = {};
         Wolmart.skrollrParallax();                                          // Initialize Skrollr Parallax
         Wolmart.initFloatingParallax();                                     // Initialize Floating Parallax
         Wolmart.menu.init();                                                // Initialize Menu
-        Wolmart.initScrollTopButton();                                      // Initialize scroll top button
+        // Wolmart.initScrollTopButton();                                      // Initialize scroll top button
         Wolmart.shop.init();                                                // Initialize Shop
         Wolmart.alert('.alert')                                             // Initialize Alert
         Wolmart.closeTopNotice('.banner-close');                            // Initialize Close Top Notice
