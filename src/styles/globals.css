@@ -5594,7 +5594,7 @@ select:focus::-ms-value {
     background-position: center;
     background-size: cover;
     border-radius: 1rem;
-    /* background-image: url(../../assets/images/newsletter-1.jpg); */
+    background-image: url(../../public/assets/images/newsletter-1.jpg);
 }
 .newsletter-popup .popup-media {
     margin-bottom: 1.7rem;
@@ -5804,7 +5804,7 @@ body .product-popup {
     max-width: 40rem;
     min-height: 40rem;
     padding: 0rem 2rem;
-    /* background-image: url(../../assets/images/newsletter-2.jpg); */
+    background-image: url(../../public/assets/images/newsletter-2.jpg);
     text-align: center;
     align-items: center;
 }
