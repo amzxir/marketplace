@@ -1,7 +1,9 @@
-import Banner from 'components/home/banner/banner'
+import DoubleBanner from 'components/home/banner/double-banner'
+import SingleBanner from 'components/home/banner/single-banner'
 import BoxWrapper from 'components/home/box-wrapper/box-wrapper'
-import Product from 'components/home/discount-product/product'
+import DiscountProduct from 'components/home/discount-product/product'
 import Feature from 'components/home/feature/feature'
+import AllProduct from 'components/home/product/product'
 import Slider from 'components/home/slider/slider'
 import Vendors from 'components/home/vendors/vendors'
 import Head from 'next/head'
@@ -20,8 +22,10 @@ export default function Home() {
         <Feature/>
         <BoxWrapper/>
         <Vendors/>
-        <Product/>
-        <Banner/>
+        <DiscountProduct/>
+        <SingleBanner/>
+        <AllProduct/>
+        <DoubleBanner/>
       </main>
     </>
   )
