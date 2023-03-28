@@ -3,59 +3,59 @@ import React from 'react'
 export default function Header() {
   return (
     <>
-      <h1 class="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
-      <header class="header">
-          <div class="header-top">
-              <div class="container">
-                  <div class="header-left">
-                      <p class="welcome-msg">Welcome to Wolmart Store message or remove it!</p>
+      <h1 className="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
+      <header className="header">
+          <div className="header-top">
+              <div className="container">
+                  <div className="header-left">
+                      <p className="welcome-msg">Welcome to Wolmart Store message or remove it!</p>
                   </div>
-                  <div class="header-right">
-                      <div class="dropdown">
+                  <div className="header-right">
+                      <div className="dropdown">
                           <a href="#currency">USD</a>
-                          <div class="dropdown-box">
+                          <div className="dropdown-box">
                               <a href="#USD">USD</a>
                               <a href="#EUR">EUR</a>
                           </div>
                       </div>
 
-                      <div class="dropdown">
+                      <div className="dropdown">
                           <a href="#language"><img src="assets/images/flags/eng.png" alt="ENG Flag" width="14"
-                                  height="8" class="dropdown-image" /> ENG</a>
-                          <div class="dropdown-box">
+                                  height="8" className="dropdown-image" /> ENG</a>
+                          <div className="dropdown-box">
                               <a href="#ENG">
                                   <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
-                                      class="dropdown-image" />
+                                      className="dropdown-image" />
                                   ENG
                               </a>
                               <a href="#FRA">
                                   <img src="assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
-                                      class="dropdown-image" />
+                                      className="dropdown-image" />
                                   FRA
                               </a>
                           </div>
                       </div>
-                      <span class="divider d-lg-show"></span>
-                      <a href="#" class="text-normal d-lg-show">Sell on Wolmart</a>
-                      <a href="my-account.html" class="d-lg-show">My Account</a>
-                      <a href="assets/ajax/login.html" class="d-lg-show login sign-in"><i
-                              class="w-icon-account"></i>Sign In</a>
-                      <span class="delimiter d-lg-show">/</span>
-                      <a href="assets/ajax/login.html" class="ml-0 d-lg-show login register">Register</a>
+                      <span className="divider d-lg-show"></span>
+                      <a href="#" className="text-normal d-lg-show">Sell on Wolmart</a>
+                      <a href="my-account.html" className="d-lg-show">My Account</a>
+                      <a href="assets/ajax/login.html" className="d-lg-show login sign-in"><i
+                              className="w-icon-account"></i>Sign In</a>
+                      <span className="delimiter d-lg-show">/</span>
+                      <a href="assets/ajax/login.html" className="ml-0 d-lg-show login register">Register</a>
                   </div>
               </div>
           </div>
 
-          <div class="header-middle">
-              <div class="container">
-                  <div class="header-left mr-md-4">
-                      <a href="#" class="mobile-menu-toggle  w-icon-hamburger" aria-label="menu-toggle">
+          <div className="header-middle">
+              <div className="container">
+                  <div className="header-left mr-md-4">
+                      <a href="#" className="mobile-menu-toggle  w-icon-hamburger" aria-label="menu-toggle">
                       </a>
-                      <a href="demo9.html" class="logo ml-lg-0">
+                      <a href="demo9.html" className="logo ml-lg-0">
                           <img src="assets/images/demos/demo9/header-logo.png" alt="logo" width="144" height="45" />
                       </a>
-                      <form method="get" action="#" class="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
-                          <div class="select-box">
+                      <form method="get" action="#" className="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
+                          <div className="select-box">
                               <select id="category" name="category">
                                   <option value="">All Categories</option>
                                   <option value="4">Fashion</option>
@@ -69,95 +69,95 @@ export default function Header() {
                                   <option value="12">Clothing</option>
                               </select>
                           </div>
-                          <input type="text" class="form-control" name="search" id="search"
+                          <input type="text" className="form-control" name="search" id="search"
                               placeholder="Search in..." required />
-                          <button class="btn btn-search" type="submit"><i class="w-icon-search"></i>
+                          <button className="btn btn-search" type="submit"><i className="w-icon-search"></i>
                           </button>
                       </form>
                   </div>
-                  <div class="header-right ml-4">
-                      <div class="header-call d-xs-show d-lg-flex align-items-center">
-                          <a href="tel:#" class="w-icon-call"></a>
-                          <div class="call-info d-lg-show">
-                              <h4 class="chat font-weight-normal font-size-md text-normal ls-normal text-light mb-0">
-                                  <a href="mailto:#" class="text-capitalize">Live Chat</a> or :</h4>
-                              <a href="tel:#" class="phone-number font-weight-bolder ls-50">0(800)123-456</a>
+                  <div className="header-right ml-4">
+                      <div className="header-call d-xs-show d-lg-flex align-items-center">
+                          <a href="tel:#" className="w-icon-call"></a>
+                          <div className="call-info d-lg-show">
+                              <h4 className="chat font-weight-normal font-size-md text-normal ls-normal text-light mb-0">
+                                  <a href="mailto:#" className="text-capitalize">Live Chat</a> or :</h4>
+                              <a href="tel:#" className="phone-number font-weight-bolder ls-50">0(800)123-456</a>
                           </div>
                       </div>
-                      <a class="wishlist label-down link d-xs-show" href="wishlist.html">
-                          <i class="w-icon-heart"></i>
-                          <span class="wishlist-label d-lg-show">Wishlist</span>
+                      <a className="wishlist label-down link d-xs-show" href="wishlist.html">
+                          <i className="w-icon-heart"></i>
+                          <span className="wishlist-label d-lg-show">Wishlist</span>
                       </a>
-                      <a class="compare label-down link d-xs-show" href="compare.html">
-                          <i class="w-icon-compare"></i>
-                          <span class="compare-label d-lg-show">Compare</span>
+                      <a className="compare label-down link d-xs-show" href="compare.html">
+                          <i className="w-icon-compare"></i>
+                          <span className="compare-label d-lg-show">Compare</span>
                       </a>
-                      <div class="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
-                          <div class="cart-overlay"></div>
-                          <a href="#" class="cart-toggle label-down link">
-                              <i class="w-icon-cart">
-                                  <span class="cart-count">2</span>
+                      <div className="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
+                          <div className="cart-overlay"></div>
+                          <a href="#" className="cart-toggle label-down link">
+                              <i className="w-icon-cart">
+                                  <span className="cart-count">2</span>
                               </i>
-                              <span class="cart-label">Cart</span>
+                              <span className="cart-label">Cart</span>
                           </a>
-                          <div class="dropdown-box">
-                              <div class="cart-header">
+                          <div className="dropdown-box">
+                              <div className="cart-header">
                                   <span>Shopping Cart</span>
-                                  <a href="#" class="btn-close">Close<i class="w-icon-long-arrow-right"></i></a>
+                                  <a href="#" className="btn-close">Close<i className="w-icon-long-arrow-right"></i></a>
                               </div>
 
-                              <div class="products">
-                                  <div class="product product-cart">
-                                      <div class="product-detail">
-                                          <a href="product-default.html" class="product-name">Beige knitted
+                              <div className="products">
+                                  <div className="product product-cart">
+                                      <div className="product-detail">
+                                          <a href="product-default.html" className="product-name">Beige knitted
                                               elas<br/>tic
                                               runner shoes</a>
-                                          <div class="price-box">
-                                              <span class="product-quantity">1</span>
-                                              <span class="product-price">$25.68</span>
+                                          <div className="price-box">
+                                              <span className="product-quantity">1</span>
+                                              <span className="product-price">$25.68</span>
                                           </div>
                                       </div>
-                                      <figure class="product-media">
+                                      <figure className="product-media">
                                           <a href="product-default.html">
                                               <img src="assets/images/cart/product-1.jpg" alt="product" height="84"
                                                   width="94" />
                                           </a>
                                       </figure>
-                                      <button class="btn btn-link btn-close" aria-label="button">
-                                          <i class="fas fa-times"></i>
+                                      <button className="btn btn-link btn-close" aria-label="button">
+                                          <i className="fas fa-times"></i>
                                       </button>
                                   </div>
 
-                                  <div class="product product-cart">
-                                      <div class="product-detail">
-                                          <a href="product-default.html" class="product-name">Blue utility
+                                  <div className="product product-cart">
+                                      <div className="product-detail">
+                                          <a href="product-default.html" className="product-name">Blue utility
                                               pina<br/>fore
                                               denim dress</a>
-                                          <div class="price-box">
-                                              <span class="product-quantity">1</span>
-                                              <span class="product-price">$32.99</span>
+                                          <div className="price-box">
+                                              <span className="product-quantity">1</span>
+                                              <span className="product-price">$32.99</span>
                                           </div>
                                       </div>
-                                      <figure class="product-media">
+                                      <figure className="product-media">
                                           <a href="product-default.html">
                                               <img src="assets/images/cart/product-2.jpg" alt="product" width="84"
                                                   height="94" />
                                           </a>
                                       </figure>
-                                      <button class="btn btn-link btn-close" aria-label="button">
-                                          <i class="fas fa-times"></i>
+                                      <button className="btn btn-link btn-close" aria-label="button">
+                                          <i className="fas fa-times"></i>
                                       </button>
                                   </div>
                               </div>
 
-                              <div class="cart-total">
+                              <div className="cart-total">
                                   <label>Subtotal:</label>
-                                  <span class="price">$58.67</span>
+                                  <span className="price">$58.67</span>
                               </div>
 
-                              <div class="cart-action">
-                                  <a href="cart.html" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
-                                  <a href="checkout.html" class="btn btn-primary  btn-rounded">Checkout</a>
+                              <div className="cart-action">
+                                  <a href="cart.html" className="btn btn-dark btn-outline btn-rounded">View Cart</a>
+                                  <a href="checkout.html" className="btn btn-primary  btn-rounded">Checkout</a>
                               </div>
                           </div>
                       </div>
@@ -165,29 +165,29 @@ export default function Header() {
               </div>
           </div>
 
-          <div class="header-bottom sticky-content fix-top sticky-header">
-              <div class="container">
-                  <div class="inner-wrap">
-                      <div class="header-left">
-                          <nav class="main-nav ml-0">
-                              <ul class="menu">
-                                  <li class="active">
+          <div className="header-bottom sticky-content fix-top sticky-header">
+              <div className="container">
+                  <div className="inner-wrap">
+                      <div className="header-left">
+                          <nav className="main-nav ml-0">
+                              <ul className="menu">
+                                  <li className="active">
                                       <a href="demo9.html">Home</a>
                                   </li>
                                   <li>
                                       <a href="demo9-shop.html">Shop</a>
 
-                                      <ul class="megamenu">
+                                      <ul className="megamenu">
                                           <li>
-                                              <h4 class="menu-title">Shop Pages</h4>
+                                              <h4 className="menu-title">Shop Pages</h4>
                                               <ul>
                                                   <li><a href="shop-banner-sidebar.html">Banner With Sidebar</a></li>
                                                   <li><a href="shop-boxed-banner.html">Boxed Banner</a></li>
                                                   <li><a href="shop-fullwidth-banner.html">Full Width Banner</a></li>
                                                   <li><a href="shop-horizontal-filter.html">Horizontal Filter<span
-                                                              class="tip tip-hot">Hot</span></a></li>
+                                                              className="tip tip-hot">Hot</span></a></li>
                                                   <li><a href="shop-off-canvas.html">Off Canvas Sidebar<span
-                                                              class="tip tip-new">New</span></a></li>
+                                                              className="tip tip-new">New</span></a></li>
                                                   <li><a href="shop-infinite-scroll.html">Infinite Ajax Scroll</a>
                                                   </li>
                                                   <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
@@ -195,7 +195,7 @@ export default function Header() {
                                               </ul>
                                           </li>
                                           <li>
-                                              <h4 class="menu-title">Shop Layouts</h4>
+                                              <h4 className="menu-title">Shop Layouts</h4>
                                               <ul>
                                                   <li><a href="shop-grid-3cols.html">3 Columns Mode</a></li>
                                                   <li><a href="shop-grid-4cols.html">4 Columns Mode</a></li>
@@ -208,7 +208,7 @@ export default function Header() {
                                               </ul>
                                           </li>
                                           <li>
-                                              <h4 class="menu-title">Product Pages</h4>
+                                              <h4 className="menu-title">Product Pages</h4>
                                               <ul>
                                                   <li><a href="product-variable.html">Variable Product</a></li>
                                                   <li><a href="product-featured.html">Featured &amp; Sale</a></li>
@@ -219,14 +219,14 @@ export default function Header() {
                                                   </li>
                                                   <li><a href="product-without-sidebar.html">Without Sidebar</a></li>
                                                   <li><a href="product-video.html">360<sup>o</sup> &amp; Video<span
-                                                              class="tip tip-new">New</span></a></li>
+                                                              className="tip tip-new">New</span></a></li>
                                               </ul>
                                           </li>
                                           <li>
-                                              <h4 class="menu-title">Product Layouts</h4>
+                                              <h4 className="menu-title">Product Layouts</h4>
                                               <ul>
                                                   <li><a href="product-default.html">Default<span
-                                                              class="tip tip-hot">Hot</span></a></li>
+                                                              className="tip tip-hot">Hot</span></a></li>
                                                   <li><a href="product-vertical.html">Vertical Thumbs</a></li>
                                                   <li><a href="product-grid.html">Grid Images</a></li>
                                                   <li><a href="product-masonry.html">Masonry</a></li>
@@ -346,75 +346,75 @@ export default function Header() {
                               </ul>
                           </nav>
                       </div>
-                      <div class="header-right">
-                          <a href="#" class="d-xl-show"><i class="w-icon-map-marker mr-1"></i>Track Order</a>
-                          <a href="#"><i class="w-icon-sale"></i>Daily Deals</a>
+                      <div className="header-right">
+                          <a href="#" className="d-xl-show"><i className="w-icon-map-marker mr-1"></i>Track Order</a>
+                          <a href="#"><i className="w-icon-sale"></i>Daily Deals</a>
                       </div>
                   </div>
               </div>
           </div>
 
-          <div class="container d-lg-show">
-              <div class="inner-wrap">
-                  <ul class="menu horizontal-menu category-menu">
+          <div className="container d-lg-show">
+              <div className="inner-wrap">
+                  <ul className="menu horizontal-menu category-menu">
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-electronics"></i>Computers
+                              <i className="w-icon-electronics"></i>Computers
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-tshirt"></i>Clothings
+                              <i className="w-icon-tshirt"></i>Clothings
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-sofa"></i>Furniture
+                              <i className="w-icon-sofa"></i>Furniture
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-bridge-lamp"></i>Electrolier
+                              <i className="w-icon-bridge-lamp"></i>Electrolier
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-headphone"></i>Headphone
+                              <i className="w-icon-headphone"></i>Headphone
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-bag"></i>Office
+                              <i className="w-icon-bag"></i>Office
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-camera"></i>Electronics
+                              <i className="w-icon-camera"></i>Electronics
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-android"></i>Smartphone
+                              <i className="w-icon-android"></i>Smartphone
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-rice-cooker"></i>Cooker
+                              <i className="w-icon-rice-cooker"></i>Cooker
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-return"></i>Accessories
+                              <i className="w-icon-return"></i>Accessories
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-furniture"></i>Freezer
+                              <i className="w-icon-furniture"></i>Freezer
                           </a>
                       </li>
                       <li>
                           <a href="demo9-shop.html">
-                              <i class="w-icon-dots-circle"></i>All Categories
+                              <i className="w-icon-dots-circle"></i>All Categories
                           </a>
                       </li>
                   </ul>
