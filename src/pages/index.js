@@ -1,5 +1,6 @@
-import Feature from 'components/feature/feature'
-import Slider from 'components/slider/slider'
+import BoxWrapper from 'components/home/box-wrapper/box-wrapper'
+import Feature from 'components/home/feature/feature'
+import Slider from 'components/home/slider/slider'
 import Head from 'next/head'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="main">
         <Slider/>
         <Feature/>
+        <BoxWrapper/>
       </main>
     </>
   )
