@@ -5,6 +5,7 @@ import DiscountProduct from 'components/home/discount-product/product'
 import Feature from 'components/home/feature/feature'
 import AllProduct from 'components/home/product/product'
 import Slider from 'components/home/slider/slider'
+import TopProduct from 'components/home/top-product/product'
 import Vendors from 'components/home/vendors/vendors'
 import Head from 'next/head'
 
@@ -26,6 +27,8 @@ export default function Home() {
         <SingleBanner/>
         <AllProduct/>
         <DoubleBanner/>
+        <AllProduct/>
+        <TopProduct/>
       </main>
     </>
   )
