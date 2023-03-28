@@ -2,6 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 import Footer from 'components/footer/footer'
 import Header from 'components/header/header'
 import HeadMeta from 'components/head-meta/head-meta'
+import Menu from 'components/mobile-menu/menu'
 
 export default function Document() {
   return (
@@ -12,6 +13,7 @@ export default function Document() {
       <body className='home'>
         <div className='page-wrapper'>
           <Header/>
+          <Menu/>
             <Main/>
           <Footer/>
         </div>
