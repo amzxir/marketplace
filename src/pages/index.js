@@ -1,4 +1,5 @@
 import BoxWrapper from 'components/home/box-wrapper/box-wrapper'
+import Product from 'components/home/discount-product/product'
 import Feature from 'components/home/feature/feature'
 import Slider from 'components/home/slider/slider'
 import Vendors from 'components/home/vendors/vendors'
@@ -18,6 +19,7 @@ export default function Home() {
         <Feature/>
         <BoxWrapper/>
         <Vendors/>
+        <Product/>
       </main>
     </>
   )
