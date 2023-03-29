@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -36,7 +37,7 @@ export default function Footer() {
                       <div className="col-lg-4 col-sm-6">
                           <div className="widget widget-about">
                               <Link href="/" className="logo-footer">
-                                  <img src="assets/images/demos/demo9/footer-logo.png" alt="logo-footer" width="144"height="45" />
+                                  <Image src="/assets/images/demos/demo9/footer-logo.png" alt="logo-footer" width={144} height={45} />
                               </Link>
                               <div className="widget-body">
                                   <p className="widget-about-title">سوال دارید؟ 24/7 با ما تماس بگیرید</p>
