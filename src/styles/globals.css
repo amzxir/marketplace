@@ -7239,7 +7239,7 @@ body .product-popup {
     font-size: 1.4rem;
     width: 32px;
     height: 32px;
-    margin: 2px 10px 2px 0;
+    margin: 2px 0 2px 10px;
     line-height: 28px;
     border: 2px solid #ccc;
     border-radius: 50%;
@@ -11699,14 +11699,14 @@ body .product-popup {
     padding: 2.8rem 0;
 }
 .footer-newsletter .icon-box-side {
-    justify-content: left;
+    justify-content: right;
 }
 .footer-newsletter .icon-box-title {
     margin-bottom: 0.2rem;
     font-size: 1.6rem;
 }
 .footer-newsletter .icon-box-icon {
-    margin-right: 2rem;
+    margin-left: 2rem;
     margin-bottom: 0.4rem;
 }
 .footer-newsletter .icon-box-icon i {
@@ -11721,7 +11721,7 @@ body .product-popup {
     padding: 0.93em 1.85em;
 }
 .footer-newsletter .btn i {
-    margin: -0.2rem 0 0 0.9rem;
+    margin: -0.2rem 0.9rem 0 0;
     font-size: 1.6rem;
 }
 .footer-top {
@@ -11763,6 +11763,7 @@ body .product-popup {
 .footer-bottom, .footer-bottom .container, .footer-bottom .container-fluid {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .footer-bottom .footer-left, .footer-bottom .footer-right {
     display: flex;
