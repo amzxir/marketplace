@@ -1,22 +1,51 @@
-import React from 'react'
+import { useState } from 'react';
+import Link from 'next/link'
 
 export default function Header() {
+
+    // shop categories data
+    const shopCategory = [
+        {id:1 , name:'صفحات فروشگاه' , category:['لورم1' , 'لورم2' , 'لورم3' , 'لورم4' , 'لورم5' , 'لورم6' , 'لورم7']},
+        {id:2 , name:'طرح بندی فروشگاه' , category:['لورم1' , 'لورم2' , 'لورم3' , 'لورم4' , 'لورم5' , 'لورم6' , 'لورم7']},
+        {id:3 , name:'صفحات فروشگاه' , category:['لورم1' , 'لورم2' , 'لورم3' , 'لورم4' , 'لورم5' , 'لورم6' , 'لورم7']},
+        {id:4 , name:'طرح بندی فروشگاه' , category:['لورم1' , 'لورم2' , 'لورم3' , 'لورم4' , 'لورم5' , 'لورم6' , 'لورم7']},
+    ]
+    const [category, setCategory] = useState(shopCategory);
+
+    // vendor category data
+    const vendorCategory = [
+        {id:1 , name:'1فهرست فروشگاه' , category:['فهرست فروشگاه 1' , 'فهرست فروشگاه 2' , 'فهرست فروشگاه 3' , 'فهرست فروشگاه 4']},
+        {id:2 , name:'2فهرست فروشگاه' , category:['فهرست فروشگاه 1' , 'فهرست فروشگاه 2' , 'فهرست فروشگاه 3' , 'فهرست فروشگاه 4']},
+        {id:3 , name:'3فهرست فروشگاه' , category:['فهرست فروشگاه 1' , 'فهرست فروشگاه 2' , 'فهرست فروشگاه 3']},
+    ]
+    const [vendors, setVendors] = useState(vendorCategory);
+
+    // navbar categories
+    const caregories = [
+        {id:1 , name:'کامپیوترها' , icon:'w-icon-electronics'},
+        {id:1 , name:'لباس' , icon:'w-icon-tshirt'},
+        {id:1 , name:'مبلمان' , icon:'w-icon-sofa'},
+        {id:1 , name:'برق' , icon:'w-icon-bridge-lamp'},
+        {id:1 , name:'هدفون' , icon:'w-icon-headphone'},
+        {id:1 , name:'دفتر' , icon:'w-icon-bag'},
+        {id:1 , name:'الکترونیک' , icon:'w-icon-camera'},
+        {id:1 , name:'موبایل' , icon:'w-icon-android'},
+        {id:1 , name:'اجاق گاز' , icon:'w-icon-rice-cooker'},
+        {id:1 , name:'تجهیزات جانبی' , icon:'w-icon-return'},
+        {id:1 , name:'فریزر' , icon:'w-icon-furniture'},
+    ]
+
+
   return (
     <>
-      <h1 className="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
       <header className="header">
 
           <div className="header-top">
               <div className="container">
                   <div className="header-left">
-                      <div className="dropdown">
-                          <a href="#currency">USD</a>
-                          <div className="dropdown-box">
-                              <a href="#USD">USD</a>
-                              <a href="#EUR">EUR</a>
-                          </div>
-                      </div>
-
+                      <p className="welcome-msg">به فروشگاه لورم خوش آمدید</p>
+                  </div>
+                  <div className="header-right">
                       <div className="dropdown">
                           <a href="#language"><img src="assets/images/flags/eng.png" alt="ENG Flag" width="14"
                                   height="8" className="dropdown-image" /> ENG</a>
@@ -34,31 +63,53 @@ export default function Header() {
                           </div>
                       </div>
                       <span className="divider d-lg-show"></span>
-                      <a href="#" className="text-normal d-lg-show">Sell on Wolmart</a>
-                      <a href="my-account.html" className="d-lg-show">My Account</a>
-                      <a href="assets/ajax/login.html" className="d-lg-show login sign-in"><i
-                              className="w-icon-account"></i>Sign In</a>
+                      <Link href="/" className="d-lg-show">ناحیه کاربری</Link>
+                      <Link href="/auth/login" className="d-lg-show login sign-in"><i className="w-icon-account"></i>ورود</Link>
                       <span className="delimiter d-lg-show">/</span>
-                      <a href="assets/ajax/login.html" className="ml-0 d-lg-show login register">Register</a>
-                  </div>
-                  <div className="header-right">
-                      <p className="welcome-msg">به فروشگاه لورم خوش آمدید</p>
+                      <Link href="/auth/register" className="ml-0 d-lg-show login register">ثبت نام</Link>
                   </div>
               </div>
           </div>
 
           <div className="header-middle">
               <div className="container">
-                  <div className="header-left mr-md-4">
-                      <a href="#" className="mobile-menu-toggle  w-icon-hamburger" aria-label="menu-toggle">
-                      </a>
-                      <a href="demo9.html" className="logo ml-lg-0">
+                  <div className="header-right mr-md-4 rtl">
+                      <div className="header-call d-xs-show d-lg-flex align-items-center">
+                          <a href="tel:#" className="w-icon-call"></a>
+                          <div className="call-info d-lg-show">
+                              <h4 className="chat font-weight-normal font-size-md text-normal ls-normal text-light mb-0">
+                                  <span className="text-capitalize text-dark">تماس با ما</span></h4>
+                              <a href="tel:#" className="phone-number font-weight-bolder ls-50">0919995465</a>
+                          </div>
+                      </div>
+                      <Link className="wishlist label-down link d-xs-show" href="/">
+                          <i className="w-icon-heart"></i>
+                          <span className="wishlist-label d-lg-show">علاقه مندی ها</span>
+                      </Link>
+                      <Link className="compare label-down link d-xs-show" href="/">
+                          <i className="w-icon-compare"></i>
+                          <span className="compare-label d-lg-show">مقایسه</span>
+                      </Link>
+                      <div className="dropdown cart-dropdown cart-offcanvas ml-0 ml-lg-2">
+                          <div className="cart-overlay"></div>
+                          <Link href="#" className="cart-toggle label-down link">
+                              <i className="w-icon-cart">
+                                  <span className="cart-count">2</span>
+                              </i>
+                              <span className="cart-label">سبد خرید</span>
+                          </Link>
+                      </div>
+                  </div>
+                  <div className="header-left ml-4 rtl">
+                      <Link href="#" className="mobile-menu-toggle  w-icon-hamburger ml-4" aria-label="menu-toggle">
+                      </Link>
+                      <Link href="/" className="logo ml-lg-0">
                           <img src="assets/images/demos/demo9/header-logo.png" alt="logo" width="144" height="45" />
-                      </a>
-                      <form method="get" action="#" className="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
+                      </Link>
+                      <form className="input-wrapper header-search hs-expanded hs-round d-none d-md-flex rtl">
                           <div className="select-box">
                               <select id="category" name="category">
-                                  <option value="">All Categories</option>
+                                  <option value="">همه دسته بندی ها</option>
                                   <option value="4">Fashion</option>
                                   <option value="5">Furniture</option>
                                   <option value="6">Shoes</option>
@@ -70,353 +121,100 @@ export default function Header() {
                                   <option value="12">Clothing</option>
                               </select>
                           </div>
-                          <input type="text" className="form-control" name="search" id="search"
-                              placeholder="Search in..." required />
+                          <input type="text" className="form-control" placeholder="جستجو کنید ..." required />
                           <button className="btn btn-search" type="submit"><i className="w-icon-search"></i>
                           </button>
                       </form>
                   </div>
-                  <div className="header-right ml-4">
-                      <div className="header-call d-xs-show d-lg-flex align-items-center">
-                          <a href="tel:#" className="w-icon-call"></a>
-                          <div className="call-info d-lg-show">
-                              <h4 className="chat font-weight-normal font-size-md text-normal ls-normal text-light mb-0">
-                                  <a href="mailto:#" className="text-capitalize">Live Chat</a> or :</h4>
-                              <a href="tel:#" className="phone-number font-weight-bolder ls-50">0(800)123-456</a>
-                          </div>
-                      </div>
-                      <a className="wishlist label-down link d-xs-show" href="wishlist.html">
-                          <i className="w-icon-heart"></i>
-                          <span className="wishlist-label d-lg-show">Wishlist</span>
-                      </a>
-                      <a className="compare label-down link d-xs-show" href="compare.html">
-                          <i className="w-icon-compare"></i>
-                          <span className="compare-label d-lg-show">Compare</span>
-                      </a>
-                      <div className="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
-                          <div className="cart-overlay"></div>
-                          <a href="#" className="cart-toggle label-down link">
-                              <i className="w-icon-cart">
-                                  <span className="cart-count">2</span>
-                              </i>
-                              <span className="cart-label">Cart</span>
-                          </a>
-                          <div className="dropdown-box">
-                              <div className="cart-header">
-                                  <span>Shopping Cart</span>
-                                  <a href="#" className="btn-close">Close<i className="w-icon-long-arrow-right"></i></a>
-                              </div>
-
-                              <div className="products">
-                                  <div className="product product-cart">
-                                      <div className="product-detail">
-                                          <a href="product-default.html" className="product-name">Beige knitted
-                                              elas<br/>tic
-                                              runner shoes</a>
-                                          <div className="price-box">
-                                              <span className="product-quantity">1</span>
-                                              <span className="product-price">$25.68</span>
-                                          </div>
-                                      </div>
-                                      <figure className="product-media">
-                                          <a href="product-default.html">
-                                              <img src="assets/images/cart/product-1.jpg" alt="product" height="84"
-                                                  width="94" />
-                                          </a>
-                                      </figure>
-                                      <button className="btn btn-link btn-close" aria-label="button">
-                                          <i className="fas fa-times"></i>
-                                      </button>
-                                  </div>
-
-                                  <div className="product product-cart">
-                                      <div className="product-detail">
-                                          <a href="product-default.html" className="product-name">Blue utility
-                                              pina<br/>fore
-                                              denim dress</a>
-                                          <div className="price-box">
-                                              <span className="product-quantity">1</span>
-                                              <span className="product-price">$32.99</span>
-                                          </div>
-                                      </div>
-                                      <figure className="product-media">
-                                          <a href="product-default.html">
-                                              <img src="assets/images/cart/product-2.jpg" alt="product" width="84"
-                                                  height="94" />
-                                          </a>
-                                      </figure>
-                                      <button className="btn btn-link btn-close" aria-label="button">
-                                          <i className="fas fa-times"></i>
-                                      </button>
-                                  </div>
-                              </div>
-
-                              <div className="cart-total">
-                                  <label>Subtotal:</label>
-                                  <span className="price">$58.67</span>
-                              </div>
-
-                              <div className="cart-action">
-                                  <a href="cart.html" className="btn btn-dark btn-outline btn-rounded">View Cart</a>
-                                  <a href="checkout.html" className="btn btn-primary  btn-rounded">Checkout</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+ 
               </div>
           </div>
 
-          <div className="header-bottom sticky-content fix-top sticky-header">
+          <div className="header-bottom sticky-content fix-top sticky-header rtl">
               <div className="container">
                   <div className="inner-wrap">
-                      <div className="header-left">
+                      <div className="header-right">
                           <nav className="main-nav ml-0">
                               <ul className="menu">
                                   <li className="active">
-                                      <a href="demo9.html">Home</a>
+                                      <Link href="/">خانه</Link>
                                   </li>
                                   <li>
-                                      <a href="demo9-shop.html">Shop</a>
+                                      <Link href="#">فروشگاه ها</Link>
 
                                       <ul className="megamenu">
-                                          <li>
-                                              <h4 className="menu-title">Shop Pages</h4>
-                                              <ul>
-                                                  <li><a href="shop-banner-sidebar.html">Banner With Sidebar</a></li>
-                                                  <li><a href="shop-boxed-banner.html">Boxed Banner</a></li>
-                                                  <li><a href="shop-fullwidth-banner.html">Full Width Banner</a></li>
-                                                  <li><a href="shop-horizontal-filter.html">Horizontal Filter<span
-                                                              className="tip tip-hot">Hot</span></a></li>
-                                                  <li><a href="shop-off-canvas.html">Off Canvas Sidebar<span
-                                                              className="tip tip-new">New</span></a></li>
-                                                  <li><a href="shop-infinite-scroll.html">Infinite Ajax Scroll</a>
-                                                  </li>
-                                                  <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                                  <li><a href="shop-both-sidebar.html">Both Sidebar</a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <h4 className="menu-title">Shop Layouts</h4>
-                                              <ul>
-                                                  <li><a href="shop-grid-3cols.html">3 Columns Mode</a></li>
-                                                  <li><a href="shop-grid-4cols.html">4 Columns Mode</a></li>
-                                                  <li><a href="shop-grid-5cols.html">5 Columns Mode</a></li>
-                                                  <li><a href="shop-grid-6cols.html">6 Columns Mode</a></li>
-                                                  <li><a href="shop-grid-7cols.html">7 Columns Mode</a></li>
-                                                  <li><a href="shop-grid-8cols.html">8 Columns Mode</a></li>
-                                                  <li><a href="shop-list.html">List Mode</a></li>
-                                                  <li><a href="shop-list-sidebar.html">List Mode With Sidebar</a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <h4 className="menu-title">Product Pages</h4>
-                                              <ul>
-                                                  <li><a href="product-variable.html">Variable Product</a></li>
-                                                  <li><a href="product-featured.html">Featured &amp; Sale</a></li>
-                                                  <li><a href="product-accordion.html">Data In Accordion</a></li>
-                                                  <li><a href="product-section.html">Data In Sections</a></li>
-                                                  <li><a href="product-swatch.html">Image Swatch</a></li>
-                                                  <li><a href="product-extended.html">Extended Info</a>
-                                                  </li>
-                                                  <li><a href="product-without-sidebar.html">Without Sidebar</a></li>
-                                                  <li><a href="product-video.html">360<sup>o</sup> &amp; Video<span
-                                                              className="tip tip-new">New</span></a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <h4 className="menu-title">Product Layouts</h4>
-                                              <ul>
-                                                  <li><a href="product-default.html">Default<span
-                                                              className="tip tip-hot">Hot</span></a></li>
-                                                  <li><a href="product-vertical.html">Vertical Thumbs</a></li>
-                                                  <li><a href="product-grid.html">Grid Images</a></li>
-                                                  <li><a href="product-masonry.html">Masonry</a></li>
-                                                  <li><a href="product-gallery.html">Gallery</a></li>
-                                                  <li><a href="product-sticky-info.html">Sticky Info</a></li>
-                                                  <li><a href="product-sticky-thumb.html">Sticky Thumbs</a></li>
-                                                  <li><a href="product-sticky-both.html">Sticky Both</a></li>
-                                              </ul>
-                                          </li>
-                                      </ul>
-                                  </li>
-                                  <li>
-                                      <a href="vendor-dokan-store.html">Vendor</a>
-                                      <ul>
-                                          <li>
-                                              <a href="vendor-dokan-store-list.html">Store Listing</a>
-                                              <ul>
-                                                  <li><a href="vendor-dokan-store-list.html">Store listing 1</a></li>
-                                                  <li><a href="vendor-wcfm-store-list.html">Store listing 2</a></li>
-                                                  <li><a href="vendor-wcmp-store-list.html">Store listing 3</a></li>
-                                                  <li><a href="vendor-wc-store-list.html">Store listing 4</a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <a href="vendor-dokan-store.html">Vendor Store</a>
-                                              <ul>
-                                                  <li><a href="vendor-dokan-store.html">Vendor Store 1</a></li>
-                                                  <li><a href="vendor-wcfm-store-product-grid.html">Vendor Store 2</a>
-                                                  </li>
-                                                  <li><a href="vendor-wcmp-store-product-grid.html">Vendor Store 3</a>
-                                                  </li>
-                                                  <li><a href="vendor-wc-store-product-grid.html">Vendor Store 4</a>
-                                                  </li>
-                                              </ul>
-                                          </li>
-                                      </ul>
-                                  </li>
-                                  <li>
-                                      <a href="blog.html">Blog</a>
-                                      <ul>
-                                          <li><a href="blog.html">Classic</a></li>
-                                          <li><a href="blog-listing.html">Listing</a></li>
-                                          <li>
-                                              <a href="blog-grid-3cols.html">Grid</a>
-                                              <ul>
-                                                  <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
-                                                  <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
-                                                  <li><a href="blog-grid-4cols.html">Grid 4 columns</a></li>
-                                                  <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <a href="blog-masonry-3cols.html">Masonry</a>
-                                              <ul>
-                                                  <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
-                                                  <li><a href="blog-masonry-3cols.html">Masonry 3 columns</a></li>
-                                                  <li><a href="blog-masonry-4cols.html">Masonry 4 columns</a></li>
-                                                  <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <a href="blog-mask-grid.html">Mask</a>
-                                              <ul>
-                                                  <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
-                                                  <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
-                                              </ul>
-                                          </li>
-                                          <li>
-                                              <a href="post-single.html">Single Post</a>
-                                          </li>
-                                      </ul>
-                                  </li>
-                                  <li>
-                                      <a href="about-us.html">Pages</a>
-                                      <ul>
 
-                                          <li><a href="about-us.html">About Us</a></li>
-                                          <li><a href="become-a-vendor.html">Become A Vendor</a></li>
-                                          <li><a href="contact-us.html">Contact Us</a></li>
-                                          <li><a href="faq.html">FAQs</a></li>
-                                          <li><a href="error-404.html">Error 404</a></li>
-                                          <li><a href="coming-soon.html">Coming Soon</a></li>
-                                          <li><a href="wishlist.html">Wishlist</a></li>
-                                          <li><a href="cart.html">Cart</a></li>
-                                          <li><a href="checkout.html">Checkout</a></li>
-                                          <li><a href="my-account.html">My Account</a></li>
-                                          <li><a href="compare.html">Compare</a></li>
-                                      </ul>
-                                  </li>
-                                  <li>
-                                      <a href="elements.html">Elements</a>
-                                      <ul>
-                                          <li><a href="element-accordions.html">Accordions</a></li>
-                                          <li><a href="element-alerts.html">Alert &amp; Notification</a></li>
-                                          <li><a href="element-blog-posts.html">Blog Posts</a></li>
-                                          <li><a href="element-buttons.html">Buttons</a></li>
-                                          <li><a href="element-cta.html">Call to Action</a></li>
-                                          <li><a href="element-icons.html">Icons</a></li>
-                                          <li><a href="element-icon-boxes.html">Icon Boxes</a></li>
-                                          <li><a href="element-instagrams.html">Instagrams</a></li>
-                                          <li><a href="element-categories.html">Product Category</a></li>
-                                          <li><a href="element-products.html">Products</a></li>
-                                          <li><a href="element-tabs.html">Tabs</a></li>
-                                          <li><a href="element-testimonials.html">Testimonials</a></li>
-                                          <li><a href="element-titles.html">Titles</a></li>
-                                          <li><a href="element-typography.html">Typography</a></li>
+                                        {category.map((i , index)=> {
+                                            return(
+                                                <li key={index}>
+                                                    <h4 className="menu-title">{i.name}</h4>
+                                                    <ul>
+                                                        {i.category.map((i , index)=> {
+                                                            return(
+                                                                <li key={index}><Link href="#">{i}</Link></li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </li>
+                                            )
+                                        })}
 
-                                          <li><a href="element-vendors.html">Vendors</a></li>
                                       </ul>
                                   </li>
                                   <li>
-                                      <a href="#">Features</a>
+                                      <Link href="#">فروشنده</Link>
+                                      <ul>
+                                        {vendors.map((i , index) => {
+                                            return(
+                                                <li key={index}>
+                                                    <Link href="#">{i.name}</Link>
+                                                    <ul>
+                                                        {i.category.map((i , index)=> {
+                                                            return(
+                                                                <li key={index}><Link href="#">{i}</Link></li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </li>
+                                            )
+                                        })}
+                                      </ul>
                                   </li>
                                   <li>
-                                      <a href="https://d-themes.com/buynow/wolmartwp">Buy Wolmart</a>
+                                      <Link href="#">درباره ما</Link>
+                                  </li>
+                                  <li>
+                                      <Link href="#">تماس با ما</Link>
                                   </li>
                               </ul>
                           </nav>
                       </div>
-                      <div className="header-right">
-                          <a href="#" className="d-xl-show"><i className="w-icon-map-marker mr-1"></i>Track Order</a>
-                          <a href="#"><i className="w-icon-sale"></i>Daily Deals</a>
+                      <div className="header-left">
+                          <Link href="#" className="d-xl-show ml-3"><i className="w-icon-map-marker mr-1"></i> سفارشات </Link>
+                          <Link href="#"><i className="w-icon-sale"></i> معاملات روزانه </Link>
                       </div>
                   </div>
               </div>
           </div>
 
-          <div className="container d-lg-show">
+          <div className="container d-lg-show rtl">
               <div className="inner-wrap">
                   <ul className="menu horizontal-menu category-menu">
+
+                    {caregories.map((i , index)=> {
+                        return(
+                            <li key={index}>
+                                <Link href="#">
+                                    <i className={i.icon}></i>{i.name}
+                                </Link>
+                            </li>
+                        )
+                    })}
+
                       <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-electronics"></i>Computers
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-tshirt"></i>Clothings
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-sofa"></i>Furniture
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-bridge-lamp"></i>Electrolier
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-headphone"></i>Headphone
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-bag"></i>Office
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-camera"></i>Electronics
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-android"></i>Smartphone
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-rice-cooker"></i>Cooker
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-return"></i>Accessories
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-furniture"></i>Freezer
-                          </a>
-                      </li>
-                      <li>
-                          <a href="demo9-shop.html">
-                              <i className="w-icon-dots-circle"></i>All Categories
-                          </a>
+                          <Link href="#">
+                              <i className="w-icon-dots-circle"></i>همه دسته بندی ها
+                          </Link>
                       </li>
                   </ul>
               </div>

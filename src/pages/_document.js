@@ -26,7 +26,7 @@ export default function Document() {
         <script  type="text/javascript" src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>
         <script  type="text/javascript" src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
         <script  type="text/javascript" src="/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script  type="text/javascript" src="/assets/vendor/skrollr/skrollr.min.js"></script>
+        {/* <script  type="text/javascript" src="/assets/vendor/skrollr/skrollr.min.js"></script> */}
         <script  type="text/javascript" src="/assets/vendor/jquery.countdown/jquery.countdown.min.js"></script>
         <script  type="text/javascript" src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>
         <script  type="text/javascript" src="/assets/vendor/zoom/jquery.zoom.js"></script>
