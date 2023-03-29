@@ -41,7 +41,8 @@
 .swiper-button-next:after, .swiper-button-prev:after {
     content: ""}
 .swiper-button-next:before, .swiper-button-prev:before {
-    font-family: "Wolmart"}
+    font-family: "YekanBakh-Black";
+    }
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
     cursor: default;
     color: #ccc;
@@ -308,7 +309,7 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: Poppins, sans-serif;
+    font-family: "YekanBakh-Black" !important;
     font-size: 1.4rem;
     line-height: 1.6;
     color: #666;
@@ -669,7 +670,7 @@ to {
     font-size: 2.4rem!important;
 }
 .font-primary {
-    font-family: Poppins, sans-serif!important;
+    font-family: "YekanBakh-Black" !important;
 }
 .font-secondary {
     font-family: "Arizonia", sans-serif!important;
@@ -801,7 +802,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0 0 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Poppins, sans-serif;
+    font-family: "YekanBakh-Black";
     font-weight: 700;
     line-height: 1.2;
     color: #333;
@@ -849,7 +850,7 @@ blockquote {
     left: 0;
     top: 1px;
     content: "";
-    font-family: "wolmart";
+    font-family: "YekanBakh-Black";
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -2718,7 +2719,7 @@ to {
     color: #666;
     outline: 0;
     border-radius: 0;
-    font-family: inherit;
+    font-family: "YekanBakh-Black";
     font-weight: 600;
     font-size: 1.4rem;
     padding: 0.93em 1.98em;
@@ -3405,7 +3406,7 @@ to {
     color: #999999;
     font-size: 1.3rem;
     font-weight: 600;
-    font-family: Poppins, sans-serif;
+    font-family: "YekanBakh-Black";
     line-height: 1.7;
     margin-bottom: 0.3rem;
 }
@@ -3539,7 +3540,7 @@ to {
 }
 .post-mask .post-comment:before {
     content: "";
-    font-family: "wolmart";
+    font-family: "YekanBakh-Black";
     position: absolute;
     font-size: 1.8rem;
     left: 0;
@@ -3631,7 +3632,8 @@ to {
     margin-left: 0.5rem;
     font-size: 1rem;
     font-weight: 500;
-    font-family: "wolmart"}
+    font-family: "YekanBakh-Black";
+}
 .breadcrumb li:not(:last-child):hover {
     opacity: 1;
 }
@@ -4339,7 +4341,10 @@ to {
     margin-bottom: 1.5rem;
     margin-right: 0;
 }
-}@font-face {
+
+}
+
+@font-face {
     font-family: "wolmart";
     src: url("../../public/assets/fonts/wolmart.eot?png09e");
     src: url("../../public/assets/fonts/wolmart.woff?png09e") format("woff"), url("../../public/assets/fonts/wolmart.eot?png09e#iefix") format("embedded-opentype"), url("../../public/assets/fonts/wolmart.ttf?png09e") format("truetype"), url("../../public/assets/fonts/wolmart.svg?png09e#wolmart") format("svg");
@@ -4347,6 +4352,39 @@ to {
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "YekanBakh-Black";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Black.woff");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "YekanBakh-Bold";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Bold.woff");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "YekanBakh-ExtraBlack";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-ExtraBlack.woff");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "YekanBakh-ExtraBold";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-ExtraBold.woff");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "YekanBakh-Light";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Light.woff");
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: "YekanBakh-Regular";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Regular.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 [class*=" w-icon-"], [class^=w-icon-] {
     font-family: "wolmart"!important;
     speak: never;

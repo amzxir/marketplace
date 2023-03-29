@@ -5,12 +5,10 @@ export default function Header() {
     <>
       <h1 className="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
       <header className="header">
+
           <div className="header-top">
               <div className="container">
                   <div className="header-left">
-                      <p className="welcome-msg">Welcome to Wolmart Store message or remove it!</p>
-                  </div>
-                  <div className="header-right">
                       <div className="dropdown">
                           <a href="#currency">USD</a>
                           <div className="dropdown-box">
@@ -42,6 +40,9 @@ export default function Header() {
                               className="w-icon-account"></i>Sign In</a>
                       <span className="delimiter d-lg-show">/</span>
                       <a href="assets/ajax/login.html" className="ml-0 d-lg-show login register">Register</a>
+                  </div>
+                  <div className="header-right">
+                      <p className="welcome-msg">به فروشگاه لورم خوش آمدید</p>
                   </div>
               </div>
           </div>

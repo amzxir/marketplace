@@ -10,7 +10,7 @@ export default function Menu() {
 
             <div className="mobile-menu-container scrollable">
                 <form action="#" method="get" className="input-wrapper">
-                    <input type="text" className="form-control" name="search" autocomplete="off" placeholder="Search"
+                    <input type="text" className="form-control" name="search"  placeholder="Search"
                         required />
                     <button className="btn btn-search" type="submit">
                         <i className="w-icon-search"></i>
