@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+
 
 export default function Slider() {
   return (
@@ -24,7 +26,7 @@ export default function Slider() {
                                 </div>
                             </div>
                             <figure className="slide-image skrollable slide-animate">
-                                <img src="assets/images/demos/demo9/slides/slide-image-1.png" alt="Banner"
+                                <Image src="/assets/images/demos/demo9/slides/slide-image-1.png" alt="Banner"
                                     data-bottom-top="transform: translatex(-10vh);"
                                     data-top-bottom="transform: translateX(10vh);" width="472" height="510"/>
                             </figure>
@@ -59,28 +61,28 @@ export default function Slider() {
                                 </div>
                             </div>
                             <figure className="slide-image skrollable slide-animate">
-                                <img src="assets/images/demos/demo9/slides/slide-image-3.png" alt="Banner"
+                                <Image src="/assets/images/demos/demo9/slides/slide-image-3.png" alt="Banner"
                                     data-bottom-top="transform: translatex(-10vh);"
                                     data-top-bottom="transform: translateX(10vh);" width="488" height="510"/>
                             </figure>
                         </div>
                     </div>
                 </div>
-                <div className="custom-dots swiper-img-dots appear-animate">
+                <div className="custom-dots swiper-img-dots">
                     <a href="#" className="active">
-                        <img src="/assets/images/demos/demo9/slides/dot-1.png" alt="Dot" width="70" height="70" />
+                        <Image src="/assets/images/demos/demo9/slides/dot-1.png" alt="Dot" width="70" height="70" />
                     </a>
                     <a href="#">
-                        <img src="/assets/images/demos/demo9/slides/dot-2.png" alt="Dot" width="70" height="70" />
+                        <Image src="/assets/images/demos/demo9/slides/dot-2.png" alt="Dot" width="70" height="70" />
                     </a>
                     <a href="#">
-                        <img src="assets/images/demos/demo9/slides/dot-3.png" alt="Dot" width="70" height="70" />
+                        <Image src="/assets/images/demos/demo9/slides/dot-3.png" alt="Dot" width="70" height="70" />
                     </a>
                     <a href="#">
-                        <img src="assets/images/demos/demo9/slides/dot-1.png" alt="Dot" width="70" height="70" />
+                        <Image src="/assets/images/demos/demo9/slides/dot-1.png" alt="Dot" width="70" height="70" />
                     </a>
                     <a href="#">
-                        <img src="assets/images/demos/demo9/slides/dot-2.png" alt="Dot" width="70" height="70" />
+                        <Image src="/assets/images/demos/demo9/slides/dot-2.png" alt="Dot" width="70" height="70" />
                     </a>
                 </div>
             </div>

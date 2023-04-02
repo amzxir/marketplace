@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import '/assets/vendor/fontawesome-free/css/all.min.css';
     .swiper {
     position: relative;
 }
@@ -41,7 +42,7 @@
 .swiper-button-next:after, .swiper-button-prev:after {
     content: ""}
 .swiper-button-next:before, .swiper-button-prev:before {
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
     }
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
     cursor: default;
@@ -305,13 +306,13 @@ html {
     font-weight: 400;
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "YekanBakh-Black" !important;
+    font-family: "IRANSans-Medium" !important;
 
 }
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: "YekanBakh-Black" !important;
+    font-family: "IRANSans-Medium" !important;
     font-size: 1.4rem;
     line-height: 1.6;
     color: #666;
@@ -672,7 +673,7 @@ to {
     font-size: 2.4rem!important;
 }
 .font-primary {
-    font-family: "YekanBakh-Black" !important;
+    font-family: "IRANSans-Medium" !important;
 }
 .font-secondary {
     font-family: "Arizonia", sans-serif!important;
@@ -804,7 +805,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0 0 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
     font-weight: 700;
     line-height: 1.2;
     color: #333;
@@ -852,7 +853,7 @@ blockquote {
     left: 0;
     top: 1px;
     content: "";
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -2721,7 +2722,7 @@ to {
     color: #666;
     outline: 0;
     border-radius: 0;
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
     font-weight: 600;
     font-size: 1.4rem;
     padding: 0.93em 1.98em;
@@ -3408,7 +3409,7 @@ to {
     color: #999999;
     font-size: 1.3rem;
     font-weight: 600;
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
     line-height: 1.7;
     margin-bottom: 0.3rem;
 }
@@ -3542,7 +3543,7 @@ to {
 }
 .post-mask .post-comment:before {
     content: "";
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
     position: absolute;
     font-size: 1.8rem;
     left: 0;
@@ -3634,7 +3635,7 @@ to {
     margin-left: 0.5rem;
     font-size: 1rem;
     font-weight: 500;
-    font-family: "YekanBakh-Black";
+    font-family: "IRANSans-Medium";
 }
 .breadcrumb li:not(:last-child):hover {
     opacity: 1;
@@ -4356,33 +4357,28 @@ to {
 }
 
 @font-face {
-    font-family: "YekanBakh-Black";
-    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Black.woff");
+    font-family: "IRANSans-Medium";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/IRANSans-web.woff");
     font-weight: normal;
     font-style: normal;
 }@font-face {
-    font-family: "YekanBakh-Bold";
-    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Bold.woff");
+    font-family: "IRANSansWeb_Bold-Bold";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/IRANSansWeb_Bold.woff");
     font-weight: normal;
     font-style: normal;
 }@font-face {
-    font-family: "YekanBakh-ExtraBlack";
-    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-ExtraBlack.woff");
+    font-family: "IRANSans-Light";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/IRANSansWeb_Light.woff");
     font-weight: normal;
     font-style: normal;
 }@font-face {
-    font-family: "YekanBakh-ExtraBold";
-    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-ExtraBold.woff");
+    font-family: "IRANSans-Medium";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/IRANSansWeb_Medium.woff");
     font-weight: normal;
     font-style: normal;
 }@font-face {
-    font-family: "YekanBakh-Light";
-    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Light.woff");
-    font-weight: normal;
-    font-style: normal;
-}@font-face {
-    font-family: "YekanBakh-Regular";
-    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/YekanBakh-Regular.woff");
+    font-family: "IRANSans-Regular";
+    src: url("../../public/assets/fonts/Yekan-Bakh-Family/woff/IRANSansWeb_UltraLight.woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -10063,7 +10059,7 @@ body .product-popup {
     max-width: 13.6rem;
 }
 }.header {
-    font-family: "YekanBakh-Black";    
+    font-family: "IRANSans-Medium";    
     background: #fff;
     color: #333;
 }
@@ -12291,8 +12287,9 @@ body .product-popup {
 @media (min-width:992px) {
     .nav-filters li: not(:last-child) {
     margin-right: 3.9rem;
+    }
 }
-}#products-1, #products-2 {
+#products-1, #products-2 {
     margin-bottom: 4.2rem;
 }
 .category-banner img {

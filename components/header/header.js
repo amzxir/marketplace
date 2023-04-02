@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 export default function Header() {
 
@@ -47,16 +49,16 @@ export default function Header() {
                   </div>
                   <div className="header-right">
                       <div className="dropdown">
-                          <a href="#language"><img src="assets/images/flags/eng.png" alt="ENG Flag" width="14"
+                          <a href="#language"><Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14"
                                   height="8" className="dropdown-image" /> ENG</a>
                           <div className="dropdown-box">
                               <a href="#ENG">
-                                  <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
+                                  <Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
                                       className="dropdown-image" />
                                   ENG
                               </a>
                               <a href="#FRA">
-                                  <img src="assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
+                                  <Image src="/assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
                                       className="dropdown-image" />
                                   FRA
                               </a>
@@ -104,7 +106,7 @@ export default function Header() {
                       <Link href="#" className="mobile-menu-toggle  w-icon-hamburger ml-4" aria-label="menu-toggle">
                       </Link>
                       <Link href="/" className="logo ml-lg-0">
-                          <img src="assets/images/demos/demo9/header-logo.png" alt="logo" width="144" height="45" />
+                          <Image src="/assets/images/demos/demo9/header-logo.png" alt="logo" width="144" height="45" />
                       </Link>
                       <form className="input-wrapper header-search hs-expanded hs-round d-none d-md-flex rtl">
                           <div className="select-box">

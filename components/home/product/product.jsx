@@ -1,9 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function Product() {
   return (
     <div className='container'>
-        <div className="filter-with-title title-underline mb-4 pb-2 appear-animate">
+        <div className="filter-with-title title-underline mb-4 pb-2">
             <h2 className="title">Home &amp; Furnitures</h2>
             <ul className="nav-filters">
                 <li><a href="#" className="nav-filter active">All</a></li>
@@ -15,12 +16,12 @@ export default function Product() {
                 <li><a href="#" className="nav-filter">Accessories</a></li>
             </ul>
         </div>
-        <div className="row grid cols-xl-5 cols-md-4 cols-sm-3 cols-2 appear-animate" id="products-1">
+        <div className="row grid cols-xl-5 cols-md-4 cols-sm-3 cols-2 " id="products-1">
             <div className="grid-item">
                 <div className="product text-center">
                     <figure className="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/demos/demo9/product/6-1.jpg" alt="Product" width="600"
+                            <Image src="/assets/images/demos/demo9/product/6-1.jpg" alt="Product" width="600"
                                 height="675" />
                         </a>
                         <div className="product-action-vertical">
@@ -45,7 +46,7 @@ export default function Product() {
                 <div className="product text-center">
                     <figure className="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/demos/demo9/product/6-2.jpg" alt="Product" width="600"
+                            <Image src="/assets/images/demos/demo9/product/6-2.jpg" alt="Product" width="600"
                                 height="675" />
                         </a>
                         <div className="product-action-vertical">
@@ -70,7 +71,7 @@ export default function Product() {
                 <div className="product text-center">
                     <figure className="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/demos/demo9/product/6-3.jpg" alt="Product" width="600"
+                            <Image src="/assets/images/demos/demo9/product/6-3.jpg" alt="Product" width="600"
                                 height="675" />
                         </a>
                         <div className="product-action-vertical">
@@ -95,7 +96,7 @@ export default function Product() {
                 <div className="product text-center">
                     <figure className="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/demos/demo9/product/6-4.jpg" alt="Product" width="600"
+                            <Image src="/assets/images/demos/demo9/product/6-4.jpg" alt="Product" width="600"
                                 height="675" />
                         </a>
                         <div className="product-action-vertical">
@@ -120,7 +121,7 @@ export default function Product() {
                 <div className="product text-center">
                     <figure className="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/demos/demo9/product/6-5.jpg" alt="Product" width="600"
+                            <Image src="/assets/images/demos/demo9/product/6-5.jpg" alt="Product" width="600"
                                 height="675" />
                         </a>
                         <div className="product-action-vertical">

@@ -1,9 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
+
 
 export default function Product() {
   return (
     <div className='container'>
-        <div className="row appear-animate">
+        <div className="row">
             <div className="col-lg-4 col-md-5 mb-6">
                 <div className="product-lg br-sm">
                     <h2 className="title title-underline mb-4">Deals Of The Week</h2>
@@ -13,9 +15,9 @@ export default function Product() {
                                 <div className="swiper-slide product text-center">
                                     <figure className="product-media">
                                         <a href="product-default.html">
-                                            <img src="assets/images/demos/demo9/product/5-1-1.jpg" alt="Product"
+                                            <Image src="/assets/images/demos/demo9/product/5-1-1.jpg" alt="Product"
                                                 width="800" height="900" />
-                                            <img src="assets/images/demos/demo9/product/5-1-2.jpg" alt="Product"
+                                            <Image src="/assets/images/demos/demo9/product/5-1-2.jpg" alt="Product"
                                                 width="800" height="900" />
                                         </a>
                                         <div className="product-action-vertical">
@@ -75,7 +77,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-3.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-3.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -102,7 +104,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-7.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-7.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -130,7 +132,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-4.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-4.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -157,7 +159,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-8.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-8.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -186,7 +188,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-5.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-5.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -202,7 +204,7 @@ export default function Product() {
                                         </figure>
                                         <div className="product-details">
                                             <h3 className="product-name">
-                                                <a href="product-default.html">Men's Suede Belt</a>
+                                                <a href="product-default.html">Mens Suede Belt</a>
                                             </h3>
                                             <div className="product-price">
                                                 <ins className="new-price">$37.19</ins><del
@@ -213,7 +215,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-9.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-9.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -241,7 +243,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-6.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-6.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -267,7 +269,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-10.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-10.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -283,7 +285,7 @@ export default function Product() {
                                         </figure>
                                         <div className="product-details">
                                             <h3 className="product-name">
-                                                <a href="product-default.html">Top Men's Hiking Hat</a>
+                                                <a href="product-default.html">Top Mens Hiking Hat</a>
                                             </h3>
                                             <div className="product-price">
                                                 <ins className="new-price">$20.84</ins><del
@@ -303,7 +305,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-9.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-9.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -329,7 +331,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-7.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-7.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -357,7 +359,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-4.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-4.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -384,7 +386,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-5.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-5.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -400,7 +402,7 @@ export default function Product() {
                                         </figure>
                                         <div className="product-details">
                                             <h3 className="product-name">
-                                                <a href="product-default.html">Men's Suede Belt</a>
+                                                <a href="product-default.html">Mens Suede Belt</a>
                                             </h3>
                                             <div className="product-price">
                                                 <ins className="new-price">$37.19</ins><del
@@ -413,7 +415,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-10.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-10.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -429,7 +431,7 @@ export default function Product() {
                                         </figure>
                                         <div className="product-details">
                                             <h3 className="product-name">
-                                                <a href="product-default.html">Top Men's Hiking Hat</a>
+                                                <a href="product-default.html">Top Mens Hiking Hat</a>
                                             </h3>
                                             <div className="product-price">
                                                 <ins className="new-price">$20.84</ins><del
@@ -440,7 +442,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-8.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-8.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -469,7 +471,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-6.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-6.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">
@@ -495,7 +497,7 @@ export default function Product() {
                                     <div className="product text-center">
                                         <figure className="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/demos/demo9/product/5-3.jpg"
+                                                <Image src="/assets/images/demos/demo9/product/5-3.jpg"
                                                     alt="Product" width="800" height="900" />
                                             </a>
                                             <div className="product-action-vertical">

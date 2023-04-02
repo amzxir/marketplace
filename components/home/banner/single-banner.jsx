@@ -3,7 +3,7 @@ import React from 'react'
 export default function Banner() {
   return (
     <div className='container'>
-        <div className="sale-banner banner br-sm appear-animate">
+        <div className="sale-banner banner br-sm">
             <div className="banner-content">
                 <h4
                     className="content-left banner-subtitle text-uppercase mb-8 mb-md-0 mr-0 mr-md-4 text-secondary ls-25">

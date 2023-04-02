@@ -1,12 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
+
 
 export default function DoubleBanner() {
   return (
     <div className='container'>
-        <div className="row cols-md-2 mb-6 appear-animate">
+        <div className="row cols-md-2 mb-6">
             <div className="banner banner-fixed category-banner mb-4">
                 <figure className="br-sm">
-                    <img src="assets/images/demos/demo9/banner/2-1.jpg" alt="Category Banner" width="640"
+                    <Image src="/assets/images/demos/demo9/banner/2-1.jpg" alt="Category Banner" width="640"
                         height="200" style={{ backgroundColor:'#32373B' }} />
                 </figure>
                 <div className="banner-content y-50">
@@ -21,7 +23,7 @@ export default function DoubleBanner() {
             </div>
             <div className="banner banner-fixed category-banner mb-4">
                 <figure className="br-sm">
-                    <img src="assets/images/demos/demo9/banner/2-2.jpg" alt="Category Banner" width="640"
+                    <Image src="/assets/images/demos/demo9/banner/2-2.jpg" alt="Category Banner" width="640"
                         height="200" style={{ backgroundColor:'#ECECEE' }} />
                 </figure>
                 <div className="banner-content y-50">

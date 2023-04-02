@@ -1,18 +1,20 @@
 import React from 'react'
+import Image from 'next/image'
+
 
 export default function Vendors() {
   return (
     <div className='container'>
-         <h2 className="title title-underline mb-4 appear-animate">Top Weekly Vendors</h2>
+         <h2 className="title title-underline mb-4">Top Weekly Vendors</h2>
 
-         <div className="swiper-container swiper-theme mb-10 pb-2 appear-animate">
+         <div className="swiper-container swiper-theme mb-10 pb-2">
             <div className="swiper-wrapper row cols-lg-4 cols-md-3 cols-sm-2 cols-1">
                 <div className="swiper-slide vendor-widget mb-0">
                     <div className="vendor-widget-2">
                         <div className="vendor-details">
                             <figure className="vendor-logo">
                                 <a href="vendor-dokan-store.html">
-                                    <img src="assets/images/demos/demo9/vendor-logo/1.jpg" alt="Vendor Logo"
+                                    <Image src="/assets/images/demos/demo9/vendor-logo/1.jpg" alt="Vendor Logo"
                                         width="70" height="70" />
                                 </a>
                             </figure>
@@ -33,7 +35,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-1.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-1.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -41,7 +43,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-2.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-2.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -49,7 +51,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-3.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-3.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -62,7 +64,7 @@ export default function Vendors() {
                         <div className="vendor-details">
                             <figure className="vendor-logo">
                                 <a href="vendor-dokan-store.html">
-                                    <img src="assets/images/demos/demo9/vendor-logo/2.jpg" alt="Vendor Logo"
+                                    <Image src="/assets/images/demos/demo9/vendor-logo/2.jpg" alt="Vendor Logo"
                                         width="70" height="70" />
                                 </a>
                             </figure>
@@ -83,7 +85,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-4.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-4.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -91,7 +93,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-5.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-5.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -99,7 +101,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-6.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-6.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -112,7 +114,7 @@ export default function Vendors() {
                         <div className="vendor-details">
                             <figure className="vendor-logo">
                                 <a href="vendor-dokan-store.html">
-                                    <img src="assets/images/demos/demo9/vendor-logo/3.jpg" alt="Vendor Logo"
+                                    <Image src="/assets/images/demos/demo9/vendor-logo/3.jpg" alt="Vendor Logo"
                                         width="70" height="70" />
                                 </a>
                             </figure>
@@ -133,7 +135,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-7.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-7.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -141,7 +143,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-8.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-8.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -149,7 +151,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-9.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-9.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -162,7 +164,7 @@ export default function Vendors() {
                         <div className="vendor-details">
                             <figure className="vendor-logo">
                                 <a href="vendor-dokan-store.html">
-                                    <img src="assets/images/demos/demo9/vendor-logo/4.jpg" alt="Vendor Logo"
+                                    <Image src="/assets/images/demos/demo9/vendor-logo/4.jpg" alt="Vendor Logo"
                                         width="70" height="70" />
                                 </a>
                             </figure>
@@ -183,7 +185,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-10.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-10.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -191,7 +193,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-11.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-11.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>
@@ -199,7 +201,7 @@ export default function Vendors() {
                             <div className="vendor-product">
                                 <figure className="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/demos/demo9/product/4-12.jpg"
+                                        <Image src="/assets/images/demos/demo9/product/4-12.jpg"
                                             alt="Vendor Product" width="100" height="113" />
                                     </a>
                                 </figure>

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Menu() {
   return (
     <>
@@ -245,7 +246,7 @@ export default function Menu() {
                                             <li><a href="shop-fullwidth-banner.html">Dressers</a></li>
                                             <li><a href="shop-fullwidth-banner.html">Nightstands</a>
                                             </li>
-                                            <li><a href="shop-fullwidth-banner.html">Kid's Beds &
+                                            <li><a href="shop-fullwidth-banner.html">Kids Beds &
                                                     Headboards</a></li>
                                             <li><a href="shop-fullwidth-banner.html">Armoires</a></li>
                                         </ul>

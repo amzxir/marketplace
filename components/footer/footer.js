@@ -5,7 +5,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <>
-      <footer className="footer footer-dark appear-animate mt-10 rtl">
+      <footer className="footer footer-dark mt-10 rtl">
           <div className="footer-newsletter bg-primary">
               <div className="container">
                   <div className="row justify-content-center align-items-center">
