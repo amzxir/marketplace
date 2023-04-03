@@ -1,6 +1,6 @@
-@charset "UTF-8";
 @import '/assets/vendor/fontawesome-free/css/all.min.css';
-    .swiper {
+
+.swiper {
     position: relative;
 }
 .swiper>.swiper-container {

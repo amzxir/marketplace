@@ -8,7 +8,7 @@ export default function Slider() {
         <section className="intro-section mt-4">
             <div className="swiper-container swiper-theme animation-slider">
                 <div className="swiper-wrapper row gutter-no cols-1">
-                <div className="swiper-slide banner banner-fixed content-center intro-slide intro-slide1"
+                    <div className="swiper-slide banner banner-fixed content-center intro-slide intro-slide1"
                         style={{ backgroundImage:'url(/assets/images/demos/demo9/slides/slide-1.jpg)' , backgroundColor:'#EEF4F4' }}>
                         <div className="container">
                             <div className="banner-content d-inline-block y-50">
