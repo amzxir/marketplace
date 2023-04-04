@@ -6,6 +6,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 export default function Slider() {
 
+    // slider data
     const data = [
         {id:1 , title:'معاملات و تبلیغات' , name:'مجموعه سبک زندگی مد فصل زمستان' , src:'/assets/images/demos/demo9/slides/slide-image-1.png'},
         {id:2 , title:'فقط تا پایان این هفته' , name:'مجموعه سبک زندگی مد فصل زمستان' , src:'/assets/images/demos/demo9/slides/slide-image-3.png'},

@@ -5149,7 +5149,7 @@ select:focus::-ms-value {
     line-height: 1;
 }
 .icon-box-side .icon-box-icon {
-    margin-right: 1.5rem;
+    margin-left: 1.5rem;
     margin-bottom: 0;
 }
 .icon-box-side i {
@@ -5230,7 +5230,7 @@ select:focus::-ms-value {
     flex-direction: column;
 }
 .icon-box-side .icon-box-icon {
-    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 1rem;
 }
 .icon-box-side .icon-box-content {
@@ -12069,7 +12069,7 @@ body .product-popup {
     border: 1px solid #e5e5e5;
 }
 .icon-box-wrapper .icon-box-title {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
 }
 @media (min-width:768px) {
     .icon-box-wrapper .icon-box-icon {
@@ -12396,4 +12396,8 @@ body .product-popup {
 
 .ltr{
     direction: rtl;
+}
+
+.splide:not( .is-overflow ) .splide__list {
+    justify-content: space-around;
 }
