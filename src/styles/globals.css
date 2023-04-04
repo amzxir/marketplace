@@ -1,4 +1,8 @@
 @import '/assets/vendor/fontawesome-free/css/all.min.css';
+@import '@splidejs/react-splide/css';
+
+
+
 
 .swiper {
     position: relative;
@@ -11964,7 +11968,7 @@ body .product-popup {
 }
 .intro-slide1 .banner-content {
     max-width: 38.5rem;
-    left: 9.8%;
+    right: 9.8%;
     margin-top: -0.2rem;
 }
 .intro-slide1 .banner-subtitle {
@@ -11973,8 +11977,8 @@ body .product-popup {
     letter-spacing: 0.025em;
 }
 .intro-slide1 .banner-title {
-    font-size: 4.5em;
-    line-height: 1.07;
+    font-size: 3.5em;
+    line-height: 1.50;
     margin-bottom: 3.1rem;
 }
 .intro-slide1 .banner-title span {
@@ -11982,7 +11986,7 @@ body .product-popup {
 }
 .intro-slide1 .slide-image {
     bottom: 0;
-    left: 50%;
+    right: 50%;
     min-width: 47.2rem;
 }
 .intro-slide2 .banner-content {
@@ -12285,7 +12289,7 @@ body .product-popup {
     color: #333;
 }
 @media (min-width:992px) {
-    .nav-filters li: not(:last-child) {
+    .nav-filters li {
     margin-right: 3.9rem;
     }
 }
