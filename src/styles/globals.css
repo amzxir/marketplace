@@ -8752,7 +8752,7 @@ body .product-popup {
 .vendor-logo {
     max-width: 7rem;
     flex: 0 0 7rem;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 .vendor-details {
     display: flex;
@@ -12089,7 +12089,7 @@ body .product-popup {
     margin: 0 0 0 0.7rem;
 }
 .banner-lg .banner-content {
-    left: 5.8%;
+    right: 5.8%;
     margin-top: -0.7rem;
 }
 .banner-lg .banner-subtitle {
@@ -12106,7 +12106,7 @@ body .product-popup {
 }
 .banner-md .banner-content {
     top: 11.4%;
-    left: 4.5%}
+    right: 4.5%}
 .banner-md .banner-title {
     margin-bottom: 2.3rem;
 }
@@ -12114,7 +12114,7 @@ body .product-popup {
     padding-top: 0.6rem;
 }
 .banner-sm .text-center .banner-title {
-    font-size: 10em;
+    font-size: 3em;
     line-height: 0.68;
     color: #F8B317;
 }
@@ -12127,7 +12127,7 @@ body .product-popup {
     border-top: 2px solid;
 }
 .banner-sm .banner-content:not(.text-center) {
-    left: 9.3%;
+    right: 9.3%;
     bottom: 10.2%}
 .banner-sm .banner-content:not(.text-center) .banner-subtitle {
     margin-bottom: 2px;
@@ -12399,5 +12399,5 @@ body .product-popup {
 }
 
 .splide:not( .is-overflow ) .splide__list {
-    justify-content: space-around;
+    justify-content: space-between;
 }

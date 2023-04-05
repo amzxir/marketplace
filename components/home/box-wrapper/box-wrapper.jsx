@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function BoxWrapper() {
   return (
-    <div className='container'>
+    <div className='container rtl'>
         <div className="row grid grid-float pt-2 banner-grid mb-9">
             <div className="grid-item col-lg-6 height-x2">
                 <div className="banner banner-fixed banner-lg br-sm">
@@ -13,13 +14,13 @@ export default function BoxWrapper() {
                     </figure>
                     <div className="banner-content y-50">
                         <h5 className="banner-subtitle text-capitalize font-weight-normal mb-0 ls-25">
-                            Flash Sale <strong className="text-secondary text-uppercase">50% Off</strong>
+                            فروش فلش <strong className="text-secondary text-uppercase">50 درصد تخفیف</strong>
                         </h5>
-                        <h3 className="banner-title text-capitalize">Kitchen Collection</h3>
-                        <p>Only until the end of this Week</p>
-                        <a href="demo9-shop.html" className="btn btn-dark btn-outline btn-rounded btn-icon-right">
-                            Shop Now<i className="w-icon-long-arrow-right"></i>
-                        </a>
+                        <h3 className="banner-title text-capitalize">مجموعه آشپزخانه</h3>
+                        <p>فقط تا پایان این هفته</p>
+                        <Link href="#" className="btn btn-dark btn-outline btn-rounded btn-icon-right">
+                            <i className="w-icon-long-arrow-left"></i> اکنون خرید کنید
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -31,11 +32,11 @@ export default function BoxWrapper() {
                     </figure>
                     <div className="banner-content">
                         <h3 className="banner-title text-white ls-25">
-                            Accessories<br/><span className="font-weight-normal ls-normal">Collection</span>
+                            تجهیزات جانبی<br/><span className="font-weight-normal ls-normal">مجموعه</span>
                         </h3>
-                        <a href="demo9-shop.html" className="btn btn-white btn-link btn-underline btn-icon-right">
-                            Shop Now<i className="w-icon-long-arrow-right"></i>
-                        </a>
+                        <Link href="#" className="btn btn-white btn-link btn-underline btn-icon-right">
+                            <i className="w-icon-long-arrow-left"></i> اکنون خرید کنید
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -46,12 +47,11 @@ export default function BoxWrapper() {
                             height="215" style={{ backgroundColor:'#181818' }} />
                     </figure>
                     <div className="banner-content x-50 y-50 w-100 text-center">
-                        <h3 className="banner-title font-secondary font-weight-normal mb-0 ls-25">Sale</h3>
+                        <h3 className="banner-title font-secondary font-weight-normal mb-4 ls-25">فروش</h3>
                         <div className="banner-price-info font-weight-normal text-white mb-3">
-                            Up to <strong className="text-uppercase">20% Off</strong>
+                            تا <strong className="text-uppercase">20% تخفیف</strong>
                         </div>
-                        <a href="demo9-shop.html" className="btn btn-white btn-link btn-underline">Shop
-                            Collection</a>
+                        <Link href="#" className="btn btn-white btn-link btn-underline">فروشگاه مجموعه</Link>
                     </div>
                 </div>
             </div>
@@ -62,11 +62,11 @@ export default function BoxWrapper() {
                             height="215" style={{ backgroundColor:'#A3A8A6' }} />
                     </figure>
                     <div className="banner-content">
-                        <h5 className="banner-subtitle text-uppercase font-weight-bold">20% Off</h5>
-                        <h3 className="banner-title text-capitalize ls-25">Kids Store</h3>
-                        <a href="demdo9-shop.html" className="btn btn-dark btn-link btn-underline btn-icon-right">
-                            Shop Now<i className="w-icon-long-arrow-right"></i>
-                        </a>
+                        <h5 className="banner-subtitle text-uppercase font-weight-bold">20% تخفیف</h5>
+                        <h3 className="banner-title text-capitalize ls-25">فروشگاه کودکان</h3>
+                        <Link href="#" className="btn btn-dark btn-link btn-underline btn-icon-right">
+                            <i className="w-icon-long-arrow-left"></i> اکنون خرید کنید
+                        </Link>
                     </div>
                 </div>
             </div>
