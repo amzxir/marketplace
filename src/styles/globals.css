@@ -4190,7 +4190,7 @@ to {
 .sale-banner .banner-subtitle:after, .sale-banner .banner-subtitle:before {
     content: "";
     position: absolute;
-    right: -24px;
+    left: -24px;
     top: -25px;
     bottom: -20px;
     border-right: 50px solid #454545;
@@ -4198,7 +4198,7 @@ to {
     z-index: -1;
 }
 .sale-banner .banner-subtitle:after {
-    right: -35px;
+    left: -35px;
     border-right-width: 5px;
 }
 .sale-banner .content-right {
@@ -4304,7 +4304,7 @@ to {
     padding: 4rem 0 3rem;
 }
 .sale-banner .btn {
-    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .link-banner-newsletter {
     display: block;
@@ -12254,8 +12254,8 @@ body .product-popup {
     margin: 0.4rem 0 5.4rem;
 }
 .sale-banner .banner-subtitle {
-    padding-left: 4rem;
-    padding-right: 1.9rem;
+    padding-right: 4rem;
+    padding-left: .9rem;
     background-color: #e0e0e0;
     white-space: nowrap;
 }
