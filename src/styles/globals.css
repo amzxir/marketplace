@@ -60,7 +60,7 @@
     box-sizing: border-box;
 }
 .swiper-container:not(.swiper-container-initialized) .swiper-wrapper {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow: hidden;
     width: auto;
 }
@@ -12400,4 +12400,8 @@ body .product-popup {
 
 .splide:not( .is-overflow ) .splide__list {
     justify-content: space-between;
+}
+
+.w-100{
+    width: 100%;
 }
