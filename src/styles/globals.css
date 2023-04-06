@@ -4305,6 +4305,7 @@ to {
 }
 .sale-banner .btn {
     margin-right: 3rem;
+    opacity: 0;
 }
 .link-banner-newsletter {
     display: block;
@@ -8504,7 +8505,7 @@ body .product-popup {
 }
 .title-link-wrapper a {
     margin-bottom: 0.2rem;
-    margin-left: auto;
+    margin-right: auto;
     text-transform: capitalize;
     color: #333;
 }
@@ -12255,7 +12256,7 @@ body .product-popup {
 }
 .sale-banner .banner-subtitle {
     padding-right: 4rem;
-    padding-left: .9rem;
+    padding-left: 0;
     background-color: #e0e0e0;
     white-space: nowrap;
 }
@@ -12374,6 +12375,7 @@ body .product-popup {
     left: 2%}
 .sale-banner .content-left {
     padding-left: 3rem;
+    display: none;
 }
 }@media (max-width:575px) {
     .banner {

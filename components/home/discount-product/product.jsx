@@ -146,7 +146,7 @@ export default function Product() {
                             <div className="swiper-wrapper row cols-lg-4 cols-sm-3 cols-2">
                                 {featured.map((i , index)=> {
                                     return(
-                                        <div className="product text-center">
+                                        <div key={index} className="product text-center">
                                             <figure className="product-media">
                                                 <Link href="#">
                                                     {i.img.map((i , index)=> {
