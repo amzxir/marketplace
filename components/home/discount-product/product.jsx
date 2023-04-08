@@ -183,7 +183,7 @@ export default function Product() {
                             <div className="swiper-wrapper row cols-xl-4 cols-lg-3 cols-md-2">
                                 {discountProduct.map((i , index)=> {
                                     return(
-                                        <div className="product text-center">
+                                        <div key={index} className="product text-center">
                                             <figure className="product-media">
                                                 <Link href="#">
                                                     {i.img.map((i , index)=> {
