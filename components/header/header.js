@@ -41,7 +41,6 @@ export default function Header() {
   return (
     <>
       <header className="header">
-
           <div className="header-top">
               <div className="container">
                   <div className="header-left">
@@ -49,26 +48,23 @@ export default function Header() {
                   </div>
                   <div className="header-right">
                       <div className="dropdown">
-                          <a href="#language"><Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14"
-                                  height="8" className="dropdown-image" /> ENG</a>
+                          <Link href="#"><Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8" className="dropdown-image" /> ENG</Link>
                           <div className="dropdown-box">
-                              <a href="#ENG">
-                                  <Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
-                                      className="dropdown-image" />
+                              <Link href="#">
+                                  <Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8" className="dropdown-image" />
                                   ENG
-                              </a>
-                              <a href="#FRA">
-                                  <Image src="/assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
-                                      className="dropdown-image" />
+                              </Link>
+                              <Link href="#FRA">
+                                  <Image src="/assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8" className="dropdown-image" />
                                   FRA
-                              </a>
+                              </Link>
                           </div>
                       </div>
                       <span className="divider d-lg-show"></span>
                       <Link href="/" className="d-lg-show">ناحیه کاربری</Link>
-                      <Link href="/auth/login" className="d-lg-show login sign-in"><i className="w-icon-account"></i>ورود</Link>
+                      <Link href="/auth/login" className="d-lg-show login sign-in">ورود</Link>
                       <span className="delimiter d-lg-show">/</span>
-                      <Link href="/auth/register" className="ml-0 d-lg-show login register">ثبت نام</Link>
+                      <Link href="/auth/register" className="ml-0 d-lg-show login register">ثبت نام <i className="w-icon-account"></i></Link>
                   </div>
               </div>
           </div>
@@ -138,7 +134,7 @@ export default function Header() {
                       <div className="header-right">
                           <nav className="main-nav ml-0">
                               <ul className="menu">
-                                  <li className="active">
+                                  <li>
                                       <Link href="/">خانه</Link>
                                   </li>
                                   <li>

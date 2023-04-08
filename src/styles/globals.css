@@ -3628,19 +3628,19 @@ to {
     color: inherit;
 }
 .breadcrumb li:not(:last-child) {
-    padding-right: 0.4rem;
+    padding-left: 0.4rem;
     transition: opacity 0.3s;
     opacity: 0.8;
 }
-.breadcrumb li:not(:last-child):after {
-    content: "";
+/* .breadcrumb li:not(:last-child):after {
+    content: "\f104";
     position: relative;
     display: inline-block;
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     font-size: 1rem;
     font-weight: 500;
     font-family: "IRANSans-Medium";
-}
+} */
 .breadcrumb li:not(:last-child):hover {
     opacity: 1;
 }
@@ -4899,7 +4899,7 @@ select:focus::-ms-value {
 .custom-checkbox+label {
     display: inline-block;
     position: relative;
-    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     cursor: pointer;
 }
 .custom-checkbox+label:before {
@@ -4907,7 +4907,7 @@ select:focus::-ms-value {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    right: 0;
     width: 18px;
     height: 18px;
     line-height: 15px;
@@ -5703,6 +5703,7 @@ body .product-popup {
 .login-popup {
     max-width: 50rem;
     padding: 3.3rem 5rem 2.6rem;
+    margin: 0 auto;
 }
 .login-popup .nav.nav-tabs .nav-item {
     width: calc(50% - .5rem);
@@ -7253,7 +7254,7 @@ body .product-popup {
     line-height: 3rem;
 }
 .social-icon:last-child {
-    margin-right: 0;
+    margin-left: 0;
 }
 .social-icon.social-facebook {
     color: #1b4f9b;
@@ -10137,7 +10138,7 @@ body .product-popup {
     align-items: center;
 }
 .header-top .header-right i {
-    margin-right: 0.6rem;
+    margin-left: 0.6rem;
     font-size: 1.5rem;
 }
 .header-top .header-right>* {
@@ -12406,4 +12407,8 @@ body .product-popup {
 
 .w-100{
     width: 100%;
+}
+
+.shadows{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

@@ -25,7 +25,7 @@ export default function Footer() {
                               className="input-wrapper input-wrapper-inline input-wrapper-rounded">
                               <input type="email" className="form-control mr-2 bg-white" name="email" id="email"
                                   placeholder="ایمیل خود را وارد کنید ..." />
-                              <button className="btn btn-dark btn-rounded" type="submit">ثبت<i className="w-icon-long-arrow-right"></i></button>
+                              <button className="btn btn-dark btn-rounded" type="submit"><i className="w-icon-long-arrow-left"></i> ثبت </button>
                           </form>
                       </div>
                   </div>
