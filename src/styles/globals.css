@@ -8272,7 +8272,7 @@ body .product-popup {
     padding: 1.4rem 0 1.4rem 2rem;
 }
 .tab-nav-underline .nav-item:not(:last-child) {
-    margin-right: 3rem;
+    margin-left: 3rem;
 }
 .tab-nav-underline .nav-link {
     padding: 1.4rem 0;
@@ -8875,7 +8875,7 @@ body .product-popup {
     margin-bottom: 1rem;
 }
 .vendor-widget-banner .ratings-container .ratings-full {
-    margin-right: 0;
+    margin-left: 0;
 }
 .vendor-widget-banner .vendor-product-count {
     display: block;

@@ -22,7 +22,7 @@ export default function Single() {
                   <div className="main-content">
                       <View/>
                       {/* <Total/> */}
-                      {/* <Details/> */}
+                      <Details/>
                       {/* <ProductSection/> */}
                   </div>
                   {/* <Sidbar/> */}
