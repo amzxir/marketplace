@@ -3560,16 +3560,16 @@ window.Wolmart = {};
         Wolmart.appearAnimate('.appear-animate');                           // Run appear animation
         Wolmart.setTab('.nav-tabs');                                        // Initialize Tab
         Wolmart.stickyContent('.sticky-header', { scrollMode: false });     // Initialize Sticky Content
-        Wolmart.stickyContent('.sticky-footer', {
-            minWidth: 0,
-            maxWidth: 767,
-            top: 150,
-            hide: true,
-            max_index: 2100,
-            scrollMode: true
-        });                                                                 // Initialize Sticky Footer
+        // Wolmart.stickyContent('.sticky-footer', {
+        //     minWidth: 0,
+        //     maxWidth: 767,
+        //     top: 150,
+        //     hide: true,
+        //     max_index: 2100,
+        //     scrollMode: true
+        // });                                                                 // Initialize Sticky Footer
         Wolmart.stickyContent('.sticky-toolbox', Wolmart.stickyToolboxOptions);
-        Wolmart.stickyContent('.product-sticky-content', Wolmart.stickyProductOptions);
+        // Wolmart.stickyContent('.product-sticky-content', Wolmart.stickyProductOptions);
         Wolmart.parallax('.parallax');                                      // Initialize Parallax
         Wolmart.skrollrParallax();                                          // Initialize Skrollr Parallax
         Wolmart.initFloatingParallax();                                     // Initialize Floating Parallax

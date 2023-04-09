@@ -23,7 +23,7 @@ export default function Single() {
                       <View/>
                       {/* <Total/> */}
                       <Details/>
-                      {/* <ProductSection/> */}
+                      <ProductSection/>
                   </div>
                   {/* <Sidbar/> */}
               </div>

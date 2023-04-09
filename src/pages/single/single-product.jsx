@@ -12,7 +12,7 @@ export default function SingleProduct() {
                 <ul className="breadcrumb">
                     <li><Link href="/">خانه</Link></li>
                     <FontAwesomeIcon icon={faAngleLeft} />
-                    <li className='mr-1'>ورود</li>
+                    <li className='mr-1'>مشاهده محصول</li>
                 </ul>
             </div>
         </nav>
