@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import Head from 'next/head'
 import Details from './details/details'
 import Total from './total/total'
 import View from './view/view'
 import ProductSection from './product/product-section'
 import Sidbar from './sidbar/sidbar'
-import Head from 'next/head'
 
 export default function Single() {
   return (
@@ -18,7 +18,7 @@ export default function Single() {
       <div className="page-content mt-5">
           <div className="container">
 
-              <div className="row gutter-lg">
+              <div className="row gutter-lg rtl">
                   <div className="main-content">
                       <View/>
                       {/* <Total/> */}

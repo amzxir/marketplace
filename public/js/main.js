@@ -2715,484 +2715,484 @@ window.Wolmart = {};
  * @instance multiple
  */
 
-(function ($) {
-    function ProductSingle($el) {
-        return this.init($el);
-    }
-
-    var thumbsInit = function (self) {
-        // properties for thumbnails
-        self.$thumbs = self.$wrapper.find('.product-thumbs');
-        self.$thumbsWrap = self.$thumbs.parent();
-        self.$thumbUp = self.$thumbsWrap.find('.thumb-up');
-        self.$thumbDown = self.$thumbsWrap.find('.thumb-down');
-        self.$thumbsDots = self.$thumbs.children();
-        self.thumbsCount = self.$thumbsDots.length;
-        self.$productThumb = self.$thumbsDots.eq(0);
-        self._isPgVertical = self.$thumbsWrap.parent().hasClass('product-gallery-vertical');
-        self.thumbsIsVertical = self._isPgVertical && window.innerWidth >= 992;
-
-        // refresh thumbs
-
-        Wolmart.slider(self.$thumbsWrap, {}, true);
-    }
-
-    var variationInit = function (self) {
-        self.$selects = self.$wrapper.find('.product-variations select');
-        self.$items = self.$wrapper.find('.product-variations');
-        self.$priceWrap = self.$wrapper.find('.product-variation-price');
-        self.$clean = self.$wrapper.find('.product-variation-clean'),
-            self.$btnCart = self.$wrapper.find('.btn-cart');
-
-        // check
-        self.variationCheck();
-        self.$selects.on('change', function (e) {
-            self.variationCheck();
-        });
-        self.$items.children('a').on('click', function (e) {
-            $(this).toggleClass('active').siblings().removeClass('active');
-            e.preventDefault();
-            self.variationCheck();
-            if (self.$items.parent('.product-image-swatch')) {
-                self.swatchImage();
-            }
-        });
-
-        // clean
-        self.$clean.on('click', function (e) {
-            e.preventDefault();
-            self.variationClean(true);
-        });
-
-    }
-
-    // For only Quickview
-    var recalcDetailsHeight = function () {
-        var self = this;
-        self.$wrapper.find('.product-details').css(
-            'height',
-            window.innerWidth > 767 ? self.$wrapper.find('.product-gallery')[0].clientHeight : ''
-        );
-    }
-
-    var wishlistAction = function (e) {
-        var $this = $(this);
-        if ($this.hasClass('added')) {
-            return;
-        }
-        e.preventDefault();
-        $this.addClass('load-more-overlay loading');
-
-        setTimeout(function () {
-            $this
-                .removeClass('load-more-overlay loading')
-                .toggleClass('w-icon-heart').toggleClass('w-icon-heart-full')
-                .addClass('added')
-                .attr('href', 'wishlist.html');
-        }, 500);
-    }
-
-    var goToReviewPan = function (e) {
-        e.preventDefault();
-        Wolmart.scrollTo($('.product-tabs > .nav a[href="' + this.getAttribute('href') + '"]').trigger('click'));
-    }
-
-    // Public Properties
-    ProductSingle.prototype.init = function ($el) {
-        var self = this,
-            $slider = $el.find('.product-single-swiper');
-
-        // members
-        self.$wrapper = $el;
-        self.isQuickView = !!$el.closest('.mfp-content').length;
-        self._isPgVertical = false;
-
-        // bind
-        if (self.isQuickView) {
-            recalcDetailsHeight = recalcDetailsHeight.bind(this);
-            Wolmart.ratingTooltip();
-        }
-
-        // init thumbs
-        thumbsInit(self);
-        // if not quickview, make full image toggle
-        // add gallery-video button
-        if (!document.body.classList.contains('home')) {
-            if ($slider.parent().hasClass('product-gallery-video')) {
-                self.isQuickView || $slider.append('<a href="#" class="product-gallery-btn product-degree-viewer" title="Product 360 Degree Gallery"><i class="w-icon-rotate-3d"></i></a>');
-                self.isQuickView || $slider.append('<a href="#" class="product-gallery-btn product-video-viewer" title="Product Video Thumbnail"><i class="w-icon-movie"></i></a>');
-            }
-        }
-
-        //Wishlist button event
-        self.$wrapper.on('click', '.btn-wishlist', wishlistAction);
-
-        //Rating reviews evnet
-        self.$wrapper.on('click', '.rating-reviews', goToReviewPan);
-
-        // if this is created after document ready, init plugins
-        if ('complete' === Wolmart.status) {
-            Wolmart.slider($slider, {
-                thumbs: {
-                    swiper: self.$thumbsWrap.data('slider')
-                }
-            });
-            Wolmart.initQtyInput($el.find('.quantity'));
-        }
-
-        if ($slider.length) {
-            window.addEventListener('resize', function () {
-                Wolmart.requestTimeout(function () {
-                    if ($slider.data('slider') != undefined) {
-                        $slider.data('slider').update();
-                        self.$thumbsWrap.data('slider').update();
-                    }
-                }, 100)
-            }, { passive: true });
-        }
-
-        self.$wrapper.find('.product-single-swiper').on('initialized.slider', function (e) {
-            $(e.target).find('.product-image').zoom(Wolmart.zoomImageOptions);
-        })
-
-        // init sticky thumbnail
-
-        if (self.$wrapper.find('.product-thumbs-sticky').length) {
-            self.isStickyScrolling = false;
-            self.$wrapper.on('click', '.product-thumb:not(.active)', self.clickStickyThumbnail.bind(this));
-            window.addEventListener('scroll', self.scrollStickyThumbnail.bind(this), { passive: true });
-        }
-
-        variationInit(this);
-    }
-
-    ProductSingle.prototype.variationCheck = function () {
-        var self = this,
-            isAllSelected = true;
-
-        // check all select variations are selected
-        self.$selects.each(function () {
-            return this.value || (isAllSelected = false);
-        });
-
-        // check all item variations are selected
-        self.$items.each(function () {
-            var $this = $(this);
-            if ($this.children('a:not(.size-guide)').length) {
-                return $this.children('.active').length || (isAllSelected = false);
-            }
-        });
-
-        isAllSelected ?
-            self.variationMatch() :
-            self.variationClean();
-    }
-
-    ProductSingle.prototype.variationMatch = function () {
-        var self = this;
-        self.$priceWrap.find('span').text('$' + (Math.round(Math.random() * 50) + 200) + '.00');
-        self.$priceWrap.slideDown();
-        self.$clean.slideDown();
-        self.$btnCart.removeClass('disabled');
-    }
-
-    ProductSingle.prototype.variationClean = function (reset) {
-        reset && this.$selects.val('');
-        reset && this.$items.children('.active').removeClass('active');
-        this.$priceWrap.slideUp();
-        this.$clean.css('display', 'none');
-        this.$btnCart.addClass('disabled');
-
-    }
-
-    ProductSingle.prototype.clickStickyThumbnail = function (e) {
-        var self = this;
-        var $thumb = $(e.currentTarget);
-        var currentIndex = $thumb.parent().children('.active').index();
-        var newIndex = $thumb.index() + 1;
-
-        $thumb.addClass('active').siblings('.active').removeClass('active');
-        this.isStickyScrolling = true;
-        var target = $thumb.closest('.product-thumbs-sticky').find('.product-image-wrapper > :nth-child(' + newIndex + ')');
-        if (target.length) {
-            target = target.offset().top + 10;
-            Wolmart.scrollTo(target, 500);
-        }
-
-        setTimeout(function () {
-            self.isStickyScrolling = false;
-        }, 300);
-    }
-
-    ProductSingle.prototype.scrollStickyThumbnail = function () {
-        var self = this;
-        if (!this.isStickyScrolling) {
-            self.$wrapper.find('.product-image-wrapper .product-image').each(function () {
-                if (Wolmart.isOnScreen(this)) {
-                    self.$wrapper.find('.product-thumbs > :nth-child(' + ($(this).index() + 1) + ')')
-                        .addClass('active').siblings().removeClass('active');
-                    return false;
-                }
-            });
-        }
-    }
-
-    ProductSingle.prototype.swatchImage = function () {
-        var src = this.$items.find('.active img').attr('src'),
-            productImage = this.$wrapper.find('.swiper-slide:first-child .product-image img'),
-            thumbImage = this.$wrapper.find('.swiper-slide:first-child .product-thumb img');
-
-        productImage.attr('src', src);
-        thumbImage.attr('src', src);
-    }
-
-    Wolmart.productSingle = function (selector) {
-        Wolmart.$(selector).each(function () {
-            var $this = $(this);
-            if (!$this.is('body > *')) {
-                $this.data('product-single', new ProductSingle($this));
-            }
-        })
-        return null;
-    }
-})(jQuery);
-
-/**
- * Wolmart Plugin - Product Single Page
- * 
- * @requires Slider
- * @requires ProductSingle
- * @requires PhotoSwipe
- * @instance single
- */
-
-(function ($) {
-
-    // Open Image Gallery
-    function openImageGallery(e) {
-        e.preventDefault();
-
-        var $this = $(e.currentTarget),
-            $product = $this.closest('.product-single'),
-            $review = $this.closest('.review-image'),
-            $images, images;
-        if ($this.closest('.review-image').length) {
-            $images = $this.closest('.review-image').find('img');
-        } else if ($product.find('.product-single-swiper').length) { // single carousel
-            $images = $product.find('.product-single-swiper .swiper-slide:not(.cloned) img:first-child');
-        } else if ($product.find('.product-gallery-carousel').length) { // gallery carousel
-            $images = $product.find('.product-gallery-carousel .swiper-slide:not(.cloned) img');
-        } else { // simple gallery
-            $images = $product.find('.product-image img:first-child');
-        }
-
-        if ($images.length) {
-            images = $images.map(function () {
-                var $this = $(this);
-
-                return {
-                    src: $this.attr('data-zoom-image'),
-                    w: 800,
-                    h: 900,
-                    title: $this.attr('alt')
-                };
-            }).get();
-
-            var swiper = $product.find('.product-single-swiper').data('slider'),
-                curIndex = swiper ?
-                    // Carousel Type
-                    swiper.activeIndex :
-                    // Gallery Type
-                    $product.find('.product-gallery .product-gallery-btn').index($this);
-            if ($review.length == 1) {
-                var reviewIndex = $review.find('img').index($this);
-                curIndex = reviewIndex;
-            }
-
-            if (typeof PhotoSwipe !== 'undefined') {
-                var pswpElement = $('.pswp')[0];
-
-                if (Wolmart.$body.attr('dir') == 'rtl') {
-                    var photoSwipe = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, images, {
-                        index: curIndex,
-                        closeOnScroll: false,
-                        showAnimationDuration: 0,
-                        rtl: true
-                    });
-                }
-                else {
-                    var photoSwipe = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, images, {
-                        index: curIndex,
-                        closeOnScroll: false,
-                        showAnimationDuration: 0,
-                    });
-                }
-                photoSwipe.init();
-                Wolmart.photoSwipe = photoSwipe;
-            }
-        }
-    }
-
-    // Open Video
-    function openVideo(e) {
-        e.preventDefault();
-        Wolmart.popup({
-            items: {
-                src: '<video src="assets/video/memory-of-a-woman.mp4" autoplay loop controls>',
-                type: "inline"
-            },
-            mainClass: "mfp-video-popup"
-        }, "video")
-    }
-
-    // Open 360 Degree
-    function open360DegreeView(e) {
-        e.preventDefault();
-        Wolmart.popup({
-            type: 'inline',
-            mainClass: "product-popupbox wm-fade product-360-popup",
-            preloader: false,
-            items: {
-                src: '<div class="product-gallery-degree">\
-						<div class="w-loading"><i></i></div>\
-						<ul class="product-degree-images"></ul>\
-					</div>'
-            },
-            callbacks: {
-                open: function () {
-                    this.container.find('.product-gallery-degree').ThreeSixty({
-                        imagePath: 'assets/images/products/video/',
-                        filePrefix: '360-',
-                        ext: '.jpg',
-                        totalFrames: 18,
-                        endFrame: 18,
-                        currentFrame: 1,
-                        imgList: this.container.find('.product-degree-images'),
-                        progress: '.w-loading',
-                        height: 500,
-                        width: 830,
-                        navigation: true
-                    });
-                },
-                beforeClose: function () {
-                    this.container.empty();
-                }
-            }
-        });
-    }
-
-    /**
-     * Event handler when rating control is clicked in single product page's review form.
-     * 
-     * @since 1.0
-     * @param {object} e
-     * @return {void}
-     */
-    function clickRatingForm(e) {
-        var $star = $(this);
-        $star.addClass('active').siblings().removeClass('active');
-        $star.parent().addClass('selected');
-        $star.closest('.rating-form').find('select').val($star.text());
-        e.preventDefault();
-    }
-
-    function onAddToCartSingle(e) {
-
-        var $this = $(this),
-            $alert = $('.main-content > .alert, .container > .alert'),
-            productName;
-
-        if ($this.hasClass('disabled')) {
-            alert('Please select some product options before adding this product to your cart.');
-            return;
-        }
-
-        if ($alert.length) {
-            $alert.fadeOut(function () {
-                $alert.fadeIn();
-            })
-        } else {
-            productName = $this.closest('.product-single').find('.product-title').text();
-            var alertHtml = '<div class="alert alert-success alert-cart-product mb-2">\
-                            <a href="cart.html" class="btn btn-success btn-rounded">View Cart</a>\
-                            <p class="mb-0 ls-normal">“'+ productName + '” has been added to your cart.</p>\
-                            <a href="#" class="btn btn-link btn-close" aria-label="button">\<i class="close-icon"></i>\</a>\
-                            </div>'
-            $this.closest('.product-single').before(alertHtml);
-        }
-
-        $('.product-sticky-content').trigger('recalc.pin');
-    }
-
-    function stickyProduct(selector) {
-
-        var $this = $(selector),
-            $product = $this.closest('.product-single'),
-            src = $product.find('.product-image img').eq(0).attr('src'),
-            name = $product.find('.product-details .product-title').text(),
-            newPrice = $product.find('.new-price').text(),
-            oldPrice = $product.find('.old-price').text(),
-            stickyProductDetailsHtml = '<div class="product product-list-sm mr-auto">\
-                                        <figure class="product-media">\
-                                        <img src="'+ src + '" alt="Product" width="85" height="85" />\
-                                        </figure>\
-                                        <div class="product-details pt-0 pl-2 pr-2">\
-                                        <h4 class="product-name font-weight-normal mb-1">'+ name + '</h4>\
-                                        <div class="product-price mb-0">\
-                                        <ins class="new-price">'+ newPrice + '</ins><del class="old-price">' + oldPrice + '</del></div>\
-                                        </div></div>';
-
-        $this.find('.product-qty-form').before(stickyProductDetailsHtml);
-
-        function refreshStickyProduct() {
-            if ($this.hasClass('fix-top') && window.innerWidth > 767) {
-                $this.removeClass('fix-top').addClass('fix-bottom');
-            }
-
-            if ($this.hasClass('fix-bottom') && window.innerWidth > 767) {
-                return;
-            }
-
-            if ($this.hasClass('fix-bottom') && window.innerWidth < 768) {
-                $this.removeClass('fix-bottom').addClass('fix-top');
-            }
-
-            if ($this.hasClass('fix-top') && window.innerWidth < 768) {
-                return;
-            }
-        }
-
-        window.addEventListener('resize', refreshStickyProduct, { passive: true });
-        refreshStickyProduct();
-    }
-
-    Wolmart.initProductSinglePage = function () {
-        // Zoom Image for grid type
-        $('.product-gallery').each(function () {
-            var $this = $(this),
-                $images = $this.find('.product-image');
-            $images.length && $this.find('.swiper-container').length == 0 && $images.zoom(Wolmart.zoomImageOptions);
-        });
-
-        stickyProduct('.product-sticky-content')
-
-        // Register events
-        if (!document.body.classList.contains('home')) {
-            Wolmart.$body
-                .on('click', '.product-image-full', openImageGallery)
-                .on('click', '.review-image img', openImageGallery)
-                .on('click', '.product-video-viewer', openVideo)
-                .on('click', '.product-degree-viewer', function (e) {
-                    e.preventDefault(e);
-                    if ($.fn.ThreeSixty) {
-                        open360DegreeView(e);
-                    }
-                })
-                .on('click', '.rating-form .rating-stars > a', clickRatingForm)
-                .on('click', '.product-single:not(.product-popup) .btn-cart', onAddToCartSingle);
-        }
-    }
-})(jQuery);
+// (function ($) {
+//     function ProductSingle($el) {
+//         return this.init($el);
+//     }
+
+//     var thumbsInit = function (self) {
+//         // properties for thumbnails
+//         self.$thumbs = self.$wrapper.find('.product-thumbs');
+//         self.$thumbsWrap = self.$thumbs.parent();
+//         self.$thumbUp = self.$thumbsWrap.find('.thumb-up');
+//         self.$thumbDown = self.$thumbsWrap.find('.thumb-down');
+//         self.$thumbsDots = self.$thumbs.children();
+//         self.thumbsCount = self.$thumbsDots.length;
+//         self.$productThumb = self.$thumbsDots.eq(0);
+//         self._isPgVertical = self.$thumbsWrap.parent().hasClass('product-gallery-vertical');
+//         self.thumbsIsVertical = self._isPgVertical && window.innerWidth >= 992;
+
+//         // refresh thumbs
+
+//         Wolmart.slider(self.$thumbsWrap, {}, true);
+//     }
+
+//     var variationInit = function (self) {
+//         self.$selects = self.$wrapper.find('.product-variations select');
+//         self.$items = self.$wrapper.find('.product-variations');
+//         self.$priceWrap = self.$wrapper.find('.product-variation-price');
+//         self.$clean = self.$wrapper.find('.product-variation-clean'),
+//             self.$btnCart = self.$wrapper.find('.btn-cart');
+
+//         // check
+//         self.variationCheck();
+//         self.$selects.on('change', function (e) {
+//             self.variationCheck();
+//         });
+//         self.$items.children('a').on('click', function (e) {
+//             $(this).toggleClass('active').siblings().removeClass('active');
+//             e.preventDefault();
+//             self.variationCheck();
+//             if (self.$items.parent('.product-image-swatch')) {
+//                 self.swatchImage();
+//             }
+//         });
+
+//         // clean
+//         self.$clean.on('click', function (e) {
+//             e.preventDefault();
+//             self.variationClean(true);
+//         });
+
+//     }
+
+//     // For only Quickview
+//     var recalcDetailsHeight = function () {
+//         var self = this;
+//         self.$wrapper.find('.product-details').css(
+//             'height',
+//             window.innerWidth > 767 ? self.$wrapper.find('.product-gallery')[0].clientHeight : ''
+//         );
+//     }
+
+//     var wishlistAction = function (e) {
+//         var $this = $(this);
+//         if ($this.hasClass('added')) {
+//             return;
+//         }
+//         e.preventDefault();
+//         $this.addClass('load-more-overlay loading');
+
+//         setTimeout(function () {
+//             $this
+//                 .removeClass('load-more-overlay loading')
+//                 .toggleClass('w-icon-heart').toggleClass('w-icon-heart-full')
+//                 .addClass('added')
+//                 .attr('href', 'wishlist.html');
+//         }, 500);
+//     }
+
+//     var goToReviewPan = function (e) {
+//         e.preventDefault();
+//         Wolmart.scrollTo($('.product-tabs > .nav a[href="' + this.getAttribute('href') + '"]').trigger('click'));
+//     }
+
+//     // Public Properties
+//     ProductSingle.prototype.init = function ($el) {
+//         var self = this,
+//             $slider = $el.find('.product-single-swiper');
+
+//         // members
+//         self.$wrapper = $el;
+//         self.isQuickView = !!$el.closest('.mfp-content').length;
+//         self._isPgVertical = false;
+
+//         // bind
+//         if (self.isQuickView) {
+//             recalcDetailsHeight = recalcDetailsHeight.bind(this);
+//             Wolmart.ratingTooltip();
+//         }
+
+//         // init thumbs
+//         thumbsInit(self);
+//         // if not quickview, make full image toggle
+//         // add gallery-video button
+//         if (!document.body.classList.contains('home')) {
+//             if ($slider.parent().hasClass('product-gallery-video')) {
+//                 self.isQuickView || $slider.append('<a href="#" class="product-gallery-btn product-degree-viewer" title="Product 360 Degree Gallery"><i class="w-icon-rotate-3d"></i></a>');
+//                 self.isQuickView || $slider.append('<a href="#" class="product-gallery-btn product-video-viewer" title="Product Video Thumbnail"><i class="w-icon-movie"></i></a>');
+//             }
+//         }
+
+//         //Wishlist button event
+//         self.$wrapper.on('click', '.btn-wishlist', wishlistAction);
+
+//         //Rating reviews evnet
+//         self.$wrapper.on('click', '.rating-reviews', goToReviewPan);
+
+//         // if this is created after document ready, init plugins
+//         if ('complete' === Wolmart.status) {
+//             Wolmart.slider($slider, {
+//                 thumbs: {
+//                     swiper: self.$thumbsWrap.data('slider')
+//                 }
+//             });
+//             Wolmart.initQtyInput($el.find('.quantity'));
+//         }
+
+//         if ($slider.length) {
+//             window.addEventListener('resize', function () {
+//                 Wolmart.requestTimeout(function () {
+//                     if ($slider.data('slider') != undefined) {
+//                         $slider.data('slider').update();
+//                         self.$thumbsWrap.data('slider').update();
+//                     }
+//                 }, 100)
+//             }, { passive: true });
+//         }
+
+//         self.$wrapper.find('.product-single-swiper').on('initialized.slider', function (e) {
+//             $(e.target).find('.product-image').zoom(Wolmart.zoomImageOptions);
+//         })
+
+//         // init sticky thumbnail
+
+//         if (self.$wrapper.find('.product-thumbs-sticky').length) {
+//             self.isStickyScrolling = false;
+//             self.$wrapper.on('click', '.product-thumb:not(.active)', self.clickStickyThumbnail.bind(this));
+//             window.addEventListener('scroll', self.scrollStickyThumbnail.bind(this), { passive: true });
+//         }
+
+//         variationInit(this);
+//     }
+
+//     ProductSingle.prototype.variationCheck = function () {
+//         var self = this,
+//             isAllSelected = true;
+
+//         // check all select variations are selected
+//         self.$selects.each(function () {
+//             return this.value || (isAllSelected = false);
+//         });
+
+//         // check all item variations are selected
+//         self.$items.each(function () {
+//             var $this = $(this);
+//             if ($this.children('a:not(.size-guide)').length) {
+//                 return $this.children('.active').length || (isAllSelected = false);
+//             }
+//         });
+
+//         isAllSelected ?
+//             self.variationMatch() :
+//             self.variationClean();
+//     }
+
+//     ProductSingle.prototype.variationMatch = function () {
+//         var self = this;
+//         self.$priceWrap.find('span').text('$' + (Math.round(Math.random() * 50) + 200) + '.00');
+//         self.$priceWrap.slideDown();
+//         self.$clean.slideDown();
+//         self.$btnCart.removeClass('disabled');
+//     }
+
+//     ProductSingle.prototype.variationClean = function (reset) {
+//         reset && this.$selects.val('');
+//         reset && this.$items.children('.active').removeClass('active');
+//         this.$priceWrap.slideUp();
+//         this.$clean.css('display', 'none');
+//         this.$btnCart.addClass('disabled');
+
+//     }
+
+//     ProductSingle.prototype.clickStickyThumbnail = function (e) {
+//         var self = this;
+//         var $thumb = $(e.currentTarget);
+//         var currentIndex = $thumb.parent().children('.active').index();
+//         var newIndex = $thumb.index() + 1;
+
+//         $thumb.addClass('active').siblings('.active').removeClass('active');
+//         this.isStickyScrolling = true;
+//         var target = $thumb.closest('.product-thumbs-sticky').find('.product-image-wrapper > :nth-child(' + newIndex + ')');
+//         if (target.length) {
+//             target = target.offset().top + 10;
+//             Wolmart.scrollTo(target, 500);
+//         }
+
+//         setTimeout(function () {
+//             self.isStickyScrolling = false;
+//         }, 300);
+//     }
+
+//     ProductSingle.prototype.scrollStickyThumbnail = function () {
+//         var self = this;
+//         if (!this.isStickyScrolling) {
+//             self.$wrapper.find('.product-image-wrapper .product-image').each(function () {
+//                 if (Wolmart.isOnScreen(this)) {
+//                     self.$wrapper.find('.product-thumbs > :nth-child(' + ($(this).index() + 1) + ')')
+//                         .addClass('active').siblings().removeClass('active');
+//                     return false;
+//                 }
+//             });
+//         }
+//     }
+
+//     ProductSingle.prototype.swatchImage = function () {
+//         var src = this.$items.find('.active img').attr('src'),
+//             productImage = this.$wrapper.find('.swiper-slide:first-child .product-image img'),
+//             thumbImage = this.$wrapper.find('.swiper-slide:first-child .product-thumb img');
+
+//         productImage.attr('src', src);
+//         thumbImage.attr('src', src);
+//     }
+
+//     Wolmart.productSingle = function (selector) {
+//         Wolmart.$(selector).each(function () {
+//             var $this = $(this);
+//             if (!$this.is('body > *')) {
+//                 $this.data('product-single', new ProductSingle($this));
+//             }
+//         })
+//         return null;
+//     }
+// })(jQuery);
+
+// /**
+//  * Wolmart Plugin - Product Single Page
+//  * 
+//  * @requires Slider
+//  * @requires ProductSingle
+//  * @requires PhotoSwipe
+//  * @instance single
+//  */
+
+// (function ($) {
+
+//     // Open Image Gallery
+//     function openImageGallery(e) {
+//         e.preventDefault();
+
+//         var $this = $(e.currentTarget),
+//             $product = $this.closest('.product-single'),
+//             $review = $this.closest('.review-image'),
+//             $images, images;
+//         if ($this.closest('.review-image').length) {
+//             $images = $this.closest('.review-image').find('img');
+//         } else if ($product.find('.product-single-swiper').length) { // single carousel
+//             $images = $product.find('.product-single-swiper .swiper-slide:not(.cloned) img:first-child');
+//         } else if ($product.find('.product-gallery-carousel').length) { // gallery carousel
+//             $images = $product.find('.product-gallery-carousel .swiper-slide:not(.cloned) img');
+//         } else { // simple gallery
+//             $images = $product.find('.product-image img:first-child');
+//         }
+
+//         if ($images.length) {
+//             images = $images.map(function () {
+//                 var $this = $(this);
+
+//                 return {
+//                     src: $this.attr('data-zoom-image'),
+//                     w: 800,
+//                     h: 900,
+//                     title: $this.attr('alt')
+//                 };
+//             }).get();
+
+//             var swiper = $product.find('.product-single-swiper').data('slider'),
+//                 curIndex = swiper ?
+//                     // Carousel Type
+//                     swiper.activeIndex :
+//                     // Gallery Type
+//                     $product.find('.product-gallery .product-gallery-btn').index($this);
+//             if ($review.length == 1) {
+//                 var reviewIndex = $review.find('img').index($this);
+//                 curIndex = reviewIndex;
+//             }
+
+//             if (typeof PhotoSwipe !== 'undefined') {
+//                 var pswpElement = $('.pswp')[0];
+
+//                 if (Wolmart.$body.attr('dir') == 'rtl') {
+//                     var photoSwipe = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, images, {
+//                         index: curIndex,
+//                         closeOnScroll: false,
+//                         showAnimationDuration: 0,
+//                         rtl: true
+//                     });
+//                 }
+//                 else {
+//                     var photoSwipe = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, images, {
+//                         index: curIndex,
+//                         closeOnScroll: false,
+//                         showAnimationDuration: 0,
+//                     });
+//                 }
+//                 photoSwipe.init();
+//                 Wolmart.photoSwipe = photoSwipe;
+//             }
+//         }
+//     }
+
+//     // Open Video
+//     function openVideo(e) {
+//         e.preventDefault();
+//         Wolmart.popup({
+//             items: {
+//                 src: '<video src="assets/video/memory-of-a-woman.mp4" autoplay loop controls>',
+//                 type: "inline"
+//             },
+//             mainClass: "mfp-video-popup"
+//         }, "video")
+//     }
+
+//     // Open 360 Degree
+//     function open360DegreeView(e) {
+//         e.preventDefault();
+//         Wolmart.popup({
+//             type: 'inline',
+//             mainClass: "product-popupbox wm-fade product-360-popup",
+//             preloader: false,
+//             items: {
+//                 src: '<div class="product-gallery-degree">\
+// 						<div class="w-loading"><i></i></div>\
+// 						<ul class="product-degree-images"></ul>\
+// 					</div>'
+//             },
+//             callbacks: {
+//                 open: function () {
+//                     this.container.find('.product-gallery-degree').ThreeSixty({
+//                         imagePath: 'assets/images/products/video/',
+//                         filePrefix: '360-',
+//                         ext: '.jpg',
+//                         totalFrames: 18,
+//                         endFrame: 18,
+//                         currentFrame: 1,
+//                         imgList: this.container.find('.product-degree-images'),
+//                         progress: '.w-loading',
+//                         height: 500,
+//                         width: 830,
+//                         navigation: true
+//                     });
+//                 },
+//                 beforeClose: function () {
+//                     this.container.empty();
+//                 }
+//             }
+//         });
+//     }
+
+//     /**
+//      * Event handler when rating control is clicked in single product page's review form.
+//      * 
+//      * @since 1.0
+//      * @param {object} e
+//      * @return {void}
+//      */
+//     function clickRatingForm(e) {
+//         var $star = $(this);
+//         $star.addClass('active').siblings().removeClass('active');
+//         $star.parent().addClass('selected');
+//         $star.closest('.rating-form').find('select').val($star.text());
+//         e.preventDefault();
+//     }
+
+//     function onAddToCartSingle(e) {
+
+//         var $this = $(this),
+//             $alert = $('.main-content > .alert, .container > .alert'),
+//             productName;
+
+//         if ($this.hasClass('disabled')) {
+//             alert('Please select some product options before adding this product to your cart.');
+//             return;
+//         }
+
+//         if ($alert.length) {
+//             $alert.fadeOut(function () {
+//                 $alert.fadeIn();
+//             })
+//         } else {
+//             productName = $this.closest('.product-single').find('.product-title').text();
+//             var alertHtml = '<div class="alert alert-success alert-cart-product mb-2">\
+//                             <a href="cart.html" class="btn btn-success btn-rounded">View Cart</a>\
+//                             <p class="mb-0 ls-normal">“'+ productName + '” has been added to your cart.</p>\
+//                             <a href="#" class="btn btn-link btn-close" aria-label="button">\<i class="close-icon"></i>\</a>\
+//                             </div>'
+//             $this.closest('.product-single').before(alertHtml);
+//         }
+
+//         $('.product-sticky-content').trigger('recalc.pin');
+//     }
+
+//     function stickyProduct(selector) {
+
+//         var $this = $(selector),
+//             $product = $this.closest('.product-single'),
+//             src = $product.find('.product-image img').eq(0).attr('src'),
+//             name = $product.find('.product-details .product-title').text(),
+//             newPrice = $product.find('.new-price').text(),
+//             oldPrice = $product.find('.old-price').text(),
+//             stickyProductDetailsHtml = '<div class="product product-list-sm mr-auto">\
+//                                         <figure class="product-media">\
+//                                         <img src="'+ src + '" alt="Product" width="85" height="85" />\
+//                                         </figure>\
+//                                         <div class="product-details pt-0 pl-2 pr-2">\
+//                                         <h4 class="product-name font-weight-normal mb-1">'+ name + '</h4>\
+//                                         <div class="product-price mb-0">\
+//                                         <ins class="new-price">'+ newPrice + '</ins><del class="old-price">' + oldPrice + '</del></div>\
+//                                         </div></div>';
+
+//         $this.find('.product-qty-form').before(stickyProductDetailsHtml);
+
+//         function refreshStickyProduct() {
+//             if ($this.hasClass('fix-top') && window.innerWidth > 767) {
+//                 $this.removeClass('fix-top').addClass('fix-bottom');
+//             }
+
+//             if ($this.hasClass('fix-bottom') && window.innerWidth > 767) {
+//                 return;
+//             }
+
+//             if ($this.hasClass('fix-bottom') && window.innerWidth < 768) {
+//                 $this.removeClass('fix-bottom').addClass('fix-top');
+//             }
+
+//             if ($this.hasClass('fix-top') && window.innerWidth < 768) {
+//                 return;
+//             }
+//         }
+
+//         window.addEventListener('resize', refreshStickyProduct, { passive: true });
+//         refreshStickyProduct();
+//     }
+
+//     Wolmart.initProductSinglePage = function () {
+//         // Zoom Image for grid type
+//         $('.product-gallery').each(function () {
+//             var $this = $(this),
+//                 $images = $this.find('.product-image');
+//             $images.length && $this.find('.swiper-container').length == 0 && $images.zoom(Wolmart.zoomImageOptions);
+//         });
+
+//         stickyProduct('.product-sticky-content')
+
+//         // Register events
+//         if (!document.body.classList.contains('home')) {
+//             Wolmart.$body
+//                 .on('click', '.product-image-full', openImageGallery)
+//                 .on('click', '.review-image img', openImageGallery)
+//                 .on('click', '.product-video-viewer', openVideo)
+//                 .on('click', '.product-degree-viewer', function (e) {
+//                     e.preventDefault(e);
+//                     if ($.fn.ThreeSixty) {
+//                         open360DegreeView(e);
+//                     }
+//                 })
+//                 .on('click', '.rating-form .rating-stars > a', clickRatingForm)
+//                 .on('click', '.product-single:not(.product-popup) .btn-cart', onAddToCartSingle);
+//         }
+//     }
+// })(jQuery);
 
 /**
  * Wolmart Plugin - Code Popup
@@ -3581,8 +3581,8 @@ window.Wolmart = {};
         Wolmart.accordion('.card-header > a')                               // Initialize Accordion
         Wolmart.sidebar('sidebar');                                         // Initialize Sidebar
         Wolmart.sidebar('right-sidebar');                                   // Initialize Right Sidebar
-        Wolmart.productSingle('.product-single');                           // Initialize all single products
-        Wolmart.initProductSinglePage();                                    // Initialize Single Product Page
+        // Wolmart.productSingle('.product-single');                           // Initialize all single products
+        // Wolmart.initProductSinglePage();                                    // Initialize Single Product Page
         Wolmart.initQtyInput('.quantity');                                  // Initialize Quantity Input
         Wolmart.initNavFilter('.nav-filters .nav-filter')                   // Initialize Isotope Navigation Filters
         Wolmart.calendar('.calendar-container');                            // Initialize Calendar

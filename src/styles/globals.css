@@ -1,5 +1,7 @@
 @import '/assets/vendor/fontawesome-free/css/all.min.css';
 @import '@splidejs/react-splide/css';
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 
 
 
@@ -848,19 +850,19 @@ blockquote {
 }
 .list-type-check li {
     position: relative;
-    padding-left: 2rem;
+    /* padding-right: 2rem; */
     line-height: 2;
 }
-.list-type-check li:before {
+/* .list-type-check li:before {
     position: absolute;
     display: block;
-    left: 0;
+    right: 0;
     top: 1px;
     content: "";
     font-family: "IRANSans-Medium";
     font-weight: 600;
     font-size: 1.3rem;
-}
+} */
 .list-circle li {
     padding-left: 1rem;
     margin-bottom: 1rem;
@@ -6153,7 +6155,7 @@ body .product-popup {
     flex-wrap: wrap;
 }
 .product-single .brand {
-    margin: 0 2rem 1rem 0;
+    margin: 0 0 1rem 2rem;
     border: 1px solid #eee;
     border-radius: 0.5rem;
 }
@@ -6273,7 +6275,7 @@ body .product-popup {
     margin-right: 0;
 }
 .product-single .product-color-swatch .color+.color {
-    margin-left: 0.8rem;
+    margin-right: 0.8rem;
 }
 .product-single .product-color-swatch .color:before {
     content: "";
@@ -6336,7 +6338,7 @@ body .product-popup {
     min-width: 14rem;
 }
 .product-single .btn-cart i {
-    margin: 0 0.4rem 0.2rem 0;
+    margin: 0 0 0.2rem 0.4rem;
     font-size: 1.7rem;
 }
 .product-single .btn-cart.disabled {
@@ -6351,7 +6353,7 @@ body .product-popup {
     flex: 0 0 14rem;
     max-width: 14rem;
     margin-bottom: 1rem;
-    margin-right: 2rem;
+    margin-left: 2rem;
 }
 .product-single .social-links-wrapper {
     display: flex;
@@ -6871,7 +6873,7 @@ body .product-popup {
     transition: border-color 0.3s;
 }
 .product-variations>a:not(:last-child) {
-    margin-right: 0.8rem;
+    margin-left: 0.8rem;
 }
 .product-variations>a:not(.color).active, .product-variations>a:not(.color):hover {
     border: 1px solid #2266cc;
@@ -6890,7 +6892,7 @@ body .product-popup {
 }
 .ratings-full {
     cursor: pointer;
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 .ratings-full:before {
     content: "" "" "" "" "";
@@ -12411,4 +12413,12 @@ body .product-popup {
 
 .shadows{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus{
+    border: 1px solid #337ab7 !important;
+}
+
+.image-gallery-thumbnail:hover{
+    border: 1px solid #337ab7 !important;
 }
