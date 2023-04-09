@@ -1,12 +1,13 @@
 import React , {useState} from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Image from 'next/image'
 import Link from 'next/link'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 
 
 export default function ProductSection() {
 
+    // vendor product data
     const data = [
         {id:1 , name:'مداد چسبنده' , category:'تجهیزات جانبی' , price:'198,000', src:[
             '/assets/images/products/default/1-1.jpg',
@@ -29,17 +30,16 @@ export default function ProductSection() {
             '/assets/images/products/default/1-2.jpg'
         ]},
     ]
-
     const [vendorProduct , setVendorProduct] = useState(data)
 
   return (
     <>
-        <section class="vendor-product-section">
-            <div class="title-link-wrapper mb-4">
-                <h4 class="title text-left">محصولات بیشتر از این فروشنده</h4>
-                <Link href="#" class="btn btn-dark btn-link btn-slide-right btn-icon-right"><i class="w-icon-long-arrow-left"></i> محصولات بیشتر</Link>
+        <section className="vendor-product-section">
+            <div className="title-link-wrapper mb-4">
+                <h4 className="title text-left">محصولات بیشتر از این فروشنده</h4>
+                <Link href="#" className="btn btn-dark btn-link btn-slide-right btn-icon-right"><i className="w-icon-long-arrow-left"></i> محصولات بیشتر</Link>
             </div>
-            <div class="swiper-container swiper-theme">
+            <div className="swiper-container swiper-theme">
                     <Splide 
                         options={{ 
                             rewind: true,
@@ -49,7 +49,7 @@ export default function ProductSection() {
                             pagination:false
 
                         }}
-                        class="swiper-wrapper row cols-lg-3 cols-md-4 cols-sm-3 cols-2"
+                        className="swiper-wrapper row cols-1"
                     >
                         {vendorProduct.map((i , index)=> {
                             return(
@@ -89,6 +89,7 @@ export default function ProductSection() {
                                 </SplideSlide>
                             )
                         })}
+                        
                     </Splide>
             </div>
         </section>

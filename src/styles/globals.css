@@ -7049,7 +7049,7 @@ body .product-popup {
     flex: 0 0 35.73%;
     max-width: 35.73%;
     min-width: 33.33%;
-    margin-right: 1rem;
+    margin-left: 1rem;
     padding: 0;
 }
 .sidebar .product-widget .product-name {
@@ -7822,7 +7822,7 @@ body .product-popup {
     border: 1px solid #eee;
 }
 .widget-icon-box .icon-box-side {
-    justify-content: left;
+    justify-content: right;
     padding: 2rem 0;
 }
 .widget-icon-box .icon-box-side:not(:last-child) {
@@ -7841,7 +7841,7 @@ body .product-popup {
     color: #999;
 }
 .widget-banner .banner-content {
-    left: 10.7%;
+    right: 10.7%;
     bottom: 12.5%}
 .widget-banner .banner-price-info {
     margin-left: -2px;

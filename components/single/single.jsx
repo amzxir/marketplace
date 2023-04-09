@@ -25,7 +25,7 @@ export default function Single() {
                       <Details/>
                       <ProductSection/>
                   </div>
-                  {/* <Sidbar/> */}
+                  <Sidbar/>
               </div>
 
           </div>
