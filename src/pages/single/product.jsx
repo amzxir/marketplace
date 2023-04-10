@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import Single from 'components/single/single'
 
-export default function SingleProduct() {
+export default function Product() {
   return (
     <>
         <nav className="breadcrumb-nav rtl">

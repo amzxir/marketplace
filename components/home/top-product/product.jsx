@@ -30,13 +30,13 @@ export default function Product() {
                     <div key={index} className="product-wrap mb-0">
                         <div className="product product-widget">
                             <figure className="product-media">
-                                <a href="product-default.html">
+                                <Link href="/single/product">
                                     <Image src={i.src} alt="Product" width="600" height="675"/>
-                                </a>
+                                </Link>
                             </figure>
                             <div className="product-details">
                                 <h4 className="product-name">
-                                    <a href="product-default.html">{i.name}</a>
+                                    <Link href="/single/product">{i.name}</Link>
                                 </h4>
                                 <div className="product-price ml-3">{i.price} <small>تومان</small></div>
                                 {i.dis === null ? '' : <del className="old-price">{i.dis} <small>تومان</small></del>}  

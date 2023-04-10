@@ -85,7 +85,7 @@ export default function Product() {
                                     return(
                                         <SplideSlide key={index} className='swiper-slide product text-center w-100'>
                                             <figure className="product-media">
-                                                <Link href="#">
+                                                <Link href="/single/product">
                                                     {i.img.map((i , index)=> {
                                                         return(
                                                             <Image key={index} src={i} alt="Product" width="800" height="900" />
@@ -148,7 +148,7 @@ export default function Product() {
                                     return(
                                         <div key={index} className="product text-center">
                                             <figure className="product-media">
-                                                <Link href="#">
+                                                <Link href="/single/product">
                                                     {i.img.map((i , index)=> {
                                                         return(
                                                             <Image key={index} src={i} alt="Product" width="800" height="900" />
