@@ -179,10 +179,10 @@ export default function Header() {
                                       </ul>
                                   </li>
                                   <li>
-                                      <Link href="#">درباره ما</Link>
+                                      <Link href="/about-us">درباره ما</Link>
                                   </li>
                                   <li>
-                                      <Link href="#">تماس با ما</Link>
+                                      <Link href="/contact-us">تماس با ما</Link>
                                   </li>
                               </ul>
                           </nav>

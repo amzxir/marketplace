@@ -11,7 +11,7 @@ export default function Document() {
       <Head >
         <HeadMeta/>
       </Head>
-      <body className='home'>
+      <body className='home about-us'>
         <div className='page-wrapper'>
           <Header/>
           <Menu/>
