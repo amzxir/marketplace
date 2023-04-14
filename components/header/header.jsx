@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import Menu from 'components/mobile-menu/menu'
+import { useAppContext } from '../../src/context/state';
 
 
 export default function Header() {
@@ -43,7 +44,6 @@ export default function Header() {
     const handelMenu = () => {
         setOpenMenu(!openMenu)
     }
-
 
   return (
     <>
