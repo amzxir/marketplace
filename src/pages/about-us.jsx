@@ -5,6 +5,9 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import Footer from 'components/footer/footer'
+import Header from 'components/header/header'
+
 
 
 export default function AboutUs() {
@@ -54,6 +57,7 @@ export default function AboutUs() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
+        <Header/>
         <nav className="breadcrumb-nav rtl">
             <div className="container">
                 <ul className="breadcrumb">
@@ -63,7 +67,6 @@ export default function AboutUs() {
                 </ul>
             </div>
         </nav>
-        
         <div className="page-content rtl mt-5">
             <div className="container-about">
                 <section className="introduce mb-10 pb-10">
@@ -228,6 +231,7 @@ export default function AboutUs() {
                 </div>
             </section>
         </div>
+        <Footer/>
     </>
   )
 }

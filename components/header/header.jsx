@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
+import Menu from 'components/mobile-menu/menu'
 
 
 export default function Header() {
@@ -36,6 +37,12 @@ export default function Header() {
         {id:1 , name:'تجهیزات جانبی' , icon:'w-icon-return'},
         {id:1 , name:'فریزر' , icon:'w-icon-furniture'},
     ]
+
+    const [openMenu , setOpenMenu] = useState(false)
+
+    const handelMenu = () => {
+        setOpenMenu(!openMenu)
+    }
 
 
   return (
@@ -98,8 +105,10 @@ export default function Header() {
                           </Link>
                       </div>
                   </div>
+
+
                   <div className="header-left ml-4 rtl">
-                      <Link href="#" className="mobile-menu-toggle  w-icon-hamburger ml-4" aria-label="menu-toggle">
+                      <Link href='#' onClick={handelMenu} className="mobile-menu-toggle w-icon-hamburger ml-4">
                       </Link>
                       <Link href="/" className="logo ml-lg-0">
                           <Image src="/assets/images/demos/demo9/header-logo.png" alt="logo" width="144" height="45" />
@@ -123,6 +132,8 @@ export default function Header() {
                           <button className="btn btn-search" type="submit"><i className="w-icon-search"></i>
                           </button>
                       </form>
+
+
                   </div>
  
               </div>
@@ -218,6 +229,13 @@ export default function Header() {
               </div>
           </div>
       </header>
+
+      <Menu 
+        openMenu={openMenu}
+        setOpenMenu={setOpenMenu}
+        handelMenu={handelMenu}
+      />
+
     </>
   )
 }

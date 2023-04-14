@@ -12397,6 +12397,8 @@ body .product-popup {
     left: 2%}
 }
 
+/* write style  */
+
 .rtl{
     direction: rtl;
 }
@@ -12424,3 +12426,104 @@ body .product-popup {
 .image-gallery-thumbnail:hover{
     border: 1px solid #337ab7 !important;
 }
+
+.menu-mobile-block{ 
+    background: #222;
+    max-width: 296px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 111111 !important;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.menu-mobile-none{
+    background: #fff;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 15px;
+    height: 100vh;
+    display: none;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-overlay{
+    background: #000;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    opacity: .5;
+}
+
+.p-0{
+    padding: 0 !important;
+}
+
+.border-0{
+    border: 0 !important;
+}
+
+.btn-exit{
+    position: fixed;
+    right: 20px;
+    background: transparent;
+    color: #000;
+}
+
+.btn-exit:hover{
+    position: fixed;
+    right: 20px;
+    background: transparent;
+    color: #000;
+}
+
+.menu-mobile-block > ul{ 
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    background: #222;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu-mobile-block > ul > li{ 
+    border-bottom: 1px solid #2E3237;
+}
+
+.menu-mobile-block > ul > li > a{ 
+    display: block;
+    position: relative;
+    padding: 1.3rem 0.6rem 1.3rem 1rem;
+    color: inherit;
+    transition: color 0.3s;
+    color: #fff;
+}
+
+
+
+
+
