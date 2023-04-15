@@ -5487,7 +5487,7 @@ select:focus::-ms-value {
     border-radius: 0.3rem;
 }
 .page-item:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 .page-item-dots {
     white-space: nowrap;
@@ -7588,7 +7588,7 @@ body .product-popup {
     height: 3.7rem;
     vertical-align: middle;
     line-height: 2.6;
-    margin-left: 1rem;
+    margin-right: 1rem;
     text-transform: none;
 }
 .filter-items {
@@ -9512,7 +9512,7 @@ body .product-popup {
 .widget .widget-title {
     position: relative;
     margin: -0.1rem 0;
-    padding: 1.4rem 2.5rem 1.4rem 0;
+    padding: 1.4rem 0 1.4rem 2.5rem;
     font-weight: 600;
     font-size: 1.6rem;
     color: #333;
@@ -9894,11 +9894,11 @@ body .product-popup {
 }
 .toolbox-item label, .toolbox-left label, .toolbox-right label, .toolbox label {
     font-weight: 600;
-    margin-right: 1rem;
+    margin-left: 1rem;
     line-height: 1.5;
 }
 .toolbox-right {
-    margin-left: auto;
+    margin-right: auto;
 }
 .toolbox {
     padding-bottom: 1rem;
@@ -9908,7 +9908,7 @@ body .product-popup {
     border-top: 1px solid #f4f4f4;
 }
 .toolbox-left>:not(.toolbox-pagination):not(:last-child), .toolbox-right>:not(.toolbox-pagination):not(:last-child), .toolbox>:not(.toolbox-pagination):not(:last-child) {
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 .toolbox .showing-info {
     font-size: 1.3rem;
@@ -9997,7 +9997,7 @@ body .product-popup {
 .toolbox-layout {
     display: flex;
     align-items: center;
-    margin-left: 1.9rem;
+    margin-right: 1.9rem;
 }
 .btn-layout {
     line-height: 1;
@@ -10005,7 +10005,7 @@ body .product-popup {
     transition: color 0.4s;
 }
 .btn-layout+.btn-layout {
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 .btn-layout i {
     font-size: 1.9rem;

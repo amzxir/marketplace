@@ -106,7 +106,6 @@ export default function Header() {
                       </div>
                   </div>
 
-
                   <div className="header-left ml-4 rtl">
                       <Link href='#' onClick={handelMenu} className="mobile-menu-toggle w-icon-hamburger ml-4">
                       </Link>
@@ -149,7 +148,7 @@ export default function Header() {
                                       <Link href="/">خانه</Link>
                                   </li>
                                   <li>
-                                      <Link href="#">فروشگاه ها</Link>
+                                      <Link href="/shop">فروشگاه ها</Link>
 
                                       <ul className="megamenu">
 
