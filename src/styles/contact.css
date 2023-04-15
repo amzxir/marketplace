@@ -1,0 +1,83 @@
+.contact-us .icon-box-content .icon-box-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+  }
+  .contact-us .icon-box-content p {
+    font-size: 1.4rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .contact-us .icon-box .icon-email {
+    margin: 0.3rem 0 1.5rem;
+  }
+  .contact-us .icon-box .icon-headphone {
+    margin-bottom: 2.3rem;
+  }
+  .contact-us .icon-box .icon-map-marker {
+    margin-bottom: 1.9rem;
+  }
+  .contact-us .icon-box .icon-fax {
+    margin: 0.4rem 0 2.2rem;
+  }
+  .contact-us .icon-box .w-icon-envelop-closed {
+    font-size: 5.2rem;
+  }
+  .contact-us .icon-box .w-icon-headphone {
+    font-size: 4.8rem;
+  }
+  .contact-us .icon-box .w-icon-map-marker {
+    font-size: 5.1rem;
+  }
+  .contact-us .icon-box .w-icon-fax {
+    font-size: 4.5rem;
+  }
+  .contact-us .description {
+    margin-bottom: 4.9rem;
+  }
+  
+  .contact-information-section {
+    padding-bottom: 0.9rem;
+  }
+  
+  .contact-section .card-header {
+    font-size: 1.4rem;
+    letter-spacing: 0;
+  }
+  .contact-section .card-header a {
+    padding-top: 1.5rem;
+  }
+  
+  .contact-us-form .form-group label {
+    color: #333;
+    line-height: 2;
+  }
+  .contact-us-form .form-group .form-control {
+    margin-bottom: 1.4rem;
+    min-height: 4.6rem;
+    border-radius: 0.3rem;
+  }
+  .contact-us-form .form-group textarea.form-control {
+    margin-bottom: 2.1rem;
+  }
+  
+  .contact-google-map {
+    background-color: #ddd;
+  }
+
+  .content-title-section .subtitle {
+    font-size: 1.4rem;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+  }
+  .content-title-section .title {
+    max-width: 55.5rem;
+    margin: 0 auto 0.7rem;
+    font-size: 2.4rem;
+  }
+  .content-title-section .description {
+    margin-bottom: 4.8rem;
+    font-size: 1.3rem;
+  }
