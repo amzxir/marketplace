@@ -87,11 +87,11 @@ export default function Header() {
                               <a href="tel:#" className="phone-number font-weight-bolder ls-50">0919995465</a>
                           </div>
                       </div>
-                      <Link className="wishlist label-down link d-xs-show" href="/">
+                      <Link className="wishlist label-down link d-xs-show" href="/wishlist">
                           <i className="w-icon-heart"></i>
                           <span className="wishlist-label d-lg-show">علاقه مندی ها</span>
                       </Link>
-                      <Link className="compare label-down link d-xs-show" href="/">
+                      <Link className="compare label-down link d-xs-show" href="/compare">
                           <i className="w-icon-compare"></i>
                           <span className="compare-label d-lg-show">مقایسه</span>
                       </Link>

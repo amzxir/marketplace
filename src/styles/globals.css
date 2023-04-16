@@ -6943,7 +6943,7 @@ body .product-popup {
     text-decoration: none;
 }
 .product-price .new-price:not(:last-child) {
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 .product-price:not(:last-child) {
     margin-bottom: 0.9rem;
@@ -9710,8 +9710,8 @@ body .product-popup {
 .compare-col.compare-field {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    text-align: end;
+    justify-content: flex-start;
+    text-align: start;
     padding-right: 5rem;
     font-weight: 400;
     color: #999;
