@@ -4392,7 +4392,6 @@ to {
 
 [class*=" w-icon-"], [class^=w-icon-] {
     font-family: "wolmart"!important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -4746,8 +4745,6 @@ textarea {
     font-family: inherit;
     letter-spacing: inherit;
     z-index: 1;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     cursor: pointer;
 }
 .select-box select:focus, .select-menu select:focus {
@@ -4819,7 +4816,6 @@ select:focus::-ms-value {
     height: inherit;
     min-height: auto;
     max-width: 100%;
-    -webkit-appearance: textfield;
     border: solid #ccc;
     border-width: 1px;
     color: #666;
@@ -7562,7 +7558,6 @@ body .product-popup {
     height: 37px;
     line-height: 37px;
     vertical-align: middle;
-    -webkit-appearance: textfield;
 }
 .price-range input::-webkit-inner-spin-button, .price-range input::-webkit-outer-spin-button {
     -webkit-appearance: none;
