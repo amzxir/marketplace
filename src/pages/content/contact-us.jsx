@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Header from '../../components/header/header'
-import Footer from '../../components/footer/footer'
+import Header from '../../../components/header/header'
+import Footer from '../../../components/footer/footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 

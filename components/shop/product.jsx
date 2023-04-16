@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 
 export default function Product() {
 
+    // product data
     const data = [
         {id:1 , name:'ساعت طلا' , price:'120.000' , dis:'100.000' , src:'/assets/images/demos/demo9/product/5-3.jpg'},
         {id:2 , name:'کوله پشتی راحت' , price:'120.000' , dis:null , src:'/assets/images/demos/demo9/product/5-7.jpg'},

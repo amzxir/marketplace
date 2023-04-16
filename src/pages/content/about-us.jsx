@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Footer from 'components/footer/footer'
-import Header from 'components/header/header'
+import Footer from '../../../components/footer/footer'
+import Header from '../../../components/header/header'
 
 
 

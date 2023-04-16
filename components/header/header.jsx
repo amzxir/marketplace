@@ -159,7 +159,7 @@ export default function Header() {
                                                     <ul>
                                                         {i.category.map((i , index)=> {
                                                             return(
-                                                                <li key={index}><Link href="#">{i}</Link></li>
+                                                                <li key={index}><Link href="/shop">{i}</Link></li>
                                                             )
                                                         })}
                                                     </ul>
@@ -189,10 +189,10 @@ export default function Header() {
                                       </ul>
                                   </li>
                                   <li>
-                                      <Link href="/about-us">درباره ما</Link>
+                                      <Link href="/content/about-us">درباره ما</Link>
                                   </li>
                                   <li>
-                                      <Link href="/contact-us">تماس با ما</Link>
+                                      <Link href="/content/contact-us">تماس با ما</Link>
                                   </li>
                               </ul>
                           </nav>
