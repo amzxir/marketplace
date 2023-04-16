@@ -37,25 +37,25 @@ export default function Faq() {
             </div>
         </nav>
 
-        <main class="main mt-5 rtl">
-            <div class="page-content faq">
-                <div class="container">
-                    <section class="content-title-section">
-                        <h3 class="title title-simple justify-content-center bb-no pb-0">سوالات متداول</h3>
-                        <p class="description text-center">می‌توانید با <b>نیباک</b> به راحتی سوالات را نشان دهید.</p>
+        <main className="main mt-5 rtl">
+            <div className="page-content faq">
+                <div className="container">
+                    <section className="content-title-section">
+                        <h3 className="title title-simple justify-content-center bb-no pb-0">سوالات متداول</h3>
+                        <p className="description text-center">می‌توانید با <b>نیباک</b> به راحتی سوالات را نشان دهید.</p>
                     </section>
 
-                    <section class="mb-6">
-                        <h4 class="title title-center mb-5">اطلاعات حمل و نقل</h4>
-                        <div class="row">
+                    <section className="mb-6">
+                        <h4 className="title title-center mb-5">اطلاعات حمل و نقل</h4>
+                        <div className="row">
                             {faqs.map((i , index)=> {
                                 return(
-                                    <div key={index} class="card accordion accordion-bg accordion-gutter-md accordion-border col-md-6 mb-5">
-                                        <div class="card-header">
-                                            <a href="#collapse1-1" class="collapse">{i.title}</a>
+                                    <div key={index} className="card accordion accordion-bg accordion-gutter-md accordion-border col-md-6 mb-5">
+                                        <div className="card-header">
+                                            <a href="#collapse1-1" className="collapse">{i.title}</a>
                                         </div>
-                                        <div id="collapse1-1" class="card-body expanded">
-                                            <p class="mb-0">
+                                        <div id="collapse1-1" className="card-body expanded">
+                                            <p className="mb-0">
                                                 {i.description}
                                             </p>
                                         </div>
@@ -66,17 +66,17 @@ export default function Faq() {
                         
                     </section>
 
-                    <section class="mb-10">
-                        <h4 class="title title-center mb-5">پرداخت</h4>
-                        <div class="row">
+                    <section className="mb-10">
+                        <h4 className="title title-center mb-5">پرداخت</h4>
+                        <div className="row">
                             {faqs.map((i , index)=> {
                                 return(
-                                    <div key={index} class="card accordion accordion-bg accordion-gutter-md accordion-border col-md-6 mb-5">
-                                        <div class="card-header">
-                                            <a href="#collapse1-1" class="collapse">{i.title}</a>
+                                    <div key={index} className="card accordion accordion-bg accordion-gutter-md accordion-border col-md-6 mb-5">
+                                        <div className="card-header">
+                                            <a href="#collapse1-1" className="collapse">{i.title}</a>
                                         </div>
-                                        <div id="collapse1-1" class="card-body expanded">
-                                            <p class="mb-0">
+                                        <div id="collapse1-1" className="card-body expanded">
+                                            <p className="mb-0">
                                                 {i.description}
                                             </p>
                                         </div>

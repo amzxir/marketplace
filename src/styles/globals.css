@@ -3670,7 +3670,7 @@ to {
     color: #333;
 }
 .breadcrumb.shop-breadcrumb li:not(:last-child):after {
-    margin-left: 1rem;
+    margin-right: 1rem;
     font-size: 2rem;
     font-weight: 700;
     color: #999;
@@ -4863,7 +4863,7 @@ select:focus::-ms-value {
     position: absolute;
     display: inline-flex;
     align-items: center;
-    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     border: 1px solid;

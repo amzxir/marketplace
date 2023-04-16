@@ -25,8 +25,7 @@ export default function Shop() {
             <div className="container">
                 <ul className="breadcrumb">
                     <li><Link href="/">خانه</Link></li>
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                    <li className='mr-1'>فروشگاه</li>
+                    <li>فروشگاه</li>
                 </ul>
             </div>
         </nav>

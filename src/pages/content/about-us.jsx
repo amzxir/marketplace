@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Footer from '../../../components/footer/footer'
 import Header from '../../../components/header/header'
@@ -62,8 +60,7 @@ export default function AboutUs() {
             <div className="container">
                 <ul className="breadcrumb">
                     <li><Link href="/">خانه</Link></li>
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                    <li className='mr-1'>درباره ما</li>
+                    <li>درباره ما</li>
                 </ul>
             </div>
         </nav>

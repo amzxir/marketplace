@@ -126,10 +126,10 @@ export default function View() {
                                     <button className="quantity-minus w-icon-minus"></button>
                                 </div>
                             </div>
-                            <button className="btn btn-primary btn-cart">
+                            <Link href='/shopping/card' className="btn btn-primary btn-cart">
                                 <i className="w-icon-cart"></i>
                                 <span>افرودن به سبد خرید</span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

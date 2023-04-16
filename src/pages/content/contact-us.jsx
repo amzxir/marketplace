@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../../components/header/header'
 import Footer from '../../../components/footer/footer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function ContactUs() {
 
@@ -31,8 +29,7 @@ export default function ContactUs() {
             <div className="container">
                 <ul className="breadcrumb">
                     <li><Link href="/">خانه</Link></li>
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                    <li className='mr-1'>تماس ما</li>
+                    <li>تماس ما</li>
                 </ul>
             </div>
         </nav>

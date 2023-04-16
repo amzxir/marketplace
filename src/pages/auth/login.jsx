@@ -2,8 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from './auth.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -21,8 +19,7 @@ export default function Login() {
           <div className="container">
               <ul className="breadcrumb">
                   <li><Link href="/">خانه</Link></li>
-                  <FontAwesomeIcon icon={faAngleLeft} />
-                  <li className='mr-1'>ورود</li>
+                  <li>ورود</li>
               </ul>
           </div>
       </nav>

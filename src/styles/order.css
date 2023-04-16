@@ -1,0 +1,200 @@
+.order .shop-breadcrumb {
+    margin-bottom: 2.2rem;
+  }
+  .order .order-table {
+    padding: 0.6rem 3rem 3rem;
+    border: 1px solid #e1e1e1;
+    border-collapse: separate;
+  }
+  .order .order-table thead th {
+    padding-bottom: 1.7rem;
+    font-size: 1.8rem;
+  }
+  .order .order-table thead th,
+  .order .order-table tfoot th,
+  .order .order-table tfoot td {
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .order .order-table td {
+    border: none;
+  }
+  .order .order-table tbody td:first-child {
+    min-width: 16rem;
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+  .order .order-table tbody a {
+    color: #336699;
+  }
+  .order .order-table tbody a:hover {
+    text-decoration: underline;
+  }
+  .order .order-table tbody strong {
+    color: #333;
+  }
+  .order .order-table tfoot {
+    font-size: 1.6rem;
+  }
+  .order .order-table tfoot th, .order .order-table tfoot td {
+    padding-top: 1.5rem;
+    padding-bottom: 1.8rem;
+    font-weight: 600;
+  }
+  .order .order-table tfoot th {
+    color: #333;
+  }
+  .order .order-table .total td {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333;
+  }
+  .order .alert {
+    border: 1px dashed #e5e5e5;
+  }
+  .order .alert i {
+    color: #799b5a;
+  }
+  .order .address-table td {
+    color: #666 !important;
+  }
+  .order #billing-account-addresses {
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .order #billing-account-addresses .email td {
+    padding-top: 3.5rem;
+  }
+  .order .btn-back {
+    padding: 0.85em 1.4em;
+  }
+  
+  .order-success {
+    padding: 3.6rem 1.5rem;
+    border: 2px solid #e1e1e1;
+    font-size: 2.4rem;
+  }
+  .order-success i {
+    font-size: 28px;
+    vertical-align: middle;
+    margin-left: 0.8rem;
+  }
+  
+  .order-view {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 3.2rem 0;
+  }
+  .order-view li {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .order-view strong {
+    color: #333;
+    display: block;
+  }
+  
+  .order-subtable thead tr {
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .order-subtable thead th {
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: start;
+    font-weight: 600;
+  }
+  .order-subtable td {
+    white-space: nowrap;
+  }
+  .order-subtable tbody td {
+    border: none;
+    padding: 1.5rem 0;
+  }
+  .order-subtable strong {
+    display: block;
+    color: #333;
+  }
+  .order-subtable .order {
+    width: 12.5%;
+  }
+  .order-subtable .date {
+    width: 21.13%;
+  }
+  .order-subtable .status {
+    width: 14.11%;
+  }
+  .order-subtable .total {
+    width: 32%;
+    color: #333;
+  }
+  .order-subtable .action {
+    text-align: end;
+  }
+  .order-subtable tbody tr:first-child td {
+    padding-top: 3.4rem;
+  }
+  .order-subtable tbody .order {
+    color: #336699;
+  }
+  .order-subtable tbody .btn {
+    padding: 0.72em 1.2em;
+    color: #333;
+    border-color: #eee;
+    background-color: #eee;
+  }
+  .order-subtable tbody .btn:hover, .order-subtable tbody .btn:active, .order-subtable tbody .btn:focus {
+    color: #fff;
+    border-color: #333;
+    background-color: #333;
+  }
+  .order-subtable thead th:not(:last-child),
+  .order-subtable tbody td:not(:last-child) {
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: 767px) {
+    .order-view {
+      display: block;
+    }
+    .order-view li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: start;
+    }
+    .order-view label {
+      max-width: 50%;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 50%;
+              flex: 0 0 50%;
+      padding-right: 1rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .order-subtable {
+      display: block;
+      overflow-x: auto;
+      min-width: 100%;
+    }
+  }
+  @media (max-width: 479px) {
+    .order-view li {
+      font-size: 1.5rem;
+    }
+  
+    .order .order-table {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  
+  
