@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Menu from 'components/mobile-menu/menu'
 import { useAppContext } from '../../src/context/state';
+import Sidebar from 'components/card/sidebar';
 
 
 
@@ -48,11 +49,7 @@ export default function Header() {
         setOpenMenu(!openMenu)
     }
 
-    const [openCard , setOpenCrad] = useState(false)
-
-    const handelCard = () => {
-        setOpenCrad(!openCard)
-    }
+    const [isOpen , setIsOpen] = useState(false)
 
     
 
@@ -108,7 +105,7 @@ export default function Header() {
                       </Link>
                       <div className="dropdown cart-dropdown cart-offcanvas ml-0 ml-lg-2">
                           <div className="cart-overlay"></div>
-                          <a onClick={handelCard} className="cart-toggle label-down link">
+                          <a onClick={()=> setIsOpen(!isOpen)} className="cart-toggle label-down link">
                               <i className="w-icon-cart">
                                   <span className="cart-count">2</span>
                               </i>
@@ -220,11 +217,12 @@ export default function Header() {
               </div>
           </div>
       </header>
-      
-      {/* <div className={openCard === false ? 'card-sidbar-open' :'card-sidbar-close'}>
-        kdjk
-      </div> */}
 
+
+      <Sidebar
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />      
 
       <Menu 
         openMenu={openMenu}
