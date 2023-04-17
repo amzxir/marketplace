@@ -43,7 +43,7 @@ export default function Totals() {
                             <div className="form-group">
                                 <div className="select-box">
                                     <select name="country" className="form-control form-control-md">
-                                        <option value="default" selected="selected">کشور</option>
+                                        <option value="default">کشور</option>
                                         <option value="us">ایران</option>
                                         <option value="uk">تزکیه</option>
                                     </select>
@@ -52,7 +52,7 @@ export default function Totals() {
                             <div className="form-group">
                                 <div className="select-box">
                                     <select name="state" className="form-control form-control-md">
-                                        <option value="default" selected="selected">استان</option>
+                                        <option value="default">استان</option>
                                         <option value="ohaio">تهران</option>
                                     </select>
                                 </div>

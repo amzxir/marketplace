@@ -170,25 +170,6 @@ export default function Header() {
                                       </ul>
                                   </li>
                                   <li>
-                                      <Link href="#">فروشنده</Link>
-                                      <ul>
-                                        {vendors.map((i , index) => {
-                                            return(
-                                                <li key={index}>
-                                                    <Link href="#">{i.name}</Link>
-                                                    <ul>
-                                                        {i.category.map((i , index)=> {
-                                                            return(
-                                                                <li key={index}><Link href="#">{i}</Link></li>
-                                                            )
-                                                        })}
-                                                    </ul>
-                                                </li>
-                                            )
-                                        })}
-                                      </ul>
-                                  </li>
-                                  <li>
                                       <Link href="/content/about-us">درباره ما</Link>
                                   </li>
                                   <li>

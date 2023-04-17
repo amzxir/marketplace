@@ -29,7 +29,7 @@ export default function Form() {
                     <label>کشور / منطقه *</label>
                     <div className="select-box">
                         <select name="country" className="form-control form-control-md">
-                            <option value="default" selected="selected">ایران</option>
+                            <option value="default" >ایران</option>
                             <option value="uk">ترکیه</option>
                         </select>
                     </div>
@@ -54,7 +54,7 @@ export default function Form() {
                             <label>شهر *</label>
                             <div className="select-box">
                                 <select name="country" className="form-control form-control-md">
-                                    <option value="default" selected="selected">تهران</option>
+                                    <option value="default" >تهران</option>
                                     <option value="uk">مازندران</option>
                                 </select>
                             </div>

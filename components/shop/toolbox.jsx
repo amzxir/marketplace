@@ -13,7 +13,7 @@ export default function Toolbox() {
                 <div className="toolbox-item toolbox-show select-box">
                     <select name="count" className="form-control">
                         <option value="9">نمایش 9</option>
-                        <option value="12" selected="selected">نمایش 12</option>
+                        <option value="12" >نمایش 12</option>
                         <option value="24">نمایش 24</option>
                         <option value="36">نمایش 36</option>
                     </select>
