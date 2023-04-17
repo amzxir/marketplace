@@ -5,6 +5,8 @@ import Menu from 'components/mobile-menu/menu'
 import { useAppContext } from '../../src/context/state';
 
 
+
+
 export default function Header() {
 
     // shop categories data
@@ -39,11 +41,20 @@ export default function Header() {
         {id:1 , name:'فریزر' , icon:'w-icon-furniture'},
     ]
 
+    // open and close menu
     const [openMenu , setOpenMenu] = useState(false)
 
     const handelMenu = () => {
         setOpenMenu(!openMenu)
     }
+
+    const [openCard , setOpenCrad] = useState(false)
+
+    const handelCard = () => {
+        setOpenCrad(!openCard)
+    }
+
+    
 
   return (
     <>
@@ -97,12 +108,12 @@ export default function Header() {
                       </Link>
                       <div className="dropdown cart-dropdown cart-offcanvas ml-0 ml-lg-2">
                           <div className="cart-overlay"></div>
-                          <Link href="#" className="cart-toggle label-down link">
+                          <a onClick={handelCard} className="cart-toggle label-down link">
                               <i className="w-icon-cart">
                                   <span className="cart-count">2</span>
                               </i>
                               <span className="cart-label">سبد خرید</span>
-                          </Link>
+                          </a>
                       </div>
                   </div>
 
@@ -209,6 +220,11 @@ export default function Header() {
               </div>
           </div>
       </header>
+      
+      {/* <div className={openCard === false ? 'card-sidbar-open' :'card-sidbar-close'}>
+        kdjk
+      </div> */}
+
 
       <Menu 
         openMenu={openMenu}

@@ -12518,6 +12518,31 @@ body .product-popup {
     color: #fff;
 }
 
+.card-sidbar-open{
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-right: 0;
+    z-index: 1;
+    background: #fff;
+    padding: 2rem;
+    direction: rtl;
+}
+
+.card-sidbar-close{
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: #fff;
+    padding: 2rem;
+    direction: rtl;
+}
+
 
 
 
