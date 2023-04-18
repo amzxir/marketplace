@@ -15,38 +15,38 @@ export default function Feature() {
 
   return (
     <>
-    <div className='container'>
-        <div className="swiper-container swiper-theme icon-box-wrapper br-sm mb-10">
-              <div className="cols-1">
-                    <Splide 
-                        options={{ 
-                            rewind: true,
-                            arrows:false,
-                            direction:'rtl',
-                            autoWidth: true,
-                            pagination:false
+        <div className='container'>
+            <div className="swiper-container swiper-theme icon-box-wrapper br-sm mb-10">
+                <div className="cols-1">
+                        <Splide 
+                            options={{ 
+                                rewind: true,
+                                arrows:false,
+                                direction:'rtl',
+                                autoWidth: true,
+                                pagination:false
 
-                        }}
-                    >
-                        {feature.map((i , index)=> {
-                            return(
-                                <SplideSlide key={index} className='ml-5 mr-5'>
-                                    <div className="swiper-slide icon-box icon-box-side text-dark">
-                                        <span className="icon-box-icon icon-shipping">
-                                            <i className={i.icon}></i>
-                                        </span>
-                                        <div className="icon-box-content">
-                                            <h4 className="icon-box-title">{i.title}</h4>
-                                            <p className="text-default">{i.name}</p>
+                            }}
+                        >
+                            {feature.map((i , index)=> {
+                                return(
+                                    <SplideSlide key={index} className='ml-5 mr-5'>
+                                        <div className="swiper-slide icon-box icon-box-side text-dark">
+                                            <span className="icon-box-icon icon-shipping">
+                                                <i className={i.icon}></i>
+                                            </span>
+                                            <div className="icon-box-content">
+                                                <h4 className="icon-box-title">{i.title}</h4>
+                                                <p className="text-default">{i.name}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </SplideSlide>
-                            )
-                        })}
-                    </Splide>
-              </div>
+                                    </SplideSlide>
+                                )
+                            })}
+                        </Splide>
+                </div>
+            </div>
         </div>
-    </div>
     </>
   )
 }

@@ -61,6 +61,13 @@ export default function Product() {
         ]},
     ]
     const [featured , setFeatured] = useState(dataFeatured)
+    
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
+      setToggleState(index)
+    }
+
 
   return (
     <div className='container rtl'>
@@ -133,15 +140,24 @@ export default function Product() {
                 <div className="tab tab-nav-underline tab-nav-center">
                     <ul className="nav nav-tabs justify-content-center" role="tablist">
                         <li className="nav-item">
-                            <a className="nav-link active" href="#tab-1">ویژه</a>
+                            <a
+                            onClick={() => toggleTab(1)}
+                            className={toggleState === 1 ? "nav-link active" : "nav-link"}
+                            >ویژه</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#tab-2">حراج</a>
+                            <a 
+                            onClick={() => toggleTab(2)}
+                            className={toggleState === 2 ? "nav-link active" : "nav-link"}
+                            >حراج</a>
                         </li>
                     </ul>
                 </div>
+
                 <div className="tab-content">
-                    <div className="tab-pane active" id="tab-1">
+                    <div
+                    className={toggleState === 1 ? "tab-pane active" : "tab-pane"}
+                    >
                         <div className="swiper-container swiper-theme">
                             <div className="swiper-wrapper row cols-lg-4 cols-sm-3 cols-2">
                                 {featured.map((i , index)=> {
@@ -178,7 +194,9 @@ export default function Product() {
                             </div>
                         </div>
                     </div>
-                    <div className="tab-pane" id="tab-2">
+                    <div
+                    className={toggleState === 2 ? "tab-pane active" : "tab-pane"}
+                    >
                         <div className="swiper-container swiper-theme">
                             <div className="swiper-wrapper row cols-xl-4 cols-lg-3 cols-md-2">
                                 {discountProduct.map((i , index)=> {

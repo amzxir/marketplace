@@ -13,7 +13,6 @@ export default function Slider() {
     ]
     const [slider , setSlider] = useState(data)
 
-
   return (
     <>
         <section className="intro-section mt-4">
@@ -58,7 +57,6 @@ export default function Slider() {
                 </div> */}
             </div>
         </section>
-
     </>
   )
 }
