@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-export default function Product() {
+export default function Product({titleProduct}) {
 
     // product data
     const data =[
@@ -20,7 +20,7 @@ export default function Product() {
   return (
     <div className='container rtl'>
         <div className="filter-with-title title-underline mb-4 pb-2">
-            <h2 className="title">محصولات پرفروش</h2>
+            <h2 className="title">{titleProduct}</h2>
         </div>
             <Splide 
                 options={{ 

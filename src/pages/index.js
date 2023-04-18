@@ -25,9 +25,13 @@ export default function Home() {
         <Vendors/>
         <DiscountProduct/>
         <SingleBanner/>
-        <AllProduct/>
+        <AllProduct
+          titleProduct='محصولات پرفروش'
+        />
         <DoubleBanner/>
-        <AllProduct/>
+        <AllProduct
+          titleProduct='محصولات تخفیف دار'
+        />
         <TopProduct/>
       </main>
     </>
