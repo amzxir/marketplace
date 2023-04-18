@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import Breadcrumb from '../../components/breadcrumb/breadcrumb'
 
 
 
@@ -14,16 +15,12 @@ export default function Wishlist() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <main className="main wishlist-page rtl">
-            <nav className="breadcrumb-nav mb-5">
-                <div className="container">
-                    <ul className="breadcrumb">
-                        <li><Link href="/">خانه</Link></li>
-                        <li>علاقه مندی</li>
-                    </ul>
-                </div>
-            </nav>
+        <Breadcrumb 
+            childrenOne='علاقه مندی'
+            childrenTwo='خانه'
+        />
 
+        <main className="main wishlist-page rtl">
             <div className="page-content">
                 <div className="container">
                     <h3 className="wishlist-title">لیست علاقه مندی های من</h3>

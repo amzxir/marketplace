@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Breadcrumb from '../../../components/breadcrumb/breadcrumb'
 
 export default function Register() {
   return (
@@ -12,14 +13,10 @@ export default function Register() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <nav className="breadcrumb-nav">
-          <div className="container">
-              <ul className="breadcrumb">
-                  <li><Link href="/">خانه</Link></li>
-                  <li>ثبت نام</li>
-              </ul>
-          </div>
-      </nav>
+      <Breadcrumb
+        childrenOne='خانه'
+        childrenTwo='ثبت نام'
+      />
 
       <div className="page-content">
           <div className="container">

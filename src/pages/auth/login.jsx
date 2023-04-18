@@ -15,14 +15,11 @@ export default function Login() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <nav className="breadcrumb-nav">
-          <div className="container">
-              <ul className="breadcrumb">
-                  <li><Link href="/">خانه</Link></li>
-                  <li>ورود</li>
-              </ul>
-          </div>
-      </nav>
+      <Breadcrumb
+        childrenOne='خانه'
+        childrenTwo='ورود'
+      />
+      
       <div className="page-content">
           <div className="container">
               <div className="login-popup shadows mt-3">

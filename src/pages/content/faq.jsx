@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import Breadcrumb from '../../../components/breadcrumb/breadcrumb'
 
 export default function Faq() {
 
@@ -21,14 +22,10 @@ export default function Faq() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <nav className="breadcrumb-nav rtl">
-            <div className="container">
-                <ul className="breadcrumb">
-                    <li><Link href="/">خانه</Link></li>
-                    <li>حریم خصوصی</li>
-                </ul>
-            </div>
-        </nav>
+        <Breadcrumb
+            childrenOne='خانه'
+            childrenTwo='حریم خصوصی'
+        />
 
 
         <main className="main mt-5 rtl">

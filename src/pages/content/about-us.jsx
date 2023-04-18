@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import Breadcrumb from '../../../components/breadcrumb/breadcrumb';
 
 
 
@@ -53,14 +54,11 @@ export default function AboutUs() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <nav className="breadcrumb-nav rtl">
-            <div className="container">
-                <ul className="breadcrumb">
-                    <li><Link href="/">خانه</Link></li>
-                    <li>درباره ما</li>
-                </ul>
-            </div>
-        </nav>
+        <Breadcrumb 
+            childrenOne='خانه'
+            childrenTwo='درباره ما'
+        />
+
         <div className="page-content rtl mt-5">
             <div className="container-about">
                 <section className="introduce mb-10 pb-10">

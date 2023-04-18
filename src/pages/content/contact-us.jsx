@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Breadcrumb from '../../../components/breadcrumb/breadcrumb'
 
 export default function ContactUs() {
 
@@ -21,14 +22,10 @@ export default function ContactUs() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <nav className="breadcrumb-nav rtl">
-            <div className="container">
-                <ul className="breadcrumb">
-                    <li><Link href="/">خانه</Link></li>
-                    <li>تماس ما</li>
-                </ul>
-            </div>
-        </nav>
+        <Breadcrumb
+            childrenOne='خانه'
+            childrenTwo='تماس ما'
+        />
 
         <main className="main rtl">
             <div className="page-content contact-us mt-5">

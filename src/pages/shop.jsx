@@ -6,6 +6,7 @@ import Banner from '../../components/shop/banner'
 import Toolbox from '../../components/shop/toolbox'
 import Pagination from '../../components/shop/pagination'
 import Product from '../../components/shop/product'
+import Breadcrumb from '../../components/breadcrumb/breadcrumb'
 
 export default function Shop() {
   return (
@@ -16,14 +17,10 @@ export default function Shop() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <nav className="breadcrumb-nav rtl">
-            <div className="container">
-                <ul className="breadcrumb">
-                    <li><Link href="/">خانه</Link></li>
-                    <li>فروشگاه</li>
-                </ul>
-            </div>
-        </nav>
+        <Breadcrumb 
+            childrenOne='خانه'
+            childrenTwo='فروشگاه' 
+        />
 
         <main className="main rtl">
             <div className="page-content mb-10">
