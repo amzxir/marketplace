@@ -3,8 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Footer from '../../../components/footer/footer'
-import Header from '../../../components/header/header'
 
 
 
@@ -55,7 +53,6 @@ export default function AboutUs() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <Header/>
         <nav className="breadcrumb-nav rtl">
             <div className="container">
                 <ul className="breadcrumb">
@@ -228,7 +225,6 @@ export default function AboutUs() {
                 </div>
             </section>
         </div>
-        <Footer/>
     </>
   )
 }

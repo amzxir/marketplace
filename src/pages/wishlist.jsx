@@ -1,7 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import Footer from '../../components/footer/footer'
-import Header from '../../components/header/header'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -16,12 +14,8 @@ export default function Wishlist() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <Header/>
-
         <main className="main wishlist-page rtl">
-
-
-          <nav className="breadcrumb-nav mb-5">
+            <nav className="breadcrumb-nav mb-5">
                 <div className="container">
                     <ul className="breadcrumb">
                         <li><Link href="/">خانه</Link></li>
@@ -90,8 +84,6 @@ export default function Wishlist() {
                 </div>
             </div>
         </main>
-
-        <Footer/>
     </>
   )
 }

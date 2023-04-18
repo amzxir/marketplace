@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import Header from '../../../components/header/header'
-import Footer from '../../../components/footer/footer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function Faq() {
 
@@ -25,17 +21,15 @@ export default function Faq() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <Header/>
-
         <nav className="breadcrumb-nav rtl">
             <div className="container">
                 <ul className="breadcrumb">
                     <li><Link href="/">خانه</Link></li>
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                    <li className='mr-1'>حریم خصوصی</li>
+                    <li>حریم خصوصی</li>
                 </ul>
             </div>
         </nav>
+
 
         <main className="main mt-5 rtl">
             <div className="page-content faq">
@@ -89,8 +83,6 @@ export default function Faq() {
                 </div>
             </div>
         </main>
-
-        <Footer/>
     </>
   )
 }
