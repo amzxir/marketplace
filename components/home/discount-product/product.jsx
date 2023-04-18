@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -62,12 +62,53 @@ export default function Product() {
     ]
     const [featured , setFeatured] = useState(dataFeatured)
     
+    // state tabs
     const [toggleState, setToggleState] = useState(1);
 
+    // handel toggletab
     const toggleTab = (index) => {
       setToggleState(index)
     }
 
+    // states timer end
+    const [partyTime, setPartyTime] = useState(false);
+    // states timer
+    const [days , setDays] = useState(0)
+    const [hours , setHours] = useState(0)
+    const [minutes , setMinutes] = useState(0)
+    const [seconds , setSeconds] = useState(0)
+
+    useEffect(() =>{
+
+        const target = new Date("4/19/2023 23:59:59")
+
+        const interval = setInterval(()=> {
+
+            const now = new Date()
+            const difference = target.getTime()-now.getTime()
+
+            const d = Math.floor(difference / (1000*60*60*24))
+            setDays(d)
+
+            const h = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            )
+            setHours(h)
+
+            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+            setMinutes(m)
+
+            const s = Math.floor((difference % (1000 * 60)) / 1000)
+            setSeconds(s)
+
+            if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+                setPartyTime(true);
+            }
+
+        } , 1000)
+
+        return () => clearInterval(interval)
+    },[])
 
   return (
     <div className='container rtl'>
@@ -127,10 +168,10 @@ export default function Product() {
                         </div>
                         <div className="swiper-slide product-countdown countdown-compact mb-2">
                             <span className='countdown-row countdown-show4'>
-                                <span className='countdown-section'><span className='countdown-amount'>00</span><span className='countdown-period'>روز</span></span>
-                                <span className='countdown-section'><span className='countdown-amount'>00</span><span className='countdown-period'>ساعت</span></span>
-                                <span className='countdown-section'><span className='countdown-amount'>00</span><span className='countdown-period'>دقیقه</span></span>
-                                <span className='countdown-section'><span className='countdown-amount'>00</span><span className='countdown-period'>ثانیه</span></span>
+                                <span className='countdown-section'><span className='countdown-amount'>{days}</span><span className='countdown-period'>روز</span></span>
+                                <span className='countdown-section'><span className='countdown-amount'>{hours}</span><span className='countdown-period'>ساعت</span></span>
+                                <span className='countdown-section'><span className='countdown-amount'>{minutes}</span><span className='countdown-period'>دقیقه</span></span>
+                                <span className='countdown-section'><span className='countdown-amount'>{seconds}</span><span className='countdown-period'>ثانیه</span></span>
                             </span>
                         </div>
                     </div>
