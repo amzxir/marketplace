@@ -38,7 +38,7 @@ export default function Sidebar({isOpen , setIsOpen}) {
                             <div className="product-detail mr-2">
                                 <Link href="/single/product" className="product-name">{i.name}</Link>
                                 <div className="price-box">
-                                    <span className="product-price">{i.price} تومان</span>
+                                    <span className="product-prices">{i.price} تومان</span>
                                 </div>
                             </div>
                         </div>

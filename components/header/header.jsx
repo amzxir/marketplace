@@ -4,6 +4,10 @@ import Image from 'next/image'
 import Menu from 'components/mobile-menu/menu'
 import { useAppContext } from '../../src/context/state';
 import Sidebar from 'components/card/sidebar';
+import HeaderTop from './header-top'
+import HeaderMiddle from './header-middle'
+import HeaderCategory from './header-category'
+import HeaderSticky from './header-sticky'
 
 
 
@@ -49,186 +53,39 @@ export default function Header() {
         setOpenMenu(!openMenu)
     }
 
+    // state sidebar card
     const [isOpen , setIsOpen] = useState(false)
-
-    
 
   return (
     <>
       <header className="header">
-          <div className="header-top">
-              <div className="container">
-                  <div className="header-left">
-                      <p className="welcome-msg">به فروشگاه لورم خوش آمدید</p>
-                  </div>
-                  <div className="header-right">
-                      <div className="dropdown">
-                          <Link href="#"><Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8" className="dropdown-image" /> ENG</Link>
-                          <div className="dropdown-box">
-                              <Link href="#">
-                                  <Image src="/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8" className="dropdown-image" />
-                                  ENG
-                              </Link>
-                              <Link href="#FRA">
-                                  <Image src="/assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8" className="dropdown-image" />
-                                  FRA
-                              </Link>
-                          </div>
-                      </div>
-                      <span className="divider d-lg-show"></span>
-                      <Link href="/" className="d-lg-show">ناحیه کاربری</Link>
-                      <Link href="/auth/login" className="d-lg-show login sign-in">ورود</Link>
-                      <span className="delimiter d-lg-show">/</span>
-                      <Link href="/auth/register" className="ml-0 d-lg-show login register">ثبت نام <i className="w-icon-account"></i></Link>
-                  </div>
-              </div>
-          </div>
+        <HeaderTop/>
 
-          <div className="header-middle">
-              <div className="container">
-                  <div className="header-right mr-md-4 rtl">
-                      <div className="header-call d-xs-show d-lg-flex align-items-center">
-                          <a href="tel:#" className="w-icon-call"></a>
-                          <div className="call-info d-lg-show">
-                              <h4 className="chat font-weight-normal font-size-md text-normal ls-normal text-light mb-0">
-                                  <span className="text-capitalize text-dark">تماس با ما</span></h4>
-                              <a href="tel:#" className="phone-number font-weight-bolder ls-50">0919995465</a>
-                          </div>
-                      </div>
-                      <Link className="wishlist label-down link d-xs-show" href="/wishlist">
-                          <i className="w-icon-heart"></i>
-                          <span className="wishlist-label d-lg-show">علاقه مندی ها</span>
-                      </Link>
-                      <Link className="compare label-down link d-xs-show" href="/compare">
-                          <i className="w-icon-compare"></i>
-                          <span className="compare-label d-lg-show">مقایسه</span>
-                      </Link>
-                      <div className="dropdown cart-dropdown cart-offcanvas ml-0 ml-lg-2">
-                          <div className="cart-overlay"></div>
-                          <a onClick={()=> setIsOpen(!isOpen)} className="cart-toggle label-down link">
-                              <i className="w-icon-cart">
-                                  <span className="cart-count">2</span>
-                              </i>
-                              <span className="cart-label">سبد خرید</span>
-                          </a>
-                      </div>
-                  </div>
+        <HeaderMiddle 
+            handelMenu={handelMenu}
+            setIsOpen={setIsOpen}
+            isOpen={isOpen}
+        />
 
-                  <div className="header-left ml-4 rtl">
-                      <Link href='#' onClick={handelMenu} className="mobile-menu-toggle w-icon-hamburger ml-4">
-                      </Link>
-                      <Link href="/" className="logo ml-lg-0">
-                          <Image src="/assets/images/demos/demo9/header-logo.png" alt="logo" width="144" height="45" />
-                      </Link>
-                      <form className="input-wrapper header-search hs-expanded hs-round d-none d-md-flex rtl">
-                          <div className="select-box">
-                              <select id="category" name="category">
-                                  <option value="">همه دسته بندی ها</option>
-                                  <option value="4">Fashion</option>
-                                  <option value="5">Furniture</option>
-                                  <option value="6">Shoes</option>
-                                  <option value="7">Sports</option>
-                                  <option value="8">Games</option>
-                                  <option value="9">Computers</option>
-                                  <option value="10">Electronics</option>
-                                  <option value="11">Kitchen</option>
-                                  <option value="12">Clothing</option>
-                              </select>
-                          </div>
-                          <input type="text" className="form-control" placeholder="جستجو کنید ..." required />
-                          <button className="btn btn-search" type="submit"><i className="w-icon-search"></i>
-                          </button>
-                      </form>
+        <HeaderSticky
+            category={category}
+        />
 
+        <HeaderCategory
+            caregories={caregories}
+        />
 
-                  </div>
- 
-              </div>
-          </div>
+        <Sidebar
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+        />      
 
-          <div className="header-bottom sticky-content fix-top sticky-header rtl">
-              <div className="container">
-                  <div className="inner-wrap">
-                      <div className="header-right">
-                          <nav className="main-nav ml-0">
-                              <ul className="menu">
-                                  <li>
-                                      <Link href="/">خانه</Link>
-                                  </li>
-                                  <li>
-                                      <Link href="/shop">فروشگاه ها</Link>
-
-                                      <ul className="megamenu">
-
-                                        {category.map((i , index)=> {
-                                            return(
-                                                <li key={index}>
-                                                    <h4 className="menu-title">{i.name}</h4>
-                                                    <ul>
-                                                        {i.category.map((i , index)=> {
-                                                            return(
-                                                                <li key={index}><Link href="/shop">{i}</Link></li>
-                                                            )
-                                                        })}
-                                                    </ul>
-                                                </li>
-                                            )
-                                        })}
-
-                                      </ul>
-                                  </li>
-                                  <li>
-                                      <Link href="/content/about-us">درباره ما</Link>
-                                  </li>
-                                  <li>
-                                      <Link href="/content/contact-us">تماس با ما</Link>
-                                  </li>
-                              </ul>
-                          </nav>
-                      </div>
-                      <div className="header-left">
-                          <Link href="#" className="d-xl-show ml-3"><i className="w-icon-map-marker mr-1"></i> سفارشات </Link>
-                          <Link href="#"><i className="w-icon-sale"></i> معاملات روزانه </Link>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div className="container d-lg-show rtl">
-              <div className="inner-wrap">
-                  <ul className="menu horizontal-menu category-menu">
-
-                    {caregories.map((i , index)=> {
-                        return(
-                            <li key={index}>
-                                <Link href="#">
-                                    <i className={i.icon}></i>{i.name}
-                                </Link>
-                            </li>
-                        )
-                    })}
-
-                      <li>
-                          <Link href="#">
-                              <i className="w-icon-dots-circle"></i>همه دسته بندی ها
-                          </Link>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+        <Menu 
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            handelMenu={handelMenu}
+        />
       </header>
-
-
-      <Sidebar
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-      />      
-
-      <Menu 
-        openMenu={openMenu}
-        setOpenMenu={setOpenMenu}
-        handelMenu={handelMenu}
-      />
 
     </>
   )
