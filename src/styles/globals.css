@@ -12639,12 +12639,16 @@ select {
     text-overflow: '';
 }
 
-.close_filter{
-    transform: translateX(-100%) !important;
-    opacity: 0 !important;
-}
 
-.open_filter{
-    transform: translateX(0) !important;
-    opacity: 1 !important;
+@media (max-width: 992px){
+    .close_filter{
+        transform: translateX(-100%) !important;
+        opacity: 0 !important;
+    }
+    
+    .open_filter{
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+
 }
