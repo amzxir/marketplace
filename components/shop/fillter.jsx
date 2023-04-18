@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 
-export default function Fillter() {
+export default function Fillter({openFilter}) {
 
     // fillter data
     const data = [
@@ -49,7 +49,7 @@ export default function Fillter() {
             <div className="sidebar-overlay"></div>
             <Link className="sidebar-close" href="#"><i className="close-icon"></i></Link>
 
-            <div className="sidebar-content scrollable">
+            <div className={`sidebar-content scrollable ${!openFilter ? 'close_filter' : 'open_filter'}`}>
                 <div className="sticky-sidebar">
                     <div className="filter-actions">
                         <label>فیلتر ها</label>

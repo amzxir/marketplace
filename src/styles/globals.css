@@ -11721,7 +11721,7 @@ body .product-popup {
     padding: 0.93em 1.85em;
 }
 .footer-newsletter .btn i {
-    margin: -0.2rem 0.9rem 0 0;
+    margin: -0.2rem 0 0 0.9rem;
     font-size: 1.6rem;
 }
 .footer-top {
@@ -12639,4 +12639,12 @@ select {
     text-overflow: '';
 }
 
-  
+.close_filter{
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+}
+
+.open_filter{
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}

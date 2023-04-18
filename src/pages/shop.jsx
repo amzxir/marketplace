@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Fillter from '../../components/shop/fillter'
@@ -9,6 +9,9 @@ import Product from '../../components/shop/product'
 import Breadcrumb from '../../components/breadcrumb/breadcrumb'
 
 export default function Shop() {
+
+    const [openFilter , setOpenFilter] = useState(false)
+
   return (
     <>
         <Head>
@@ -26,12 +29,17 @@ export default function Shop() {
             <div className="page-content mb-10">
                 <div className="container">
                     <div className="shop-content row gutter-lg">
-                        <Fillter/>
+                        <Fillter
+                            openFilter={openFilter}
+                        />
 
                         <div className="main-content">
                             <Banner/>
 
-                            <Toolbox/>
+                            <Toolbox
+                                openFilter={openFilter}
+                                setOpenFilter={setOpenFilter}
+                            />
 
                             <Product/>
                             

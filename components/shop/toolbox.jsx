@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Toolbox() {
+export default function Toolbox({openFilter , setOpenFilter}) {
+
   return (
     <>
         <nav className="toolbox sticky-toolbox sticky-content fix-top">
             <div className="toolbox-left">
-                <a href="#" className="btn btn-primary btn-outline btn-rounded left-sidebar-toggle 
-                    btn-icon-left d-block d-lg-none"><i className="w-icon-category"></i><span>فیلترها</span></a>
+                <a onClick={()=> setOpenFilter(!openFilter)} className="btn btn-primary btn-outline btn-rounded left-sidebar-toggle btn-icon-left d-block d-lg-none"><i className="w-icon-category"></i><span>فیلترها</span></a>
             </div>
             <div className="toolbox-right">
                 <div className="toolbox-item toolbox-show select-box">
