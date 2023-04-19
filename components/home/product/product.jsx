@@ -42,6 +42,16 @@ export default function Product({titleProduct}) {
     ]
     const [product , setProduct] = useState(data)
 
+    // state for index product
+    const [indexProduct , setIndexProduct] = useState()
+
+    // handel open modal
+    const handelOpenModal = (index) => {
+        setOpenModal(index)
+        setIndexProduct(index)
+    }
+
+
   return (
     <div className='container rtl'>
         <div className="filter-with-title title-underline mb-4 pb-2">
@@ -72,7 +82,7 @@ export default function Product({titleProduct}) {
                                         <Link href="#" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
                                         <Link href="#" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
                                         <Link href="#" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
-                                        <a onClick={()=> setOpenModal(!openModal)} className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                        <a onClick={()=> handelOpenModal(index)} className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
                                     </div>
                                 </figure>
                                 <div className="product-details">
@@ -91,7 +101,7 @@ export default function Product({titleProduct}) {
 
             </Splide>
             
-            <Modal>
+            <Modal show={openModal === indexProduct}>
                 <div className="product product-single product-popup">
                     <div className="row gutter-lg overlay-auto">
                         <div className="col-md-6 mb-4 mb-md-0">
@@ -213,7 +223,6 @@ export default function Product({titleProduct}) {
                     </div>
                 </div>
             </Modal>
-
 
     </div>
   )

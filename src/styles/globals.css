@@ -6161,7 +6161,7 @@ select:focus::-ms-value {
     margin: 1.4rem 0 2rem;
 }
 .product-single .social-icon {
-    margin-right: 0.8rem;
+    margin-left: 0.8rem;
 }
 .product-single .product-categories, .product-single .product-sku {
     color: #666;
@@ -6356,7 +6356,7 @@ select:focus::-ms-value {
     margin-top: 1.3rem;
 }
 .product-single .social-links-wrapper>* {
-    margin-right: 2rem;
+    margin-left: 2rem;
     margin-bottom: 1rem;
 }
 .product-single .social-links-wrapper .btn-product-icon {
@@ -12663,7 +12663,7 @@ select {
 
 .overlay-auto{
     overflow: auto;
-    height: 680px;
+    max-height: 70vh;
 }
 
 .icon-closse{
@@ -12680,7 +12680,7 @@ select {
     z-index: 2;
     background: #000;
     opacity: 0.4;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
