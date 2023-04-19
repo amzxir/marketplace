@@ -5694,9 +5694,9 @@ select:focus::-ms-value {
     overflow-x: hidden;
     overflow-y: auto;
 }
-body .product-popup {
+/* body .product-popup {
     display: none;
-}
+} */
 .login-popup {
     max-width: 50rem;
     padding: 3.3rem 5rem 2.6rem;
@@ -6257,7 +6257,7 @@ body .product-popup {
     padding-top: 2.8rem;
 }
 .product-single .product-color-swatch {
-    margin-right: 4rem;
+    margin-left: 4rem;
     margin-bottom: 2rem;
 }
 .product-single .product-color-swatch .color {
@@ -12651,4 +12651,38 @@ select {
         opacity: 1 !important;
     }
 
+}
+
+.opacity-1{
+    opacity: 3 !important;
+}
+
+.opacity-0{
+    opacity: 0 !important;
+}
+
+.overlay-auto{
+    overflow: auto;
+    height: 680px;
+}
+
+.icon-closse{
+    position: absolute;
+    z-index: 3;
+    top: -25px;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.back-modal{
+    z-index: 2;
+    background: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

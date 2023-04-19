@@ -1,14 +1,16 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const sharedState = false
+
+  const [openModal , setOpenModal] = useState(false)
 
   return (
     <AppContext.Provider 
     value={{ 
-        sharedState
+        openModal,
+        setOpenModal
      }}
     >
       {children}
