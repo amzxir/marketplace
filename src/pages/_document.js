@@ -13,8 +13,6 @@ export default function Document() {
             <Main/>
         </div>
         <NextScript />
-        {/* <script src='/js/main.js' async/> */}
-        {/* <script src="/assets/vendor/jquery/jquery.js" /> */}
       </body>
     </Html>
   )
