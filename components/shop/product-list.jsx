@@ -30,7 +30,7 @@ export default function ProductList({product , setProduct}) {
                                     <span className="ratings" style={{ width:'100%' }}></span>
                                     <span className="tooltiptext tooltip-top"></span>
                                 </div>
-                                <Link href="/single/product" className="rating-reviews">(3 Reviews)</Link>
+                                <Link href="/single/product" className="rating-reviews">(3 بررسی ها)</Link>
                             </div>
                             <div className="product-price">{i.price} {i.dis === null ? '' : '-'} {i.dis} تومان</div>
                             <div className="product-desc">

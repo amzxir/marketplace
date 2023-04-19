@@ -5,7 +5,7 @@ export default function Toolbox({openFilter , setOpenFilter , changeProduct , se
 
   return (
     <>
-        <nav className="toolbox sticky-toolbox sticky-content fix-top">
+        <nav className="toolbox sticky-toolbox sticky-content fix-top" style={{ zIndex:'1 !important' }}>
             <div className="toolbox-left">
                 <a onClick={()=> setOpenFilter(!openFilter)} className="btn btn-primary btn-outline btn-rounded left-sidebar-toggle btn-icon-left d-block d-lg-none"><i className="w-icon-category"></i><span>فیلترها</span></a>
             </div>
