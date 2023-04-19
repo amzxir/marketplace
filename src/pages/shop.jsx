@@ -1,16 +1,46 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import Fillter from '../../components/shop/fillter'
 import Banner from '../../components/shop/banner'
 import Toolbox from '../../components/shop/toolbox'
 import Pagination from '../../components/shop/pagination'
-import Product from '../../components/shop/product'
+import ProductGrid from '../../components/shop/product-grid'
 import Breadcrumb from '../../components/breadcrumb/breadcrumb'
+import ProductList from 'components/shop/product-list'
 
 export default function Shop() {
 
+    // product data
+    const data = [
+        {id:1 , name:'ساعت طلا' , price:'120.000' , dis:'100.000' , src:'/assets/images/demos/demo9/product/5-3.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'کالای الکتریکی'},
+        {id:2 , name:'کوله پشتی راحت' , price:'120.000' , dis:null , src:'/assets/images/demos/demo9/product/5-7.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'پوشاک'},
+        {id:3 , name:'کفش چرم قهوه ای' , price:'150.000' , dis:'120.000' , src:'/assets/images/demos/demo9/product/5-4.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'خوراکی'},
+        {id:4 , name:'صندلی راحتی' , price:'160.000' , dis:'140.000' , src:'/assets/images/demos/demo9/product/5-8.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'کالای الکتریکی'},
+        {id:5 , name:'کمربند جیر مردانه' , price:'180.000' , dis:'110.000' , src:'/assets/images/demos/demo9/product/5-5.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'پوشاک'},
+        {id:6 , name:'ساعت طلا' , price:'120.000' , dis:'100.000' , src:'/assets/images/demos/demo9/product/5-3.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'کالای الکتریکی'},
+        {id:7 , name:'کوله پشتی راحت' , price:'120.000' , dis:null , src:'/assets/images/demos/demo9/product/5-7.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'کالای الکتریکی'},
+        {id:8 , name:'کفش چرم قهوه ای' , price:'150.000' , dis:'120.000' , src:'/assets/images/demos/demo9/product/5-4.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'خوراکی'},
+        {id:9 , name:'صندلی راحتی' , price:'160.000' , dis:'140.000' , src:'/assets/images/demos/demo9/product/5-8.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'کالای الکتریکی'},
+        {id:10 , name:'کمربند جیر مردانه' , price:'180.000' , dis:'110.000' , src:'/assets/images/demos/demo9/product/5-5.jpg' , 
+        des:'معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند' , category:'کالای الکتریکی'},
+
+    ]
+    const [product , setProduct] = useState(data)
+
+    // state open and close filter
     const [openFilter , setOpenFilter] = useState(false)
+
+    // state change grid to list or list to grid
+    const [changeProduct , setChangeProduct] = useState(false)
 
   return (
     <>
@@ -39,10 +69,23 @@ export default function Shop() {
                             <Toolbox
                                 openFilter={openFilter}
                                 setOpenFilter={setOpenFilter}
+                                changeProduct={changeProduct}
+                                setChangeProduct={setChangeProduct}
                             />
 
-                            <Product/>
-                            
+                            {!changeProduct ? 
+
+                                <ProductGrid
+                                    product={product}
+                                    setProduct={setProduct}
+                                />
+                                :
+                                <ProductList
+                                    product={product}
+                                    setProduct={setProduct}
+                                />
+                            }
+
                             <Pagination/>
                         </div>
                     </div>

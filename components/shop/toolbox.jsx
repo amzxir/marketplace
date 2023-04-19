@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Toolbox({openFilter , setOpenFilter}) {
+export default function Toolbox({openFilter , setOpenFilter , changeProduct , setChangeProduct}) {
 
   return (
     <>
@@ -19,12 +19,12 @@ export default function Toolbox({openFilter , setOpenFilter}) {
                     </select>
                 </div>
                 <div className="toolbox-item toolbox-layout">
-                    <Link href="#" className="icon-mode-grid btn-layout active">
-                        <i className="w-icon-grid"></i>
-                    </Link>
-                    <Link href="#" className="icon-mode-list btn-layout">
+                    <a onClick={()=> setChangeProduct(true)} className={`icon-mode-list btn-layout ${changeProduct === true ? 'active' : ''}`}>
                         <i className="w-icon-list"></i>
-                    </Link>
+                    </a>
+                    <a onClick={()=> setChangeProduct(false)} className={`icon-mode-grid btn-layout ${changeProduct === false ? 'active' : ''}`}>
+                        <i className="w-icon-grid"></i>
+                    </a>
                 </div>
             </div>
         </nav>
