@@ -2,10 +2,35 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { useAppContext } from '@/context/state';
+import Modal from 'components/modal/modal';
+import ImageGallery from 'react-image-gallery';
 
 
 
 export default function Product() {
+
+    const {openModal , setOpenModal} = useAppContext()
+
+    // state modal image
+    const images = [
+        {
+          original: '/assets/images/products/default/1-800x900.jpg',
+          thumbnail: '/assets/images/products/default/1-800x900.jpg',
+        },
+        {
+          original: '/assets/images/products/default/1-800x900.jpg',
+          thumbnail: '/assets/images/products/default/1-800x900.jpg',
+        },
+        {
+        original: '/assets/images/products/default/1-800x900.jpg',
+        thumbnail: '/assets/images/products/default/1-800x900.jpg',
+        },
+        {
+        original: '/assets/images/products/default/1-800x900.jpg',
+        thumbnail: '/assets/images/products/default/1-800x900.jpg',
+        },
+    ]
 
     // Discount Product data
     const dataDiscount = [
@@ -110,6 +135,15 @@ export default function Product() {
         return () => clearInterval(interval)
     },[])
 
+    // state for index product
+    const [indexProduct , setIndexProduct] = useState()
+
+    // handel open modal
+    const handelOpenModal = (index) => {
+        setOpenModal(index)
+        setIndexProduct(index)
+    }
+
   return (
     <div className='container rtl'>
         <div className="row">
@@ -141,10 +175,10 @@ export default function Product() {
                                                     })}
                                                 </Link>
                                                 <div className="product-action-vertical">
-                                                    <Link href="#" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
-                                                    <Link href="#" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
-                                                    <Link href="#" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
-                                                    <Link href="#" className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></Link>
+                                                    <Link href="/shopping/card" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
+                                                    <Link href="/wishlist" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
+                                                    <Link href="/compare" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
+                                                    <a onClick={()=> handelOpenModal(index)} className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
                                                 </div>
                                             </figure>
                                             <div className="product-details">
@@ -183,22 +217,20 @@ export default function Product() {
                         <li className="nav-item">
                             <a
                             onClick={() => toggleTab(1)}
-                            className={toggleState === 1 ? "nav-link active" : "nav-link"}
+                            className={toggleState === 1 ? "nav-link active pointer" : "nav-link pointer"}
                             >ویژه</a>
                         </li>
                         <li className="nav-item">
                             <a 
                             onClick={() => toggleTab(2)}
-                            className={toggleState === 2 ? "nav-link active" : "nav-link"}
+                            className={toggleState === 2 ? "nav-link active pointer" : "nav-link pointer"}
                             >حراج</a>
                         </li>
                     </ul>
                 </div>
 
                 <div className="tab-content">
-                    <div
-                    className={toggleState === 1 ? "tab-pane active" : "tab-pane"}
-                    >
+                    <div className={toggleState === 1 ? "tab-pane active" : "tab-pane"}>
                         <div className="swiper-container swiper-theme">
                             <div className="swiper-wrapper row cols-lg-4 cols-sm-3 cols-2">
                                 {featured.map((i , index)=> {
@@ -213,10 +245,10 @@ export default function Product() {
                                                     })}
                                                 </Link>
                                                 <div className="product-action-vertical">
-                                                    <a href="#" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                                    <a href="#" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                                    <a href="#" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                                    <a href="#" className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                                    <Link href="/shopping/card" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
+                                                    <Link href="/wishlist" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
+                                                    <Link href="/compare" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
+                                                    <a onClick={()=> handelOpenModal(index)} className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
                                                 </div>
                                             </figure>
                                             <div className="product-details">
@@ -235,9 +267,7 @@ export default function Product() {
                             </div>
                         </div>
                     </div>
-                    <div
-                    className={toggleState === 2 ? "tab-pane active" : "tab-pane"}
-                    >
+                    <div className={toggleState === 2 ? "tab-pane active" : "tab-pane"}>
                         <div className="swiper-container swiper-theme">
                             <div className="swiper-wrapper row cols-xl-4 cols-lg-3 cols-md-2">
                                 {discountProduct.map((i , index)=> {
@@ -252,10 +282,10 @@ export default function Product() {
                                                     })}
                                                 </Link>
                                                 <div className="product-action-vertical">
-                                                    <Link href="#" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
-                                                    <Link href="#" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
-                                                    <Link href="#" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
-                                                    <Link href="#" className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></Link>
+                                                    <Link href="/shopping/card" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
+                                                    <Link href="/wishlist" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
+                                                    <Link href="/compare" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
+                                                    <a onClick={()=> handelOpenModal(index)} className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
                                                 </div>
                                             </figure>
                                             <div className="product-details">
@@ -275,6 +305,130 @@ export default function Product() {
                 </div>
             </div>
         </div>
+
+        <Modal show={openModal === indexProduct}>
+            <div className="product product-single product-popup">
+                <div className="row gutter-lg overlay-auto">
+                    <div className="col-md-6 mb-4 mb-md-0">
+                        <div className="product-gallery product-gallery-sticky">
+                            <div className="swiper-container product-single-swiper swiper-theme nav-inner">
+                                <div className="swiper-wrapper row cols-1 gutter-no">
+                                    <div className="swiper-slide">
+                                        <figure className="product-image">
+                                            <ImageGallery 
+                                                items={images}
+                                                showNav={false}
+                                                isRTL={true}
+                                                disableSwipe={false}
+                                                showPlayButton={false}
+                                            />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 overflow-hidden p-relative">
+                        <div className="pl-0">
+                            <h2 className="product-title">ساعت مچی مشکی الکترونیکی</h2>
+                            <div className="product-bm-wrapper">
+                                <figure className="brand">
+                                    <Image src="/assets/images/products/brand/brand-1.jpg" alt="Brand" width="102" height="48" />
+                                </figure>
+                                <div className="product-meta">
+                                    <div className="product-categories"> دسته بندی: <span className="product-category"><a>الکترونیک</a></span>
+                                    </div>
+                                    <div className="product-sku">
+                                        سریال: <span>MS46891340</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr className="product-divider"/>
+
+                            <div className="product-price">120.000 تومان</div>
+
+                            <div className="ratings-container">
+                                <div className="ratings-full">
+                                    <span className="ratings" style={{ width:'80%' }}></span>
+                                    <span className="tooltiptext tooltip-top"></span>
+                                </div>
+                                <a className="rating-reviews">(3 بررسی ها)</a>
+                            </div>
+
+                            <div className="product-short-desc">
+                                <ul className="list-type-check list-style-none">
+                                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است</li>
+                                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است</li>
+                                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است</li>
+                                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است</li>
+                                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است</li>
+                                </ul>
+                            </div>
+
+                            <hr className="product-divider"/>
+
+                            <div className="product-form product-variation-form product-color-swatch">
+                                <label>رنگ:</label>
+                                <div className="d-flex align-items-center product-variations">
+                                    <a href="#" className="color" style={{ backgroundColor:'#ffcc01' }}></a>
+                                    <a href="#" className="color" style={{ backgroundColor:'#ca6d00' }}></a>
+                                    <a href="#" className="color" style={{ backgroundColor:'#1c93cb' }}></a>
+                                    <a href="#" className="color" style={{ backgroundColor:'#ccc' }}></a>
+                                    <a href="#" className="color" style={{ backgroundColor:'#333' }}></a>
+                                </div>
+                            </div>
+                            <div className="product-form product-variation-form product-size-swatch">
+                                <label className="mb-1">سایز:</label>
+                                <div className="flex-wrap d-flex align-items-center product-variations">
+                                    <a href="#" className="size">Small</a>
+                                    <a href="#" className="size">Medium</a>
+                                    <a href="#" className="size">Large</a>
+                                    <a href="#" className="size">Extra Large</a>
+                                </div>
+                            </div>
+
+                            <div className="product-variation-price">
+                                <span></span>
+                            </div>
+
+                            <div className="product-form">
+                                <div className="product-qty-form">
+                                    <div className="input-group" dir='ltr'>
+                                        <input className="quantity form-control" type="number" min="1" max="10000000"/>
+                                        <button className="quantity-plus w-icon-plus"></button>
+                                        <button className="quantity-minus w-icon-minus"></button>
+                                    </div>
+                                </div>
+                                <button className="btn btn-primary btn-cart">
+                                    <i className="w-icon-cart"></i>
+                                    <span>افرودن به سبد خرید</span>
+                                </button>
+                            </div>
+
+                            <div className="social-links-wrapper">
+                                <div className="social-links">
+                                    <div className="social-icons social-no-color border-thin">
+                                        <a href="#" className="social-icon social-facebook w-icon-facebook"></a>
+                                        <a href="#" className="social-icon social-twitter w-icon-twitter"></a>
+                                        <a href="#" className="social-icon social-pinterest fab fa-pinterest-p"></a>
+                                        <a href="#" className="social-icon social-whatsapp fab fa-whatsapp"></a>
+                                        <a href="#" className="social-icon social-youtube fab fa-linkedin-in"></a>
+                                    </div>
+                                </div>
+                                <span className="divider d-xs-show"></span>
+                                <div className="product-link-wrapper d-flex">
+                                    <a href="#" className="btn-product-icon btn-wishlist w-icon-heart"><span></span></a>
+                                    <a href="#"
+                                        className="btn-product-icon btn-compare btn-icon-left w-icon-compare"><span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Modal>
+
     </div>
   )
 }
