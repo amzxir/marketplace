@@ -45,15 +45,15 @@ export default function HeaderMiddle({handelMenu , setIsOpen , isOpen}) {
                         <div className="select-box">
                             <select id="category" name="category">
                                 <option value="">همه دسته بندی ها</option>
-                                <option value="4">Fashion</option>
-                                <option value="5">Furniture</option>
-                                <option value="6">Shoes</option>
-                                <option value="7">Sports</option>
-                                <option value="8">Games</option>
-                                <option value="9">Computers</option>
-                                <option value="10">Electronics</option>
-                                <option value="11">Kitchen</option>
-                                <option value="12">Clothing</option>
+                                <option value="4">روش</option>
+                                <option value="5">مبلمان</option>
+                                <option value="6">کفش</option>
+                                <option value="7">ورزش ها</option>
+                                <option value="8">بازی ها</option>
+                                <option value="9">کامپیوترها</option>
+                                <option value="10">الکترونیک</option>
+                                <option value="11">آشپزخانه</option>
+                                <option value="12">تن پوش</option>
                             </select>
                         </div>
                         <input type="text" className="form-control" placeholder="جستجو کنید ..." required />

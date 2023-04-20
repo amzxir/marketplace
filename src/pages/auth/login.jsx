@@ -2,8 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from './auth.module.scss'
-
-
+import Breadcrumb from 'components/breadcrumb/breadcrumb'
 
 export default function Login() {
   return (

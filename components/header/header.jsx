@@ -1,8 +1,5 @@
 import { useState } from 'react';
-import Link from 'next/link'
-import Image from 'next/image'
 import Menu from 'components/mobile-menu/menu'
-import { useAppContext } from '../../src/context/state';
 import Sidebar from 'components/card/sidebar';
 import HeaderTop from './header-top'
 import HeaderMiddle from './header-middle'
