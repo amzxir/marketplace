@@ -19,10 +19,10 @@ export default function Toolbox({openFilter , setOpenFilter , changeProduct , se
                     </select>
                 </div>
                 <div className="toolbox-item toolbox-layout">
-                    <a onClick={()=> setChangeProduct(true)} className={`icon-mode-list btn-layout ${changeProduct === true ? 'active' : ''}`}>
+                    <a onClick={()=> setChangeProduct(true)} className={`icon-mode-list btn-layout pointer ${changeProduct === true ? 'active' : ''}`}>
                         <i className="w-icon-list"></i>
                     </a>
-                    <a onClick={()=> setChangeProduct(false)} className={`icon-mode-grid btn-layout ${changeProduct === false ? 'active' : ''}`}>
+                    <a onClick={()=> setChangeProduct(false)} className={`icon-mode-grid btn-layout pointer ${changeProduct === false ? 'active' : ''}`}>
                         <i className="w-icon-grid"></i>
                     </a>
                 </div>
