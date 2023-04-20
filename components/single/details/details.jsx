@@ -1,23 +1,41 @@
+import React , {useState} from 'react'
 import Image from 'next/image'
-import React from 'react'
 
 export default function Details() {
+
+    // state tabs
+    const [toggleState, setToggleState] = useState(1);
+
+    // handel toggletab
+    const toggleTab = (index) => {
+        setToggleState(index)
+    }
+
   return (
     <>
         <div className="tab tab-nav-boxed tab-nav-underline product-tabs">
             <ul className="nav nav-tabs" role="tablist">
                 <li className="nav-item">
-                    <a href="#product-tab-description" className="nav-link active">توضیحات</a>
+                    <a 
+                        onClick={()=> toggleTab(1)}
+                        className={toggleState === 1 ? "nav-link active pointer" : "nav-link pointer"}
+                    >توضیحات</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#product-tab-specification" className="nav-link">مشخصات</a>
+                    <a 
+                        onClick={()=> toggleTab(2)}
+                        className={toggleState === 2 ? "nav-link active pointer" : "nav-link pointer"}
+                    >مشخصات</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#product-tab-reviews" className="nav-link">نظرات مشتریان (3)</a>
+                    <a 
+                        onClick={()=> toggleTab(3)}
+                        className={toggleState === 3 ? "nav-link active pointer" : "nav-link pointer"}
+                    >نظرات مشتریان (3)</a>
                 </li>
             </ul>
             <div className="tab-content">
-                <div className="tab-pane active" id="product-tab-description">
+                <div className={toggleState === 1 ? "tab-pane active" : "tab-pane"}>
                     <div className="row mb-4">
                         <div className="col-md-6 mb-5">
                             <h4 className="title tab-pane-title font-weight-bold mb-2">جزئیات</h4>
@@ -44,7 +62,7 @@ export default function Details() {
                         </div>
                     </div>
                 </div>
-                <div className="tab-pane" id="product-tab-specification">
+                <div className={toggleState === 2 ? "tab-pane active" : "tab-pane"}>
                     <ul className="list-none">
                         <li>
                             <label>مدل</label>
@@ -64,7 +82,7 @@ export default function Details() {
                         </li>
                     </ul>
                 </div>
-                <div className="tab-pane" id="product-tab-reviews">
+                <div className={toggleState === 3 ? "tab-pane active" : "tab-pane"}>
                     <div className="row mb-4">
                         <div className="col-xl-4 col-lg-5 mb-4">
                             <div className="ratings-wrapper">
