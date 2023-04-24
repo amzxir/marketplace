@@ -29,8 +29,8 @@ export default function Totals() {
                             return(
                                 <li key={index}> 
                                     <div className="custom-radio">
-                                        <input type="radio" id="free-shipping" className="custom-control-input" name="shipping"/>
-                                        <label for="free-shipping" className="custom-control-label color-dark">{i.label} تومان</label>
+                                        <input type="radio" id={i.id} className="custom-control-input" name="shipping"/>
+                                        <label for={i.id} className="custom-control-label color-dark">{i.label} تومان</label>
                                     </div>
                                 </li>
                             )
@@ -72,8 +72,7 @@ export default function Totals() {
                         <label>جمع</label>
                         <span className="ls-50">120.000 تومان</span>
                     </div>
-                    <a href="#"
-                        className="btn btn-block btn-dark btn-icon-right btn-rounded  btn-checkout"><i className="w-icon-long-arrow-left"></i> برای تسویه حساب اقدام کنید</a>
+                    <a href="#" className="btn btn-block btn-dark btn-icon-right btn-rounded  btn-checkout"><i className="w-icon-long-arrow-left"></i> برای تسویه حساب اقدام کنید</a>
                 </div>
             </div>
         </div>
