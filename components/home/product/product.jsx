@@ -79,7 +79,7 @@ export default function Product({titleProduct}) {
                                         <Image src={i.src} alt="Product" width="600" height="675" />
                                     </Link>
                                     <div className="product-action-vertical">
-                                        <Link href="/shopping/card" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
+                                        <Link href="/card" className="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></Link>
                                         <Link href="/wishlist" className="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></Link>
                                         <Link href="/compare" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
                                         <a onClick={()=> handelOpenModal(index)} className="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>

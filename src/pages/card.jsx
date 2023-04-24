@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Cards from '../../../components/card/cards'
-import Totals from '../../../components/card/totals'
+import Cards from '../../components/card/cards'
+import Totals from '../../components/card/totals'
 
 
 
@@ -20,9 +20,9 @@ export default function Card() {
             <nav className="breadcrumb-nav">
                 <div className="container">
                     <ul className="breadcrumb shop-breadcrumb bb-no">
-                        <li className="active"><Link href="/shopping/card">سبد خرید</Link></li>
-                        <li><Link href="/shopping/checkout">فاکتور</Link></li>
-                        <li><Link href="/shopping/order">تکمیل خرید</Link></li>
+                        <li className="active"><Link href="/card">سبد خرید</Link></li>
+                        <li><Link href="/checkout">فاکتور</Link></li>
+                        <li><Link href="/order">تکمیل خرید</Link></li>
                     </ul>
                 </div>
             </nav>

@@ -15,9 +15,9 @@ export default function Order() {
             <nav className="breadcrumb-nav">
                 <div className="container">
                     <ul className="breadcrumb shop-breadcrumb bb-no">
-                        <li><Link href="/shopping/card">سبد خرید</Link></li>
-                        <li><Link href="/shopping/checkout">فاکتور</Link></li>
-                        <li className='active'><Link href="/shopping/order">تکمیل خرید</Link></li>
+                        <li><Link href="/card">سبد خرید</Link></li>
+                        <li><Link href="/checkout">فاکتور</Link></li>
+                        <li className='active'><Link href="/order">تکمیل خرید</Link></li>
                     </ul>
                 </div>
             </nav>
@@ -206,7 +206,7 @@ export default function Order() {
                         </div>
                     </div>
 
-                    <Link href="/shopping/checkout" className="btn btn-dark btn-rounded btn-icon-left btn-back mt-6"><i className="w-icon-long-arrow-left"></i> بازگشت به فهرست</Link>
+                    <Link href="/checkout" className="btn btn-dark btn-rounded btn-icon-left btn-back mt-6"><i className="w-icon-long-arrow-left"></i> بازگشت به فهرست</Link>
                 </div>
             </div>
         </main>

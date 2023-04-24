@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Breadcrumb from '../../../components/breadcrumb/breadcrumb';
+import Breadcrumb from '../../components/breadcrumb/breadcrumb';
 
 
 

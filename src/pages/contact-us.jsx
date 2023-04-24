@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Breadcrumb from '../../../components/breadcrumb/breadcrumb'
+import Breadcrumb from '../../components/breadcrumb/breadcrumb'
 
 export default function ContactUs() {
 

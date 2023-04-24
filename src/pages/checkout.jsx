@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import Form from '../../../components/checkout/form'
-import Orders from '../../../components/checkout/orders'
+import Form from '../../components/checkout/form'
+import Orders from '../../components/checkout/orders'
 import Link from 'next/link'
 
 
@@ -19,9 +19,9 @@ export default function Checkout() {
             <nav className="breadcrumb-nav">
                 <div className="container">
                     <ul className="breadcrumb shop-breadcrumb bb-no">
-                        <li><Link href="/shopping/card">سبد خرید</Link></li>
-                        <li className='active'><Link href="/shopping/checkout">فاکتور</Link></li>
-                        <li><Link href="/shopping/order">تکمیل خرید</Link></li>
+                        <li><Link href="/card">سبد خرید</Link></li>
+                        <li className='active'><Link href="/checkout">فاکتور</Link></li>
+                        <li><Link href="/order">تکمیل خرید</Link></li>
                     </ul>
                 </div>
             </nav>

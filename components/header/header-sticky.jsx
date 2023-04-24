@@ -54,10 +54,10 @@ export default function HeaderSticky({category}) {
                                     </ul>
                                 </li>
                                 <li>
-                                    <Link href="/content/about-us">درباره ما</Link>
+                                    <Link href="/about-us">درباره ما</Link>
                                 </li>
                                 <li>
-                                    <Link href="/content/contact-us">تماس با ما</Link>
+                                    <Link href="/contact-us">تماس با ما</Link>
                                 </li>
                             </ul>
                         </nav>

@@ -62,7 +62,7 @@ export default function Wishlist() {
                                 <td className="wishlist-action">
                                     <div className="d-lg-flex">
                                         <Link href="/single/product" className="btn btn-quickview btn-outline btn-default btn-rounded btn-sm mb-2 mb-lg-0">مشاهده</Link>
-                                        <Link href="/shopping/card" className="btn btn-dark btn-rounded btn-sm mr-lg-2 btn-cart">به سبد خرید اضافه کنید</Link>
+                                        <Link href="/card" className="btn btn-dark btn-rounded btn-sm mr-lg-2 btn-cart">به سبد خرید اضافه کنید</Link>
                                     </div>
                                 </td>
                             </tr>

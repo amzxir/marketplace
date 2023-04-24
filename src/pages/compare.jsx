@@ -32,12 +32,12 @@ export default function Compare() {
                                             <Image src="/assets/images/products/elements/1.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
-                                            <Link href="/shopping/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
+                                            <Link href="/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
                                             <Link href="/wishlist" class="btn-product-icon btn-wishlist w-icon-heart"></Link>
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h3 class="product-name"><Link href="/shopping/card">ساعت مچی مشکی الکترونیکی</Link></h3>
+                                        <h3 class="product-name"><Link href="/card">ساعت مچی مشکی الکترونیکی</Link></h3>
                                     </div>
                                 </div>
                             </div>
@@ -49,12 +49,12 @@ export default function Compare() {
                                             <Image src="/assets/images/products/elements/2.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
-                                            <Link href="/shopping/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
+                                            <Link href="/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
                                             <Link href="/wishlist" class="btn-product-icon btn-wishlist w-icon-heart"></Link>
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h3 class="product-name"><Link href="/shopping/card">کفش ورزشی تابستانی</Link>
+                                        <h3 class="product-name"><Link href="/card">کفش ورزشی تابستانی</Link>
                                         </h3>
                                     </div>
                                 </div>
@@ -67,12 +67,12 @@ export default function Compare() {
                                             <Image src="/assets/images/products/elements/3.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
-                                            <Link href="/shopping/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
+                                            <Link href="/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
                                             <Link href="/wishlist" class="btn-product-icon btn-wishlist w-icon-heart"></Link>
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h3 class="product-name"><Link href="/shopping/card">کفش ورزشی تابستانی</Link>
+                                        <h3 class="product-name"><Link href="/card">کفش ورزشی تابستانی</Link>
                                         </h3>
                                     </div>
                                 </div>
@@ -85,12 +85,12 @@ export default function Compare() {
                                             <Image src="/assets/images/products/elements/4-1.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
-                                            <Link href="/shopping/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
+                                            <Link href="/card" class="btn-product-icon btn-cart w-icon-cart"></Link>
                                             <Link href="/wishlist" class="btn-product-icon btn-wishlist w-icon-heart"></Link>
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h3 class="product-name"><Link href="/shopping/card">کفش ورزشی تابستانی</Link>
+                                        <h3 class="product-name"><Link href="/card">کفش ورزشی تابستانی</Link>
                                         </h3>
                                     </div>
                                 </div>

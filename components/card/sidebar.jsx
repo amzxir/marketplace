@@ -28,7 +28,7 @@ export default function Sidebar({isOpen , setIsOpen}) {
                     return(
                         <div key={index} className="product product-cart pb-3">
                             <figure className="product-media">
-                                <Link href="product-default.html">
+                                <Link href="/single/product">
                                     <img src={i.src} alt="product" height="84" width="94" />
                                 </Link>
                             </figure>
@@ -50,8 +50,8 @@ export default function Sidebar({isOpen , setIsOpen}) {
                 <span>120.000 تومان</span>
             </div>
             <div className='cart-action'>
-                <Link href='/shopping/card' className='btn btn-dark btn-outline btn-rounded'>سبد خرید</Link>
-                <Link href='/shopping/checkout' className='btn btn-primary  btn-rounded'>فاکتور</Link>
+                <Link href='/card' className='btn btn-dark btn-outline btn-rounded'>سبد خرید</Link>
+                <Link href='/checkout' className='btn btn-primary  btn-rounded'>فاکتور</Link>
             </div>
         </div>
     </>
