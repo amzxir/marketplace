@@ -75,7 +75,7 @@ export default function Product({titleProduct}) {
                         <SplideSlide key={index} className="grid-item">
                             <div className="product text-center">
                                 <figure className="product-media">
-                                    <Link href="/single/product">
+                                    <Link href="/single-product">
                                         <Image src={i.src} alt="Product" width="600" height="675" />
                                     </Link>
                                     <div className="product-action-vertical">

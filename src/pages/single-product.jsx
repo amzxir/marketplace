@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Single from 'components/single/single'
-import Breadcrumb from '../../../components/breadcrumb/breadcrumb'
+import Breadcrumb from '../../components/breadcrumb/breadcrumb'
 
 export default function Product() {
   return (

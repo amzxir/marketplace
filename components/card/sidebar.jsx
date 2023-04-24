@@ -28,7 +28,7 @@ export default function Sidebar({isOpen , setIsOpen}) {
                     return(
                         <div key={index} className="product product-cart pb-3">
                             <figure className="product-media">
-                                <Link href="/single/product">
+                                <Link href="/single-product">
                                     <img src={i.src} alt="product" height="84" width="94" />
                                 </Link>
                             </figure>
@@ -36,7 +36,7 @@ export default function Sidebar({isOpen , setIsOpen}) {
                                 <i className="fas fa-times"></i>
                             </button>
                             <div className="product-detail mr-2">
-                                <Link href="/single/product" className="product-name">{i.name}</Link>
+                                <Link href="/single-product" className="product-name">{i.name}</Link>
                                 <div className="price-box">
                                     <span className="product-prices">{i.price} تومان</span>
                                 </div>

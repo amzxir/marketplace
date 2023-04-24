@@ -44,7 +44,7 @@ export default function Cards() {
                             <tr key={index}>
                                 <td className="product-thumbnail">
                                     <div className="p-relative">
-                                        <Link href="/single/product">
+                                        <Link href="/single-product">
                                             <figure>
                                                 <Image src={i.src} alt="product" width="300" height="338"/>
                                             </figure>
@@ -53,7 +53,7 @@ export default function Cards() {
                                     </div>
                                 </td>
                                 <td className="product-name">
-                                    <Link href="/single/product">{i.name}</Link>
+                                    <Link href="/single-product">{i.name}</Link>
                                 </td>
                                 <td className="product-price"><span className="amount">{i.price1} تومان</span></td>
                                 <td className="product-quantity">

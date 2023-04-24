@@ -46,7 +46,7 @@ export default function ProductList({product , setProduct}) {
                 return(
                     <div key={index} className="product product-list">
                         <figure className="product-media">
-                            <Link href="/single/product">
+                            <Link href="/single-product">
                                 <Image src={i.src} alt="Product" width="330" height="338" />
                             </Link>
                             <div className="product-action-vertical">
@@ -58,21 +58,21 @@ export default function ProductList({product , setProduct}) {
                                 <a>{i.category}</a>
                             </div>
                             <h4 className="product-name">
-                                <Link href="/single/product">{i.name}</Link>
+                                <Link href="/single-product">{i.name}</Link>
                             </h4>
                             <div className="ratings-container">
                                 <div className="ratings-full">
                                     <span className="ratings" style={{ width:'100%' }}></span>
                                     <span className="tooltiptext tooltip-top"></span>
                                 </div>
-                                <Link href="/single/product" className="rating-reviews">(3 بررسی ها)</Link>
+                                <Link href="/single-product" className="rating-reviews">(3 بررسی ها)</Link>
                             </div>
                             <div className="product-price">{i.price} {i.dis === null ? '' : '-'} {i.dis} تومان</div>
                             <div className="product-desc">
                                 {i.des}
                             </div>
                             <div className="product-action">
-                                <Link href="/single/product" className="btn-product btn-cart" title="Add to Cart"><i className="w-icon-cart"></i>مشاهده</Link>
+                                <Link href="/single-product" className="btn-product btn-cart" title="Add to Cart"><i className="w-icon-cart"></i>مشاهده</Link>
                                 <Link href="/wishlist" className="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></Link>
                                 <Link href="/compare" className="btn-product-icon btn-compare w-icon-compare" title="Compare"></Link>
                             </div>

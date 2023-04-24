@@ -38,7 +38,7 @@ export default function Wishlist() {
                             <tr>
                                 <td className="product-thumbnail">
                                     <div className="p-relative">
-                                        <Link href="/single/product">
+                                        <Link href="/single-product">
                                             <figure>
                                                 <Image src="/assets/images/shop/7-1.jpg" alt="product" width="300"
                                                     height="338"/>
@@ -49,7 +49,7 @@ export default function Wishlist() {
                                     </div>
                                 </td>
                                 <td className="product-name">
-                                    <Link href="/single/product">
+                                    <Link href="/single-product">
                                       تنه آسمان آبی
                                     </Link>
                                 </td>
@@ -61,7 +61,7 @@ export default function Wishlist() {
                                 </td>
                                 <td className="wishlist-action">
                                     <div className="d-lg-flex">
-                                        <Link href="/single/product" className="btn btn-quickview btn-outline btn-default btn-rounded btn-sm mb-2 mb-lg-0">مشاهده</Link>
+                                        <Link href="/single-product" className="btn btn-quickview btn-outline btn-default btn-rounded btn-sm mb-2 mb-lg-0">مشاهده</Link>
                                         <Link href="/card" className="btn btn-dark btn-rounded btn-sm mr-lg-2 btn-cart">به سبد خرید اضافه کنید</Link>
                                     </div>
                                 </td>

@@ -50,7 +50,7 @@ export default function ProductGrid({product , setProduct}) {
                     <div key={index} className="product-wrap">
                         <div className="product text-center">
                             <figure className="product-media">
-                                <Link href="/single/product">
+                                <Link href="/single-product">
                                     <Image src={i.src} alt="Product" width="800" height="900" />
                                 </Link>
                                 <div className="product-action-vertical">
@@ -62,7 +62,7 @@ export default function ProductGrid({product , setProduct}) {
                             </figure>
                             <div className="product-details">
                                 <h3 className="product-name">
-                                    <Link href="/single/product">{i.name}</Link>
+                                    <Link href="/single-product">{i.name}</Link>
                                 </h3>
                                 <div className="product-price">
                                     <ins className="new-price">{i.price}</ins>

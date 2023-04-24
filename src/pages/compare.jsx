@@ -28,7 +28,7 @@ export default function Compare() {
                                 <Link href="#" class="btn remove-product"><i class="w-icon-times-solid"></i></Link>
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <Link href="/single/product">
+                                        <Link href="/single-product">
                                             <Image src="/assets/images/products/elements/1.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
@@ -45,7 +45,7 @@ export default function Compare() {
                                 <Link href="#" class="btn remove-product"><i class="w-icon-times-solid"></i></Link>
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <Link href="/single/product">
+                                        <Link href="/single-product">
                                             <Image src="/assets/images/products/elements/2.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
@@ -63,7 +63,7 @@ export default function Compare() {
                                 <Link href="#" class="btn remove-product"><i class="w-icon-times-solid"></i></Link>
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <Link href="/single/product">
+                                        <Link href="/single-product">
                                             <Image src="/assets/images/products/elements/3.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
@@ -81,7 +81,7 @@ export default function Compare() {
                                 <Link href="#" class="btn remove-product"><i class="w-icon-times-solid"></i></Link>
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                    <Link href="/single/product">
+                                    <Link href="/single-product">
                                             <Image src="/assets/images/products/elements/4-1.jpg" alt="Product" width="228" height="257" />
                                         </Link>
                                         <div class="product-action-vertical">
